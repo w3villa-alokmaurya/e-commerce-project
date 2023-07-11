@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container top-header d-flex justify-content-between">
+            <div class="top-header-left ">
+                <ul class="d-flex">
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-regular fa-envelope"></i>  About Us</a></li>
+                    <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+                    <li><a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
+                </ul>
+            </div>
+            <div class="top-header-middle">
+                <ul class="d-flex">
+                    <div class="language-dropdown dropdown">
+                        <button class=" dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          English
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="language-dropdown">
+                          <a class="dropdown-item" href="#">Choose language</a>
+                          
+                        </div>
+                      </div>
+                      <div class="currency-dropdown dropdown " style="padding-left: 5px;">
+                        <button class=" dropdown-toggle" type="button" id="currency-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          $ US Dollar
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="currency-dropdown">
+                          <a class="dropdown-item" href="#">Currency</a>
+                          
+                        </div>
+                      </div>
+                </ul>
+            </div>
+            <div class="top-header-right ">
+                <ul class="d-flex">
+                    <li>
+                        <div class="more-menu dropdown">
+                            <button class=" dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              More Menus
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="more-menu">
+                              <a class="dropdown-item" href="#">Category</a>
+                              
+                            </div>
+                          </div>
+                    </li>
+                    <li>Delivery</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="middle bg-gray">
+          <div class="middle-header d-flex  align-items-center container ">
+              <div class="brand-name">
+                  <h1>Journal</h1>
+              </div>
+              <div class="search-bar d-flex">
+                  <div class="filter-dropdown dropdown">
+                      <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        All
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="filter-dropdown">
+                        <a class="dropdown-item" href="#">Category</a>
+                        
+                      </div>
+                    </div>
+                  <form action="" class="search-form">
+                      <input type="text" placeholder="Search here...">
+                      <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+              </div>
+              <div class="middle-header-menus ">
+                  <ul class="d-flex">
+                      <li><a href=""><i class="fa-solid fa-circle-user"></i>Login</a></li>
+                      <li><a href=""><i class="fa-solid fa-pencil"></i></i>Register</a></li>
+                      <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
+                      <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
+                  </ul>
+              </div>
+              <div class="middle-header-cart d-flex align-items-center">
+                  <p>0 item(s)-$0.00</p>
+                  <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+              </div>
+          </div>
+        </div>
+        <div class="lower">
+        <div class="lower-header d-flex align-items-center justify-content-between container">
+          <div class="lower-left">
+            <ul class="d-flex">
+              <li><a href="">All Departments</a></li>
+                      <li><a href="">Multilevel</a></li>
+                      <li><a href="">mega menu</a></li>
+                      <li><a href="">full width</a></li>
+
+            </ul>
+          </div>
+          <div class="lower-right">
+            <ul class="d-flex">
+            <li><a href=""><i class="fa-solid fa-phone-volume"></i> 18005556789</a></li>
+                      <li style="padding-right: 0; "><a href=""><i class="fa-solid fa-file-lines"></i> Blog</a></li>
+                    </ul>
+                      
+                      
+          </div>
+        </div>
+        </div>
+        
+    </header>
+    <section class="hero-section container d-flex">
+      <div class="hero-left">
+        <div class="hero-text">
+          <button class="hero-mobile-button">Mobile</button>
+        <h2>Best mobile options at any resolutions</h2>
+        <button class="hero-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+
+        </div>
+        
+        <!-- <img src="images/image2.png" alt=""> -->
+
+      </div>
+      <div class="hero-right d-flex-column">
+        <div class="hero-right-1">
+          <div class="right-hero-text">
+            <p>wearables</p>
+            <h3>intelligent & durable design</h3>
+          </div>
+            <img src="images/image3.png" alt="">
+        </div>
+        
+        <div class="hero-right-1">
+          <div class="right-hero-text">
+          <p>computers</p>
+          <h3>bulid your own high powered pc</h3>
+          
+        </div>
+        <img src="images/core-i3-4170-processor-punta-original-imaggvkxbkyefhzj.webp" alt="">
+
+      </div>
+
+    </section>
+    <section class="features">
+      <div class="container features-section d-flex justify-content-between align-items-center">
+        <div class="first-feature">
+          <div class="d-flex">
+            <p><i class="fa-solid fa-truck-fast"></i></p>
+            <p><span>Free Shipping</span><br>
+              <span>Free delivery over $100</span></p>
+            
+          </div>
+        </div>
+        <div class="first-feature">
+          <div class="d-flex">
+            <p><i class="fa-solid fa-reply"></i></p>
+            <p><span>Free Returns</span><br>
+              <span>Hassle free returns</span></p>
+            
+          </div>
+        </div>
+        <div class="first-feature">
+          <div class="d-flex">
+            <p><i class="fa-solid fa-lock"></i></p>
+            <p><span>Secure Shopping</span><br>
+              <span>Best security features</span></p>
+            
+          </div>
+        </div>
+        <div class="first-feature">
+          <div class="d-flex">
+            <p><i class="fa-solid fa-cube"></i></p>
+            <p><span>Unlimited blocks</span><br>
+              <span>Any content any page</span></p>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="why-buy-from-us container">
+      <div class="why-upper-text text-center">
+        <h1>Why buy from us ? </h1>
+        <p class="line"></p>
+        <p>Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
+        
+      </div>
+      <div class="button-container">
+        <button class="category-btn active">Top categories</button>
+        <button class="category-btn">Electronic</button>
+        <button class="category-btn">Beauty</button>
+        <button class="category-btn">Fashion</button>
+      </div>
+
+      <div class="category-products d-flex">
+        <div class="category-product">
+          <img src="images/image4.jpeg" alt="">
+          <p>Fashion</p>
+
+        </div>
+        <div class="category-product">
+          <img src="images/image8.jpeg" alt="">
+          <p>Fashion</p>
+
+        </div>
+        <div class="category-product">
+          <img src="images/image5.jpeg" alt="">
+          <p>Fashion</p>
+
+        </div>
+        <div class="category-product">
+          <img src="images/image6.jpeg" alt="">
+          <p>Fashion</p>
+
+        </div>
+        <div class="category-product">
+          <img src="images/image7.jpeg" alt="">
+          <p>Fashion</p>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <section class="why-buy-from-us featured-products-container container">
+      <div class="why-upper-text text-center">
+        <h1>Featured Products</h1>
+        <p class="line"></p>
+        <p>Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
+        
+      </div>
+      <div class="button-container">
+        <button class="category-btn active">Featured</button>
+        <button class="category-btn">Latest</button>
+        <button class="category-btn">bestsellers</button>
+        <button class="category-btn">specials</button>
+      </div>
+
+      <div class="featured-products d-flex">
+        <div class="products-card">
+          <div class="left">custom labels</div>
+          <div class="right">
+            <p class="right-1">-70%</p>
+            <p class="right-2">hot</p>
+          </div>
+          
+          <img src="images/image8.jpeg" alt="">
+          <div class="box-product d-flex justify-content-between">
+            <a href="#">Ericson</a>
+            <p>Model 519</p>
+          </div>
+          <div class="price ">
+            <h3>Headphones</h3>
+            <p>$999 <del>$3,299.00</del></p>
+          </div>
+            <div class="cart-product d-flex justify-content-between">
+              <div class="add-to-cart-btn">
+                <input type="number" name="number"
+              min = "1" max="10" step="1" value="1">
+                <button>Add to cart</button>
+              </div>
+              <div class="product-icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+              </div>
+          </div>
+          <div class="bottom-card d-flex justify-content-between align-items-center">
+            <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+            <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
+          </div>
+        </div>
+        <div class="products-card">
+          <div class="left">custom labels</div>
+          <div class="right">
+            <p class="right-1">-70%</p>
+            <p class="right-2">hot</p>
+          </div>
+          
+          <img src="images/image8.jpeg" alt="">
+          <div class="box-product d-flex justify-content-between">
+            <a href="#">Ericson</a>
+            <p>Model 519</p>
+          </div>
+          <div class="price ">
+            <h3>Headphones</h3>
+            <p>$999 <del>$3,299.00</del></p>
+          </div>
+            <div class="cart-product d-flex justify-content-between">
+              <div class="add-to-cart-btn">
+                <input type="number" name="number"
+              min = "1" max="10" step="1" value="1">
+                <button>Add to cart</button>
+              </div>
+              <div class="product-icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+              </div>
+          </div>
+          <div class="bottom-card d-flex justify-content-between align-items-center">
+            <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+            <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
+          </div>
+        </div>
+        <div class="products-card">
+          <div class="left">custom labels</div>
+          <div class="right">
+            <p class="right-1">-70%</p>
+            <p class="right-2">hot</p>
+          </div>
+          
+          <img src="images/image8.jpeg" alt="">
+          <div class="box-product d-flex justify-content-between">
+            <a href="#">Ericson</a>
+            <p>Model 519</p>
+          </div>
+          <div class="price ">
+            <h3>Headphones</h3>
+            <p>$999 <del>$3,299.00</del></p>
+          </div>
+            <div class="cart-product d-flex justify-content-between">
+              <div class="add-to-cart-btn">
+                <input type="number" name="number"
+              min = "1" max="10" step="1" value="1">
+                <button>Add to cart</button>
+              </div>
+              <div class="product-icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+              </div>
+          </div>
+          <div class="bottom-card d-flex justify-content-between align-items-center">
+            <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+            <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
+          </div>
+        </div>
+        <div class="products-card">
+          <div class="left">custom labels</div>
+          <div class="right">
+            <p class="right-1">-70%</p>
+            <p class="right-2">hot</p>
+          </div>
+          
+          <img src="images/image8.jpeg" alt="">
+          <div class="box-product d-flex justify-content-between">
+            <a href="#">Ericson</a>
+            <p>Model 519</p>
+          </div>
+          <div class="price ">
+            <h3>Headphones</h3>
+            <p>$999 <del>$3,299.00</del></p>
+          </div>
+            <div class="cart-product d-flex justify-content-between">
+              <div class="add-to-cart-btn">
+                <input type="number" name="number"
+              min = "1" max="10" step="1" value="1">
+                <button>Add to cart</button>
+              </div>
+              <div class="product-icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+              </div>
+          </div>
+          <div class="bottom-card d-flex justify-content-between align-items-center">
+            <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+            <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="show-allbutton">
+        <button >See all products <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+
+
+    </section>
+    <section class="featured-category-container">
+      <div class="featured-category container">
+        <div class="why-upper-text text-center">
+          <h1>Featured Category</h1>
+          <p class="line"></p>
+          <p>Easily create category based modules and display products from specific categories or brands only. The advanced page builder allows you to create any grid layout with full control at any breakpoint.</p>
+          
+        </div>
+
+      </div>
+     
+
+      
+
+
+
+    </section>
+
+    
+    
+</body>
+</html>
