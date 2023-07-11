@@ -645,6 +645,7 @@ li{
 .right-card img{
     width: 100%;
     margin-bottom: 10px;
+    height: 160px;
 }
 .right-card .left{
     position: absolute;
@@ -674,7 +675,7 @@ li{
     /* float: inline-end; */
 }
 .category-cart-btn{
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 .category-cart-btn button{
     background-color: var(--theme-color);
@@ -689,9 +690,9 @@ li{
     
     
 }
-.margin-top-10px{
+/* .margin-top-10px{
     margin-top: 15px;
-}
+} */
 .right-card a{
     text-decoration: none;
     color: #004fcf;
