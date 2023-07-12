@@ -1,0 +1,29 @@
+@media screen and (max-width:767px){
+
+    .footer{
+        flex-direction: column;
+        padding-left: 20px;
+        width: 100%;
+        
+    }
+    .footer-bottom-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-newsletter{
+        width: 100%;
+    }
+    .footer-myaccount{
+        width: 100%;
+        border-right: none;
+    }
+    .footer-customer-service{
+        width: 100%;
+        border-right: none;
+    }
+    .footer-about-us{
+        width: 100%;
+        border-right: none;
+    }
+    
+}

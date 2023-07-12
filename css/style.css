@@ -1065,7 +1065,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
-    height: 240px;
+    /* height: 240px; */
 
 }
 .footer ul{
