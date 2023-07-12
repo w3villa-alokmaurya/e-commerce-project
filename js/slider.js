@@ -80,3 +80,56 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+
+var owl = $('#category-products');
+owl.owlCarousel({
+    items: 5,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    // dots:true,
+});
+$('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+})
+$('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+})
+
+var owl = $('#featured-products');
+owl.owlCarousel({
+    items: 4,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    // dots:true,
+});
+$('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+})
+$('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+})
+
+
+var owl = $('#new-fashion');
+owl.owlCarousel({
+    items: 4,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    // dots:true,
+});
+$('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+})
+$('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+})
