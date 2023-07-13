@@ -82,7 +82,7 @@ owl.owlCarousel({
     items: 1,
     loop: true,
     margin: 10,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots:true,
@@ -186,7 +186,7 @@ owl.owlCarousel({
         },
         1200:{
             items:4,
-            nav:true,
+            nav:false,
             loop:false
         }
     }
@@ -222,7 +222,7 @@ owl.owlCarousel({
         },
         1000:{
             items:5,
-            nav:true,
+            nav:false,
             loop:false
         }
     }
