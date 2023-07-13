@@ -18,7 +18,8 @@
 </head>
 <body>
     <header>
-        <div class="container top-header d-flex justify-content-between">
+        <div class="container top-header  justify-content-between">
+          
             <div class="top-header-left ">
                 <ul class="d-flex">
                     <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -28,7 +29,7 @@
                 </ul>
             </div>
             <div class="top-header-middle">
-                <ul class="d-flex">
+                <ul class="d-flex mobile-language">
                     <div class="language-dropdown dropdown">
                         <button class=" dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           English
@@ -48,6 +49,10 @@
                         </div>
                       </div>
                 </ul>
+                <ul class="mobile-login">
+                  <li><a href=""><i class="fa-solid fa-circle-user"></i> Login</a></li>
+                  <li><a href=""><i class="fa-solid fa-pencil"></i> Register</a></li>
+                </ul>
             </div>
             <div class="top-header-right ">
                 <ul class="d-flex">
@@ -62,7 +67,7 @@
                             </div>
                           </div>
                     </li>
-                    <li>Delivery</li>
+                    <li><i class="fa-solid fa-truck-fast"></i> Delivery</li>
                 </ul>
             </div>
 
@@ -71,6 +76,9 @@
           <div class="middle-header d-flex  align-items-center container ">
               <div class="brand-name">
                   <h1>Journal</h1>
+              </div>
+              <div class="bars-toggle">
+                <span><i class="fa-solid fa-bars"></i></span>
               </div>
               <div class="search-bar d-flex">
                   <div class="filter-dropdown dropdown">
@@ -122,6 +130,19 @@
           </div>
         </div>
         </div>
+
+        <div class="mobile-bottom-header">
+          <div class="brand-name">
+            <h1>Journal</h1>
+          </div>
+          <div class="right-side">
+            <ul>
+              <li><i class="fa-solid fa-bars"></i></li>
+              <li><i class="fa-solid fa-magnifying-glass"></i></li>
+              <li><i class="fa-solid fa-cart-shopping"></i></li>
+            </ul>
+          </div>
+        </div>
         
     </header>
     <section class="hero-section container d-flex">
@@ -132,7 +153,7 @@
             <button class="hero-mobile-button">Mobile</button>
           <h2>Best mobile options at any resolutions</h2>
           <button class="hero-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          <img src="images/image2.png" alt="">
+          <img src="images/image5.jpeg" alt="">
   
           </div>
 
@@ -159,7 +180,7 @@
         </div> 
       </div>
     </div>
-      <div class="hero-right d-flex-column">
+      <div class="hero-right d-flex">
         <div class="hero-right-1">
           <div class="right-hero-text">
             <p>wearables</p>
@@ -184,32 +205,32 @@
         <div class="first-feature">
           <div class="d-flex">
             <p class="padding-right-5"><i class="fa-solid fa-truck-fast"></i></p>
-            <p><span>Free Shipping</span><br>
-              <span>Free delivery over $100</span></p>
+            <p><span class="white">Free Shipping</span><br>
+              <span class="gray">Free delivery over $100</span></p>
             
           </div>
         </div>
         <div class="first-feature">
           <div class="d-flex">
             <p class="padding-right-5"><i class="fa-solid fa-reply"></i></p>
-            <p><span>Free Returns</span><br>
-              <span>Hassle free returns</span></p>
+            <p><span class="white">Free Returns</span><br>
+              <span class="gray">Hassle free returns</span></p>
             
           </div>
         </div>
         <div class="first-feature">
           <div class="d-flex">
             <p class="padding-right-5"><i class="fa-solid fa-lock"></i></p>
-            <p><span>Secure Shopping</span><br>
-              <span>Best security features</span></p>
+            <p><span class="white">Secure Shopping</span><br>
+              <span class="gray">Best security features</span></p>
             
           </div>
         </div>
         <div class="first-feature">
           <div class="d-flex">
             <p ><i class="fa-solid fa-cube"></i></p>
-            <p><span>Unlimited blocks</span><br>
-              <span>Any content any page</span></p>
+            <p><span class="white">Unlimited blocks</span><br>
+              <span class="gray">Any content any page</span></p>
             
           </div>
         </div>
@@ -221,7 +242,7 @@
       <div class="why-upper-text text-center">
         <h1>Why buy from us ? </h1>
         <p class="line"></p>
-        <p>Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
+        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
         
       </div>
       <div class="button-container">
@@ -272,7 +293,7 @@
       <div class="why-upper-text text-center">
         <h1>Featured Products</h1>
         <p class="line"></p>
-        <p>Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
+        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
         
       </div>
       <div class="button-container">
@@ -458,7 +479,7 @@
         <div class="why-upper-text text-center">
           <h1>Featured Category</h1>
           <p class="line"></p>
-          <p>Easily create category based modules and display products from specific categories or brands only. The advanced page builder allows you to create any grid layout with full control at any breakpoint.</p>
+          <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Easily create category based modules and display products from specific categories or brands only. The advanced page builder allows you to create any grid layout with full control at any breakpoint.</p>
           
         </div>
         <div class="featured-categories-products d-flex">
@@ -635,7 +656,7 @@
         <div class="why-upper-text text-center">
           <h1 style="color: white;">Improved Gallery Module</h1> 
           <p class="line"></p>  
-          <p>The Gallery module supports images,videos and can also act as banners that can point at any other page pr open other Popup module. Create different modules with images, videos, banners pr a combinations of all. Add your modules on any page in ny any grid format.</p>    
+          <p style="width: 1000px; text-align: center; margin-left: auto; margin-right: auto;"></p>>The Gallery module supports images,videos and can also act as banners that can point at any other page pr open other Popup module. Create different modules with images, videos, banners pr a combinations of all. Add your modules on any page in ny any grid format.</p>    
         </div> 
         <div class="image-gallery">
           
@@ -677,7 +698,7 @@
       <div class="why-upper-text text-center">
         <h1>From Our Blog</h1>
         <p class="line"></p>
-        <p>Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
+        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
         
       </div>
       <div class="button-container">
@@ -811,7 +832,7 @@
               <p class="name"> - Alok Maurya</p>
 
             </div>
-            <div class="test-card">
+            <div class="test-card ">
               <p class="quote-s"><i class="fa-solid fa-quote-left"></i></p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus debitis itaque sequi deleniti sed magnam maiores excepturi corporis. In aliquam at repudiandae quos dolorum quisquam? Ratione, ut! Dignissimos, officiis!</p>
               <p class="name"> - Alok Maurya</p>
@@ -839,9 +860,9 @@
       </div>
 
       <div class="carousal-wrapper">
-        <div id="most-viewed" class="owl-carousel owl-theme blog-cards " style="margin-top: 40px; margin-bottom: 20px;">
+        <div id="most-viewed" class="owl-carousel owl-theme" style="margin-top: 40px; margin-bottom: 20px;">
           
-            <div class="most-viewed-card">
+            <div class="most-viewed-card ">
               <div class="image-viewed">
               <img src="images/image8.jpeg" alt="">
             </div>

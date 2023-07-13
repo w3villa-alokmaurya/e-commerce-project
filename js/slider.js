@@ -5,7 +5,29 @@ owl.owlCarousel({
     margin: 10,
     autoplay: true,
     autoplayTimeout: 1000,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:3,
+            nav:false
+        },
+        768:{
+            items:5,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:7,
+            nav:false,
+            loop:true,
+        },
+        1200:{
+            items:9,
+            nav:false,
+            loop:false
+        }
+    }
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -21,7 +43,29 @@ owl.owlCarousel({
     margin: 10,
     autoplay: true,
     autoplayTimeout: 2000,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        768:{
+            items:1,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:true,
+        },
+        1200:{
+            items:3,
+            nav:false,
+            loop:false
+        }
+    }
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -39,6 +83,23 @@ owl.owlCarousel({
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots:true,
+    responsiveClass:true,
+    // responsive:{
+    //     0:{
+    //         items:1,
+    //         nav:false
+    //     },
+    //     767:{
+    //         items:2,
+    //         nav:false,
+    //         loop:true,
+    //     },
+    //     1000:{
+    //         items:5,
+    //         nav:true,
+    //         loop:false
+    //     }
+    // }
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -55,7 +116,26 @@ owl.owlCarousel({
     margin: 10,
     autoplay: true,
     autoplayTimeout: 2000,
-    autoplayHoverPause: true
+    autoplayHoverPause: true,
+    responsiveClass:true,
+    responsiveBaseElement: window,
+
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        800:{
+            items:1,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:false
+        }
+    }
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -65,6 +145,7 @@ $('.stop').on('click', function () {
 })
 
 var owl = $('#most-viewed');
+
 owl.owlCarousel({
     items: 4,
     loop: true,
@@ -73,7 +154,31 @@ owl.owlCarousel({
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     dots:false,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:false
+        },
+        768:{
+            items:2,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:true,
+        },
+        1200:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+    
 });
+
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
 })
@@ -90,6 +195,23 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:false
+        },
+        767:{
+            items:3,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
     // dots:true,
 });
 $('.play').on('click', function () {
@@ -107,6 +229,28 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    esponsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        768:{
+            items:2,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:true,
+        },
+        1200:{
+            items:4,
+            nav:false,
+            loop:false
+        }
+    }
     // dots:true,
 });
 $('.play').on('click', function () {
@@ -125,6 +269,28 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:false
+        },
+        768:{
+            items:3,
+            nav:false,
+            loop:true,
+        },
+        1000:{
+            items:4,
+            nav:false,
+            loop:true,
+        },
+        1200:{
+            items:4,
+            nav:false,
+            loop:false
+        }
+    }
     // dots:true,
 });
 $('.play').on('click', function () {
