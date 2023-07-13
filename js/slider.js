@@ -12,7 +12,7 @@ owl.owlCarousel({
             items:3,
             nav:false
         },
-        768:{
+        767:{
             items:5,
             nav:false,
             loop:true,
@@ -50,8 +50,11 @@ owl.owlCarousel({
             items:1,
             nav:false
         },
-        768:{
-            items:1,
+        550:{
+            items:2,
+        },
+        767:{
+            items:2,
             nav:false,
             loop:true,
         },
@@ -118,19 +121,27 @@ owl.owlCarousel({
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsiveClass:true,
-    responsiveBaseElement: window,
+    
 
     responsive:{
         0:{
             items:1,
             nav:false
         },
-        800:{
-            items:1,
+        430:{
+            items:2,
+        },
+        767:{
+            items:2,
             nav:false,
             loop:true,
         },
         1000:{
+            items:3,
+            nav:false,
+            loop:false
+        },
+        1200:{
             items:3,
             nav:false,
             loop:false
@@ -160,7 +171,10 @@ owl.owlCarousel({
             items:2,
             nav:false
         },
-        768:{
+        430:{
+            items:3,
+        },
+        767:{
             items:2,
             nav:false,
             loop:true,
@@ -235,7 +249,7 @@ owl.owlCarousel({
             items:1,
             nav:false
         },
-        768:{
+        767:{
             items:2,
             nav:false,
             loop:true,
@@ -275,7 +289,7 @@ owl.owlCarousel({
             items:2,
             nav:false
         },
-        768:{
+        767:{
             items:3,
             nav:false,
             loop:true,

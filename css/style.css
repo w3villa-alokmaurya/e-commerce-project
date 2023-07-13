@@ -168,7 +168,7 @@ header{
 
 }
 .search-form input{
-    width: 400px;
+    max-width: 400px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -273,7 +273,7 @@ header{
     
 }
 #banner-slider{
-    width: 800px;
+    max-width: 800px;
     margin-right: 20px;
     height: 450px;
 }
@@ -359,20 +359,23 @@ header{
     height: 215px;
     width: 100%;
     margin-bottom: 20px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
 
 
 }
 .hero-right-1 img{
     width: 200px;
     height: 180px;
-    position: relative;
+    /* position: relative; */
     left: 220px;
     margin-bottom: 20px;
     height: auto;
     bottom: 110px;
 }
 .right-hero-text{
-    position: relative;
+    /* position: relative; */
     top: 50px;
     left: 40px;
     width: 130px;
@@ -623,6 +626,9 @@ header{
     color: black;
     font-size: 14px;
     border: 1px solid #a1a7ac;
+}
+.fa-bars{
+    display: none!important;
 }
 .product-icon i{
     color: var(--font-p-color);

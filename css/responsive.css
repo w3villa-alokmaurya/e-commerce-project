@@ -1,4 +1,4 @@
-@media screen and (max-width:800px){
+@media screen and (max-width:767px){
 
     .footer{
         flex-direction: column;
@@ -355,3 +355,31 @@
 
     
 }
+
+
+@media screen and (max-width:1272px ) and (min-width:900px) {
+.hero-section{
+    width: 100%;
+}
+#banner-slider{
+    max-width: 550px!important;
+}
+.hero-right{
+    max-width: 350px!important;
+}
+
+    
+}
+@media screen and (max-width:899px ) and (min-width:769px) {
+    .hero-section{
+        width: 100%;
+    }
+    #banner-slider{
+        max-width: 500px!important;
+    }
+    .hero-right{
+        max-width: 300px!important;
+    }
+    
+        
+    }
