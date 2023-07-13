@@ -290,6 +290,7 @@
     .viewed-right .icons{
         margin-top: 5px;
     }
+    
 
     .image-gallery{
         flex-wrap: wrap;
@@ -301,8 +302,25 @@
         margin-top: 15px;
         height: 115px;
     }
+    .featured-categories-products{
+        flex-direction: column;
+    }
     .featured-left{
-        display: none;
+        width: 107%;
+        margin-bottom: 20px;
+        margin-left: 0;
+        background-color: rgba(188, 188, 188, 0.531);
+        margin-left: -20px;
+        margin-right: -40px;
+        padding-left: 30px;
+        /* padding: 0; */
+        padding-right: 30px;
+        
+
+    }
+    .featured-left img{
+        width: 100%;
+        object-fit: cover;
     }
     .featured-right{
         width: 100%;
