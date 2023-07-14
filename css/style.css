@@ -304,11 +304,13 @@ header{
     /* width: 335px; */
     margin-top: auto;
     margin-bottom: auto;
-    /* position: relative;
-    top: 160px;
-    left: 50px; */
+    /* position: relative;*/
+    top: 100px;
+    left: 30px; 
+    position: absolute;
     padding-left: 20px;
     padding-right: 20px;
+    width: 50%;
 }
 .hero-mobile-button{
     background-color: var(--theme-color);
@@ -436,7 +438,7 @@ header{
 }
 .features-section i{
     font-size: 20px;
-    color: orange;
+    color: #f14919;
     width: 50px;
     height: 50px;
     border: 2px solid var(--theme-color);
@@ -457,11 +459,11 @@ header{
 
 }
 .why-upper-text span{
-    background-color: orange;
+    background-color: #f14919;
     width: 30px;
     font-size: 30px;
     height: 2px;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid #f14919;
 }
 .why-upper-text p{
     font-size: 16px;
@@ -469,7 +471,7 @@ header{
     
 }
 .line{
-    border-bottom: 2px orange solid;
+    border-bottom: 2px #f14919 solid;
     border-width: 3px;
     width: 70px;
     position: relative;
@@ -747,7 +749,7 @@ header{
     padding-top: 10px;
 }
 .featured-left-1{
-    border-bottom: 2px orange solid;
+    border-bottom: 2px #f14919 solid;
     border-width: 3px;
     width: 70px;
     position: relative;
@@ -757,7 +759,7 @@ header{
 
 }
 .featured-right-1{
-    border-bottom: 2px orange solid;
+    border-bottom: 2px #f14919 solid;
     border-width: 3px;
     width: 70px;
     position: relative;
@@ -851,7 +853,7 @@ header{
     height: 100%;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
-    background: orange!important;
+    background: #f14919!important;
 }
 .gallery-section{
     background-color: #384854;
@@ -863,6 +865,7 @@ header{
     flex-direction: row;
     margin-top: 40px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 .image{
     width: 130px;
@@ -989,7 +992,7 @@ header{
 
 }
 .test-card{
-    width: 400px;
+    max-width: 350px;
     height: 350px;
     text-align: center;
 
@@ -998,7 +1001,7 @@ header{
     margin-bottom: 0;
 }
 .test-card .quote-s{
-    color: orange;
+    color: #f14919;
     font-size: 60px;
 }
 .test-card .name{
@@ -1024,7 +1027,7 @@ header{
     width: 100px;
     /* justify-content: space-around; */
     /* padding-left: -2px; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 .owl-carousel .owl-stage
      {
@@ -1063,6 +1066,7 @@ header{
 }
 .most-viewed-card p{
     margin-bottom: 0;
+    margin-top: -8px;
 }
 .most-viewed-card .viewed-right p{
     font-size: 16px;

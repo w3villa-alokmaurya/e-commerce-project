@@ -34,6 +34,7 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+        height: 50px;
         
     }
     .top-header .dropdown-toggle{
@@ -43,6 +44,7 @@
     .top-header-left{
         display: none;
         visibility: hidden;
+        width: 100%;
     }
     .top-header-middle{
         display: flex;
@@ -53,6 +55,7 @@
         /* margin-left: auto; */
         /* position: relative; */
         align-items: center;
+        width: 100%;
     
     }
     .mobile-login{
@@ -83,6 +86,7 @@
     }
     .lower{
         display: none;
+        width: 100%;
     }
     .mobile-bottom-header{
         display: flex;
@@ -92,6 +96,7 @@
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
+        width: 100%;
     }
     .mobile-bottom-header h1{
         font-size: 30px;
@@ -107,6 +112,9 @@
         margin-bottom: 0;
         padding-left: 0;
 
+    }
+    .container{
+        max-width: 100%!important;
     }
     .right-side li{
         padding-left: 30px;
@@ -141,6 +149,7 @@
         /* position: relative; */
         left: 20px;
         top: 40px;
+        position: absolute;
     }
     .hero-text .hero-more-button{
         height: 30px;
@@ -274,7 +283,7 @@
     
     width: 100%;
 }
-    .most-viewed-card{
+    /* .most-viewed-card{
         max-width: 190px!important;
         height: 250px;
         flex-direction: column;
@@ -292,7 +301,7 @@
     .viewed-right .icons{
         margin-top: 5px;
     }
-    
+     */
 
     .image-gallery{
         flex-wrap: wrap;
@@ -308,7 +317,7 @@
         flex-direction: column;
     }
     .featured-left{
-        width: 107%;
+        width: 100%;
         margin-bottom: 20px;
         margin-left: 0;
         background-color: rgba(188, 188, 188, 0.531);
@@ -354,6 +363,11 @@
         height: 220px;
     }
 
+    .blog-cards{
+        justify-content: center;
+        /* margin-left: 20px; */
+    }
+
 
     
 }
@@ -372,16 +386,30 @@
 
     
 }
-@media screen and (max-width:899px ) and (min-width:769px) {
+@media screen and (max-width:899px ) and (min-width:768px) {
     .hero-section{
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     #banner-slider{
-        max-width: 500px!important;
+        max-width: 620px!important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-left{
+        width: 620px!important;
+        margin-left: auto;
+        margin-right: auto;
     }
     .hero-right{
-        max-width: 300px!important;
+        width: 620px!important;
+        margin-left: auto;
+        margin-right: auto;
     }
+    /* .hero-right-1{
+        width: ;
+    } */
     
         
     }
