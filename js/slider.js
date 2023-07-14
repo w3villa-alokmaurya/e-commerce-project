@@ -1,3 +1,4 @@
+// brands
 var owl = $('#brands');
 owl.owlCarousel({
     items: 9,
@@ -35,6 +36,9 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+
+// for blog posts
 
 var owl = $('#blog-cards');
 owl.owlCarousel({
@@ -77,6 +81,10 @@ $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
 
+
+
+// for main banner slider in hro section
+
 var owl = $('#banner-slider');
 owl.owlCarousel({
     items: 1,
@@ -87,22 +95,7 @@ owl.owlCarousel({
     autoplayHoverPause: true,
     dots:true,
     responsiveClass:true,
-    // responsive:{
-    //     0:{
-    //         items:1,
-    //         nav:false
-    //     },
-    //     767:{
-    //         items:2,
-    //         nav:false,
-    //         loop:true,
-    //     },
-    //     1000:{
-    //         items:5,
-    //         nav:true,
-    //         loop:false
-    //     }
-    // }
+  
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -110,6 +103,8 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+// for testimonials
 
 
 var owl = $('#testimonials');
@@ -154,6 +149,8 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+// most viewed
 
 var owl = $('#most-viewed');
 
@@ -200,6 +197,8 @@ $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
 
+// category products
+
 
 var owl = $('#category-products');
 owl.owlCarousel({
@@ -234,6 +233,8 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+//featured products
 
 var owl = $('#featured-products');
 owl.owlCarousel({
@@ -273,6 +274,9 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+
+//new fashion
 
 
 var owl = $('#new-fashion');
