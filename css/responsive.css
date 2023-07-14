@@ -367,6 +367,9 @@
         justify-content: center;
         
     }
+    .fa-bars{
+        display: block!important;
+    }
 
 
     
