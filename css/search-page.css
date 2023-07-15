@@ -14,6 +14,9 @@
         margin-bottom: 15px;
         padding-left: 0!important;
     }
+    .search-main-section{
+        padding-left: 0!important;
+    }
 
     .searches{
         width: 100%!important;
@@ -68,6 +71,9 @@
     .search-products .products-card{
         max-width: 480px!important;
     }
+    .search-main-section{
+        padding-left: 0!important;
+    }
 
 
 
@@ -85,6 +91,9 @@
     }
     .bredcrumbs-links{
         padding-left: 8px;
+    }
+    .search-main-section{
+        padding-left: 0!important;
     }
 
     .searches{
