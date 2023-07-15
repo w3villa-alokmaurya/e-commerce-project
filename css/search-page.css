@@ -254,6 +254,22 @@
     color: var(--font-p-color) !important;
     font-size: 18px;
     font-weight: 500;
+    background-color: white;
+}
+.price-selector{
+    position: relative;
+    width: 100%;
+}
+#pt1 {
+    position: absolute;
+    width: 100%;
+    height: 2;
+    background-color: var(--theme-color);
+    /* left: 0; */
+    color: var(--theme-color);
+}
+#pt1{
+    overflow: hidden;
 }
 
 .search-input{
