@@ -13,8 +13,6 @@
 .main-product-section{
     display: flex;
     width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 .main-product-section .right-side .right-side-top-main{
     display: flex;
