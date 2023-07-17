@@ -625,6 +625,7 @@ header{
 .cart-product{
     margin-left: 10px;
     margin-right: 10px;
+    align-items: baseline;
 }
 .add-to-cart-btn button{
     height: 35px;
