@@ -160,15 +160,20 @@ header{
     border: none;
     padding: 5px;
    
-    width: 60px;
+    width: 50px;
     height: 40px;
     border-radius: 5px;
     
 
 
 }
+.search-form{
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
 .search-form input{
-    max-width: 400px;
+    max-width: 200px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -181,7 +186,10 @@ header{
     margin-bottom: 0;
     font-size: 14px;
     color: gray;
-    margin-right: 10px;
+    padding-right: 10px;
+}
+.middle-header-cart{
+    justify-content: space-between;
 }
 .lower{
     background-color: var(--theme-color);
@@ -297,7 +305,7 @@ header{
 .btn-floating{
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 35px;
 }
 .hero-left img{
 
@@ -622,6 +630,7 @@ header{
     margin-top: 5px;
     text-transform: uppercase;font-weight: 600;
 }
+
 .cart-product{
     margin-left: 10px;
     margin-right: 10px;
@@ -638,6 +647,12 @@ header{
     border-radius: 3px;
     border: none;
 
+}
+.color-gray{
+    color: var(--font-p-color)!important;
+}
+.yellow-color{
+    color: rgb(255, 200, 0);
 }
 .add-to-cart-btn input{
     width: 60px;
@@ -1140,16 +1155,19 @@ header{
 .footer-newsletter{
     width: 300px;
     margin-bottom: 20px;
+    padding-left: 15px;
 }
 .footer-myaccount{
     width: 300px;
     margin-bottom: 20px;
     border-right: 1px solid rgb(220, 217, 217);
+    padding-left: 15px;
 }
 .footer-customer-service{
     width: 300px;
     margin-bottom: 20px;
     border-right: 1px solid rgb(220, 217, 217);
+    padding-left: 15px;
 }
 .footer li a{
     color: var(--theme-color);

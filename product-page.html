@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website The Product page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/search-page.css">
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- header section -->
+  <header>
+    <div class="container top-header  justify-content-between">
+      
+        <div class="top-header-left ">
+            <ul class="d-flex">
+                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-regular fa-envelope"></i>  About Us</a></li>
+                <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
+            </ul>
+        </div>
+        <div class="top-header-middle">
+            <ul class="d-flex mobile-language">
+                <div class="language-dropdown dropdown">
+                    <button class=" dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      English
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="language-dropdown">
+                      <a class="dropdown-item" href="#">Choose language</a>
+                      
+                    </div>
+                  </div>
+                  <div class="currency-dropdown dropdown " style="padding-left: 5px;">
+                    <button class=" dropdown-toggle" type="button" id="currency-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      $ US Dollar
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="currency-dropdown">
+                      <a class="dropdown-item" href="#">Currency</a>
+                      
+                    </div>
+                  </div>
+            </ul>
+            <ul class="mobile-login">
+              <li><a href=""><i class="fa-solid fa-circle-user"></i> Login</a></li>
+              <li><a href=""><i class="fa-solid fa-pencil"></i> Register</a></li>
+            </ul>
+        </div>
+        <div class="top-header-right ">
+            <ul class="d-flex">
+                <li>
+                    <div class="more-menu dropdown">
+                        <button class=" dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          More Menus
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="more-menu">
+                          <a class="dropdown-item" href="#">Category</a>
+                          
+                        </div>
+                      </div>
+                </li>
+                <li><i class="fa-solid fa-truck-fast"></i> Delivery</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="middle bg-gray">
+      <div class="middle-header d-flex  align-items-center container ">
+          <div class="brand-name">
+              <h1>Journal</h1>
+          </div>
+          <div class="bars-toggle">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </div>
+          <div class="search-bar d-flex">
+              <div class="filter-dropdown dropdown">
+                  <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="filter-dropdown">
+                    <a class="dropdown-item" href="#">Category</a>
+                    
+                  </div>
+                </div>
+              <form action="" class="search-form">
+                  <input type="text" placeholder="Search here...">
+                  <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+          </div>
+          <div class="middle-header-menus ">
+              <ul class="d-flex">
+                  <li><a href=""><i class="fa-solid fa-circle-user"></i>Login</a></li>
+                  <li><a href=""><i class="fa-solid fa-pencil"></i></i>Register</a></li>
+                  <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
+                  <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
+              </ul>
+          </div>
+          <div class="middle-header-cart d-flex align-items-center">
+              <p>0 item(s)-$0.00</p>
+              <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+      </div>
+    </div>
+    <div class="lower">
+    <div class="lower-header d-flex align-items-center justify-content-between container">
+      <div class="lower-left">
+        <ul class="d-flex align-items-center">
+          <li class="yellow-box"><a href=""><i class="fa-solid fa-align-left"></i> All Departments <sup>Sale</sup> </a></li>
+                  <li><a href="">Multilevel</a></li>
+                  <li><a href="">mega menu <sup class="new-yellow-up">New</sup></a></li>
+                  <li><a href="">full width</a></li>
+
+        </ul>
+      </div>
+      <div class="lower-right">
+        <ul class="d-flex align-items-center">
+        <li><a href=""><i class="fa-solid fa-phone-volume"></i> 18005556789</a></li>
+                  <li class="yellow-box-blog" style="padding-right: 0; "><a href=""><i class="fa-solid fa-file-lines"></i> Blog</a></li>
+                </ul>
+                  
+                  
+      </div>
+    </div>
+    </div>
+
+    <div class="mobile-bottom-header">
+      <div class="brand-name">
+        <h1>Journal</h1>
+      </div>
+      <div class="right-side">
+        <ul>
+          <li><i class="fa-solid fa-bars"></i></li>
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
+        </ul>
+      </div>
+    </div>
+    
+</header>
+<section class="breadcrumbs container">
+    <div class="bredcrumbs-links">
+        <span><i class="fa-solid fa-home"></i></span>
+         <span><i class="fa-solid fa-arrow-right"></i></span>
+         <span>Search</span>
+         <span><i class="fa-solid fa-arrow-right"></i></span>
+         <span>Apple Cinema 30"</span>
+    </div>
+
+</section>
+   <!-- back to top -->
+   <button
+   type="button"
+   class="btn btn-primary btn-floating btn-lg"
+   id="btn-back-to-top"
+   >
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- main product section  -->
+
+<section class="bg-all" style="padding-bottom: 20px;">
+    <div class="container">
+        <div class="search-top-text">
+            <h1>Apple Cinema 30</h1>
+            <p class="left-hr-line"></p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="container main-product-section">
+        <div class="left-side">
+            <div class="box1">
+                <img src="images/image11.jpeg" alt="">
+            </div>
+            <div class="box1">
+                <img src="images/image11.jpeg" alt="">
+            </div>
+            <div class="box1">
+                <img src="images/image11.jpeg" alt="">
+            </div>
+            <div class="box1">
+                <img src="images/image11.jpeg" alt="">
+            </div>
+            <div class="box1">
+                <img src="images/image11.jpeg" alt="">
+            </div>
+
+        </div>
+        <div class="middle-side">
+            <div class="left-side-grid products-card w-100">
+                <!-- <div class="left">Pre Order</div> -->
+                  <div class="right">
+                    <p class="right-1">-70%</p>
+                    <p class="right-2">hot</p>
+                  </div>
+                  
+                  <img src="images/image2.png" alt="">
+
+              </div>
+
+        </div>
+        <div class="right-side">
+            <div class="right-side-top">
+
+            
+                <div class="right-side-top-main">
+                    <div>
+                    <h3>Description</h3>
+                    <p class="line start w-110"></p>
+                    </div>
+                    <div>
+                        <h3 class="color-gray">Specifications</h3>
+                        <!-- <p class="line start"></p> -->
+
+                    </div>
+                    <div>
+                        <h3 class="color-gray">Reviews</h3>
+                        <!-- <p class="line start"></p> -->
+
+                    </div>
+                    <div>
+                        <h3 style="padding-right: 0;" class="color-gray">Custom Tabs</h3>
+                        <!-- <p class="line start"></p> -->
+
+                    </div>
+                    
+                    
+                    
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda esse rem saepe! Doloremque quisquam, nostrum in quas aliquam eos nulla. Esse obcaecati quo asperiores impedit exercitationem libero temporibus voluptas hic?</p>
+                <div class="review-section-right">
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star yellow-color"></i>
+                        <i class="fa-solid fa-star yellow-color"></i>
+                        <i class="fa-solid fa-star yellow-color"></i>
+                        <i class="fa-solid fa-star yellow-color"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+                    <a href="">Based on 1 reviews </a>
+                    <span style="padding-right: 10px;"> - </span>
+                    <a href="">Write a review</a>
+
+                </div>
+
+            </div>
+            <hr/>
+
+            <div class="right-side-middle">
+                <div class="middle-left">
+                    <h3><del>39.99$</del></h3>
+                    <h2 class="color-red">71.61$</h2>
+                    <p style="padding-bottom: 5px;">Ex tax:1,717.49$</p>
+                    <p style="padding-bottom: 5px;">Price in reward point: 400</p>
+                    
+                    <p>10 or more 69.04$</p>
+                    <p>10 or more 69.04$</p>
+                    <p>10 or more 69.04$</p>
+
+                </div>
+                <div class="middle-middle">
+                    <p class="color-light-green"><i class="fa-solid fa-check"></i> In Stock</p>
+                    <div>
+                        <li>Reward Points: 100</li>
+                        <li>Model: Product 15</li>
+                        <li>Weight: 12.50kg</li>
+                        <li>Dimensions: 1.00cm <i class="fa-solid fa-xmark"></i> 2.00cm <i class="fa-solid fa-xmark"></i> 3.00cm</li>
+                    </div>
+
+                </div>
+                <div class="middle-right">
+                    <img src="images/apple.png" alt="">
+                    <a href="">Apple</a>
+                </div>
+            </div>
+            <hr/>
+            <div class="right-side-bottom">
+                <div class="options">
+                    <p>Another Select <span class="color-red">*</span></p>
+                    <select name="" id="">
+                        <option value="">--- Please Select ----</option>
+                    </select>
+                </div>
+                <div class="options">
+                    <p>Select list <span class="color-red">*</span></p>
+                    <select name="" id="">
+                        <option value="">--- Please Select ----</option>
+                    </select>
+                </div>
+                <div class="options">
+                    <p>Radio <span class="color-red">*</span></p>
+                    <div class="radio-group-btn">
+
+                    
+                    <div class="radio-buttons">
+                        <input type="radio" name="1" id="">
+                    <label for="">Small (+7.85$)</label>
+                    </div>
+                    <div class="radio-buttons">
+                        <input type="radio" name="1" id="">
+                    <label for="">Medium (+8.85$)</label>
+                    </div>
+                    <div class="radio-buttons">
+                        <input type="radio" name="1" id="">
+                    <label for="">Large (+10.85$)</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="options">
+                    <p>Single choice(with image) <span class="color-red">*</span></p>
+                    <div class="circles">
+                      <div class="circle bg-aqua">
+
+                        </div>
+                        <div class="circle bg-violet">
+                            
+                        </div>
+                        <div class="circle bg-aqua-dark">
+                            
+                        </div>
+                        <div class="circle bg-red1">
+                            
+                        </div>  
+                    </div>
+                    
+                </div>
+                <div class="options">
+                    <p>Text <span class="color-red">*</span></p>
+                    <input type="text" placeholder="text">
+                </div>
+                <div class="options">
+                    <p>Textarea <span class="color-red">*</span></p>
+                    <textarea class="input-w-100"  name="" id="" cols="10" rows="5"></textarea>
+                </div>
+                <div class="options">
+                    <p>File</p>
+                    <button class="upload-file"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload File</button>
+
+                </div>
+                <div class="options">
+                    <p>date <span class="color-red">*</span></p>
+                    <input class="input-w-90" type="date" placeholder="text">
+                    <button class="calender-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+                <div class="options">
+                    <p>time <span class="color-red">*</span></p>
+                    <input class="input-w-90"  type="time" placeholder="text">
+                    <button class="calender-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+                <div class="options">
+                    <p>Date & time <span class="color-red">*</span></p>
+                    <input class="input-w-90"  type="datetime" placeholder="text">
+                    <button class="calender-btn"><i class="fa-solid fa-calendar-days"></i></button>
+                </div>
+                <div class="right-side-button-cart">
+                    <input type="number" name="number"
+                  min = "1" max="10" step="1" value="1">
+                    <button style="width:410px;"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                    <button  style="background-color: rgb(15, 114, 15); width: 170px;"><i class="fa-solid fa-sack-dollar"></i> Buy Now</button>
+                    <button class="" style="background-color: red; width: 62px;"> <i class="fa-solid fa-circle-question"></i></button>
+                </div>
+                <hr>
+                <div class="icons-with-text-bottom">
+                    <span role="button"><i class="fa-solid fa-heart " style="color: red; margin-right: 5px;"></i> Add to Wishlist</span>
+                    <span role="button"><i style="color: var(--theme-color); margin-left: 20px; margin-right: 5px;" class="fa-solid fa-arrow-down-up-across-line"></i>Compare this Product</span>
+                </div>
+                <div class="min-quantity">
+                    <p><i class="fa-solid fa-info"></i> This Product has a minimum quantity of 2.</p>
+                </div>
+                <div class="social-menu  share-social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                   <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-skype"></i></a>
+                    <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section style="background-color:rgb(153 153 153 / 13%)">
+    <div class="container products-page-related-products">
+        <div class="most-viewed-top-search-page">
+            <div class="why-upper-text text-start" style="margin-right: 25px;">
+                <h1 style=" font-size: 20px;">Related products </h1>
+                <p class="line start"></p>
+                
+              </div>
+            <div class="why-upper-text text-start">
+            <h1 style="color: rgb(186, 186, 186); font-size: 20px;">People also Bought</h1>
+            <!-- <p class="line start"></p> -->
+            
+            </div>
+
+
+        </div>
+        <div class="cards-products-page">
+            <div class="right-card">
+                <div class="left">2-3 days</div>
+                <div class="right">
+                <p class="right-1">New</p>
+                <p class="right-2">hot</p>
+                </div>
+                <img src="images/image8.jpeg" alt="">
+                <a href="">Bodycorn Dress</a>
+                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
+                <hr/>
+                <div class="cart-product d-flex justify-content-between">
+                <div class="category-cart-btn">
+                    <button>Add to cart</button>
+                </div>
+                <div class="product-icon margin-top-10px">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+                </div>
+            </div>
+
+            </div>
+            <div class="right-card">
+                <div class="left">2-3 days</div>
+                <div class="right">
+                <p class="right-1">New</p>
+                <p class="right-2">hot</p>
+                </div>
+                <img src="images/image8.jpeg" alt="">
+                <a href="">Bodycorn Dress</a>
+                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
+                <hr/>
+                <div class="cart-product d-flex justify-content-between">
+                <div class="category-cart-btn">
+                    <button>Add to cart</button>
+                </div>
+                <div class="product-icon margin-top-10px">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="why-buy-from-us most-buy-section" style="margin-bottom: 0;">
+    <div class="container">
+        <div class="most-viewed-top-search-page">
+            <div class="why-upper-text text-start" style="margin-right: 25px;">
+                <h1 style="color: white; font-size: 20px;">Recently Viewed</h1>
+                <p class="line start"></p>
+                
+              </div>
+            <div class="why-upper-text text-start">
+            <h1 style="color: rgb(186, 186, 186); font-size: 20px;">Most Viewed</h1>
+            <!-- <p class="line start"></p> -->
+            
+            </div>
+
+        </div>
+        
+
+    <div class="">
+      <div  class="" >
+        
+          
+          <div class="most-viewed-card">
+            <div class="image-viewed">
+            <img src="images/image8.jpeg" alt="">
+          </div>
+            <div class="viewed-right">
+              <h1>Sunglaseses oversized for lon....</h1>
+            <p>$397.00</p>
+            <div class="icons">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-heart"></i>
+              <i  class="fa-solid fa-arrow-down-up-across-line fa-rotate-90" style="margin-left: 0px;"></i>
+            </div>
+
+            </div>
+          </div>
+          
+        
+        
+    </div>
+    </div>
+  </div>
+  </section>
+
+
+ <!-- social-menu sections -->
+
+ <section class="social-menus" >
+    <div class="social-menu container">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <a href=""><i class="fa-brands fa-skype"></i></a>
+      <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+    </div>
+
+  </section>
+
+    <!-- footer section -->
+
+    <footer class="">
+      <div class="footer container">
+        <div class="footer-about-us">
+          <h3>
+            About Us
+          </h3>
+          <p class="line start"></p>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Delivery</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+            <li><a href="">Custom links</a></li>
+          </ul>
+          
+        </div>
+        
+        <div class="footer-customer-service">
+          <h3>
+            Customer service
+          </h3>
+          <p class="line start"></p>
+          <ul>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Returns</a></li>
+            <li><a href="">Site Map</a></li>
+            <li><a href="">Brands</a></li>
+            <li><a href="">Unlimited links</a></li>
+          </ul>
+        </div>
+        <div class="footer-myaccount">
+          <h3>
+            My Account
+          </h3>
+          <p class="line start"></p>
+          <ul>
+            <li><a href="">My Account</a></li>
+            <li><a href="">Order History</a></li>
+            <li><a href="">Affiliates</a></li>
+            <li><a href="">Newsletter</a></li>
+            <li><a href="">Gift Certificates</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>
+            Newsletter
+          </h3>
+          <p class="line start"></p>
+          <p>Stay up to date with news and promotions by signing up for our newsletter.</p>
+          <form action="" class="subscribe-form">
+            <input type="email" placeholder="abc@gmail.com">
+            <button type="submit">
+              <span><i class="fa-solid fa-envelope"></i> Send</span>
+            </button>
+            <div class="checkbox"><input type="checkbox" name="" id="">
+              <label for="">I have read and agree to the <a href="">Privacy policy</a></label></div>
+            
+          </form>
+          
+        </div>
+      </div>
+      
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+          <p>Copyright &copy 2014.Your Store.All rights Reserved</p>
+        <div class="payments-secure">
+          <p><i><i class="fa-brands fa-cc-mastercard"></i></i></p>
+          <p><i class="fa-brands fa-cc-visa"></i></p>
+          <p><i class="fa-brands fa-cc-amex"></i></p>
+          <p><i class="fa-brands fa-cc-discover"></i></p>
+          <p><i class="fa-brands fa-cc-paypal"></i></p>
+         
+          <p> <i class="fa-brands fa-cc-stripe"></i></p>
+
+
+        </div>
+
+        </div>
+        
+
+    </footer>
+
+   <script src="js/search.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>
