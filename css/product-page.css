@@ -8,6 +8,32 @@
         width: 100%;
         height: 250px;
     }
+    .middle-right{
+        padding-left: 10px;
+    }
+    .middle-middle li{
+        padding-left: 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .middle-middle{
+        padding-right: 10px;
+        padding-left: 0!important;
+    }
+    .middle-left h2{
+        font-size: 20px!important;
+    }
+    .middle-left del{
+        font-size: 16px!important;
+    }
+    .middle-left p{
+        font-size: 15px!important;
+    }
+    .right-side-middle{
+        flex-direction: column-reverse;
+
+    }
+    .middle-left
     .main-product-section .middle-side{
     width:84%;
     /* height: 500px; */
@@ -89,6 +115,9 @@
 }
 .review-section-right a{
     margin-right: 10px;
+}
+.right-side-middle-left{
+    display: flex
 }
 .right-side-middle{
     display: flex;

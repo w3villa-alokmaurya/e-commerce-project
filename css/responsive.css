@@ -1,5 +1,8 @@
 @media screen and (max-width:800px){
+    /* p{
+        font-size: 14px;
 
+    } */
     .footer{
         flex-direction: column;
         padding-left: 20px;
@@ -24,6 +27,7 @@
     .footer-about-us{
         width: 100%;
         border-right: none;
+        padding-left: 20px;
     }
 
 
@@ -117,7 +121,7 @@
         max-width: 100%!important;
     }
     .right-side li{
-        padding-left: 30px;
+        padding-left: 25px;
         font-size: 25px;
         font-weight: 600;
     }
@@ -338,8 +342,8 @@
         /* height: 200px; */
     }
     .right-card{
-        height: 250px;
-        width: 200px;
+        height: 300px;
+        width: 220px;
 
     }
     .right-card img{
