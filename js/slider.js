@@ -333,6 +333,6 @@ $('.stop').on('click', function () {
 
 
 function redirect_search() {
-    window.location.href = "/search-page.html";
+    window.location.href = "/search-page";
     
 }
