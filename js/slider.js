@@ -250,6 +250,11 @@ owl.owlCarousel({
             items:1,
             nav:false
         },
+        620:{
+            items:2,
+            nav:false,
+            loop:true,
+        },
         767:{
             items:2,
             nav:false,
@@ -321,3 +326,13 @@ $('.play').on('click', function () {
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+
+
+
+
+
+function redirect_search() {
+    window.location.href = "/search-page.html";
+    
+}

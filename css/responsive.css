@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width:800px){
     /* p{
         font-size: 14px;
@@ -28,6 +30,16 @@
         width: 100%;
         border-right: none;
         padding-left: 20px;
+    }
+    .bottom-blog-text p{
+        font-size: 15px;
+    }
+    .test-card p{
+        font-size: 15px;
+    }
+    .bottom-blog-text h1{
+        font-size: 20px;
+        padding-top: 10px;
     }
 
 
@@ -370,6 +382,7 @@
 
     .blog-cards{
         justify-content: center;
+        padding-left: 20px;
         
     }
     .fa-bars{
