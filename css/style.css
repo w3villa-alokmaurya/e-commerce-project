@@ -540,6 +540,10 @@ header{
     width: 100%;
     border-radius: 5px;
 }
+.category-product img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
 .category-product p{
     position: relative;
     bottom: 40px;
