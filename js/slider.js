@@ -293,6 +293,9 @@ owl.owlCarousel({
             items:1,
             nav:false
         },
+        530:{
+            items:2,
+        },
         767:{
             items:3,
             nav:false,
