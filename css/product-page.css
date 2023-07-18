@@ -3,6 +3,15 @@
         flex-direction: column;
         padding-right: 25px;
         
+        
+    }
+    .product-most-viewed-page{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .bg-all{
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .products-main-1{
         width: 100%;
@@ -15,6 +24,10 @@
         padding-left: 0;
         font-size: 14px;
         font-weight: 500;
+    }
+    .products-page-related-products{
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .middle-middle{
         padding-right: 10px;
@@ -412,6 +425,9 @@ input[type="datetime"]::-webkit-calendar-picker-indicator {
     padding-top: 20px;
     margin-bottom: -20px;
     padding-bottom: 20px;
+    
+
+
     /* margin-top: 20px; */
 }
  
