@@ -342,8 +342,9 @@
         /* height: 200px; */
     }
     .right-card{
-        height: 320px;
-        width: 260px;
+        max-height: 320px;
+        max-width: 300px;
+        margin-right: 0;
 
     }
     .right-card img{
