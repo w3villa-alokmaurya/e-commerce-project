@@ -280,6 +280,7 @@
     .button-container{
         padding-top: 10px;
         margin-bottom: 10px;
+        flex-wrap: wrap;
     }
     .category-btn{
         height: 40px;
@@ -383,7 +384,7 @@
 
     .blog-cards{
         justify-content: center;
-        padding-left: 20px;
+        padding-left: 10px;
         
     }
     .fa-bars{

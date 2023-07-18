@@ -7,7 +7,7 @@
 
 
 :root{
-    --theme-color: #004fcf;
+    --theme-color: rgba(13,82,214,1);
     --font-p-color: gray;
 }
 .d-flex{
@@ -516,10 +516,30 @@ header{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
+    width: 160px;
+    /* overflow: hidden; */
+    position: relative;
     
 
 }
 .category-btn.active{
+    background-color: var(--theme-color)!important;
+    color: white;
+}
+
+.category-btn span{
+    position: absolute;
+    left: 72px;
+    width: 15px;
+    height: 15px;
+    bottom: -6px;
+    background-color: var(--theme-color);
+    /* left: 0; */
+    transform: rotate(320deg);
+    overflow: hidden;
+
+}
+.category-btn:hover{
     background-color: var(--theme-color)!important;
     color: white;
 }
@@ -539,10 +559,15 @@ header{
     height: 100%;
     width: 100%;
     border-radius: 5px;
+    /* width: 240px!important; */
+    /* display: block; */
 }
 .category-product img:hover{
     transform: scale(1.1);
     transition: .4s;
+    /* padding: 20px; */
+    /* width: 400px; */
+    /* width: 230px!important; */
 }
 .category-product p{
     position: relative;
@@ -568,6 +593,17 @@ header{
     overflow: hidden;
     margin-right: 20px;
     border-radius: 5px;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    /* height: auto; */
+}
+.products-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .5s;
+    /* position: relative;
+    overflow: hidden;
+    height: auto; */
+    /* margin-bottom: 20px; */
 }
 .products-card img{
     width: 100%;
@@ -575,8 +611,9 @@ header{
     object-fit: cover;
 }
 .products-card img:hover{
-    transform: scale3d(1.1);
+    transform: scale(1.1);
     transition: .4s;
+    /* position: relative; */
 }
 .box-product{
     background-color: #edf1f4;
@@ -921,7 +958,7 @@ header{
 
 }
 .blog-container{
-    background-color: rgba(220, 220, 220, 0.369);
+    background-color: rgb(248, 248, 248);
     margin-top: 0;
     padding-top: 40px;
 }
