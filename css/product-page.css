@@ -117,6 +117,7 @@
     font-size: 18px;
     font-weight: 600;
     padding-right: 8px;
+    color: var(--font-p-color);
 }
 .right-side-top{
     width: 100%;
@@ -435,10 +436,112 @@ input[type="datetime"]::-webkit-calendar-picker-indicator {
     /* margin-top: 20px; */
 }
 
-.hide-text-auto{
+/* .hide-text-auto{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+} */
+.tabs .active .line{
+    display: block!important;
+    
+
 }
+.tab{
+    cursor: pointer;
+}
+.tab h3:hover{
+    color: black!important;
+
+}
+.tabs .active h3{
+    color: black!important;
+}
+.tab .line{
+    display: none;
+}
+.tab-content div{
+    display: none;
+    
+}
+ .show-more-tab{
+    background-color: var(--theme-color);
+    color: white!important;
+    height: 20px;
+    width: auto;
+    padding: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    bottom: 20px;
+    left: 280px;
+
+}
+.hide-text-auto1{
+    /* overflow: hidden;  */
+    height: 70px;
+    
+}
+.overflow-hidden{
+    overflow: hidden!important;
+    
+}
+.overflow-none{
+    overflow: none!important;
+    height: auto!important;
+}
+.hide-text-auto1 p{
+    box-shadow: 0px 15px 10px -15px white;
+    text-align: justify;
+}
+.specifications .thead{
+    color: black;
+    background-color: rgba(178, 178, 178, 0.613);
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+table tr td{
+    padding: 15px;
+}
+table{
+    border: 1px solid rgba(128, 128, 128, 0.501);
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.review-tab-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.review-tab{
+    border: 1px solid rgba(182, 179, 179, 0.661);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.review-tab-top h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.show-more-tab-content #more{
+    display: none;
+}
+.btn-block{
+    display: block;
+}
+.btn-none{
+    display: none;
+}
+
+
  
 
