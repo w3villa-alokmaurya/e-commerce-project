@@ -197,7 +197,17 @@
 .main-product-section .middle-side img{
     /* width: 450px; */
     height: 500px;
+    transition: all .5s ease-in-out;
 }
+.middle-side .products-card{
+    box-shadow: none!important;
+}
+.main-product-section .middle-side img:hover{
+   transform: scale(3)!important;
+   
+   
+}
+
 .middle-right{
     height: 130px;
     width: 100px;
