@@ -266,20 +266,7 @@ header{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.hero-left{
-    /* width: 65%;
-    background-color: #edf1f4;
-    margin-right: 20px;
-    background-image: url('../images/image2.png');
-    background-position: 350px 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 10px;
-    height: 500px; */
-    
-    
-}
+
 #banner-slider{
     max-width: 800px;
     margin-right: 20px;
@@ -886,9 +873,6 @@ header{
     font-size: 8px;
     /* float: inline-end; */
 }
-.category-cart-btn{
-    /* margin-top: 15px; */
-}
 .category-cart-btn button{
     background-color: var(--theme-color);
     border: none;
@@ -1239,14 +1223,6 @@ header{
 .footer h3{
     font-size: 16px;
     font-weight: 600;
-}
-.vertical-line{
-    /* border-right: 1px solid rgb(220, 217, 217); */
-    /* position: relative;
-    top: 0;
-    right: 0; */
-    /* padding-bottom: 10px; */
-
 }
 .subscribe-form{
     position: relative;
