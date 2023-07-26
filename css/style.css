@@ -286,6 +286,8 @@ header{
     max-width: 800px;
     margin-right: 20px;
     height: 450px;
+    position: relative;
+    z-index: -1;
 }
 
 .hero-left{
@@ -329,6 +331,7 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     width: 50%;
+    
 }
 .hero-mobile-button{
     background-color: var(--theme-color);
@@ -370,6 +373,7 @@ header{
     position: absolute;
     left: 50px;
     bottom: 20px;
+    
 }
 /* .hero-left img{
     width: 300px;
@@ -494,6 +498,7 @@ header{
     width: 70px;
     position: relative;
     left: 600px;
+    z-index: -1;
 
 }
 .why-upper-text a{
@@ -1040,6 +1045,7 @@ header{
     height: 0px;
     position: absolute;
     top: 365px;
+    /* z-index: 1; */
 
 }
 
@@ -1309,17 +1315,22 @@ header{
 .popup .active{
     display: block!important;
     transition: all .4s ease-in-out;
-    transform: translate(0%,5%) scale(1);     
+    transform: translate(0%,5%) scale(1);  
+    position: fixed;
+    left: 35%;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    padding: 30px;
+    z-index: 1;  
+    /* overflow-y: hidden; */
 }
+
 .popup{
     transition: all .4s ease-in-out;
-    transform: translate(0%,5%) scale(1);  
-<<<<<<< HEAD
-    /* position: absolute; */
-    /* background-color: #384854;
-    color: white; */
-=======
->>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
+    /* transform: translate(0%,5%) scale(1);   */
+    
+
 }
 .popup .none{
     display: none!important;
@@ -1342,12 +1353,7 @@ header{
     margin-right: auto;
     width: 400px;
     height: 400px;
-    
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
+
 }
 .close-btn{
 
@@ -1363,11 +1369,7 @@ header{
 }
 .login-form{
     padding-top: 40px;
-<<<<<<< HEAD
-    
-=======
-    position: relative;
->>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
+
     
 }
 .login-form .form-control1{
