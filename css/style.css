@@ -1314,6 +1314,9 @@ header{
 .popup{
     transition: all .4s ease-in-out;
     transform: translate(0%,5%) scale(1);  
+    /* position: absolute; */
+    /* background-color: #384854;
+    color: white; */
 }
 .popup .none{
     display: none!important;
@@ -1338,6 +1341,7 @@ header{
     height: 400px;
     
     
+    
 }
 .close-btn{
 
@@ -1353,7 +1357,7 @@ header{
 }
 .login-form{
     padding-top: 40px;
-    position: relative;
+    
     
 }
 .login-form .form-control1{
