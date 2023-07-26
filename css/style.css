@@ -48,6 +48,10 @@ h1{
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+a:hover{
+    color: var(--theme-color)!important;
 }
 li{
     list-style: none;
@@ -57,6 +61,13 @@ header{
 }
 .mobile-login{
     display: none;
+}
+.mobile-login a{
+    color: white!important;
+    cursor: pointer;
+}
+.mobile-login a:hover{
+    color: black!important;
 }
 .mobile-bottom-header{
     display: none;
@@ -123,10 +134,14 @@ header{
     padding-left: 0;
 }
 .middle-header a{
-    color: gray;
+    color: gray!important;
     text-decoration: none;
     padding-left: 5px;
+    cursor: pointer;
     
+}
+.middle-header a:hover{
+    color: var(--theme-color)!important;
 }
 .middle-header-menus li{
     width: 55px;
@@ -1284,4 +1299,82 @@ header{
 .payments-secure p{
     margin-right: 10px;
     font-size: 20px;
+}
+
+
+
+/* .login-popup{
+    display: none;
+} */
+.popup .active{
+    display: block!important;
+    transition: all .4s ease-in-out;
+    transform: translate(0%,5%) scale(1);     
+}
+.popup{
+    transition: all .4s ease-in-out;
+    transform: translate(0%,5%) scale(1);  
+}
+.popup .none{
+    display: none!important;
+}
+/* .popup{transition: .5s ;
+    margin-bottom: -40px;
+} */
+.popup .login-form .active{
+    
+} 
+
+.login-popup{
+    transition: all .4s ease-in-out;
+    transform: translate(0%,5%) scale(1.1);  
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* display: none; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    
+    
+}
+.close-btn{
+
+    border: none;
+    background: var(--theme-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    float: right;
+    margin-top: 10px;
+
+}
+.login-form{
+    padding-top: 40px;
+    position: relative;
+    
+}
+.login-form .form-control1{
+    width: 100%;
+    padding: 3px;
+}
+.login-form input{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid rgba(128, 128, 128, 0.43);
+    padding: 3px 5px;
+}
+#signin{
+    border: none;
+    color: white;
+    background-color: var(--theme-color);
+    border-radius: 3px;
+    width: 70px;
+    height: 35px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }

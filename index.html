@@ -52,8 +52,8 @@
                       </div>
                 </ul>
                 <ul class="mobile-login">
-                  <li><a href=""><i class="fa-solid fa-circle-user"></i> Login</a></li>
-                  <li><a href=""><i class="fa-solid fa-pencil"></i> Register</a></li>
+                  <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i> Login</a></li>
+                  <li><a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i> Register</a></li>
                 </ul>
             </div>
             <div class="top-header-right ">
@@ -99,8 +99,8 @@
               </div>
               <div class="middle-header-menus ">
                   <ul class="d-flex">
-                      <li><a href=""><i class="fa-solid fa-circle-user"></i>Login</a></li>
-                      <li><a href=""><i class="fa-solid fa-pencil"></i></i>Register</a></li>
+                      <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></li>
+                      <li><a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></li>
                       <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
                       <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
                   </ul>
@@ -147,6 +147,54 @@
         </div>
         
     </header>
+
+
+    <section class="popup" id="popup">
+      <div class="login-popup none" id="popup-login">
+        <button onclick="toggleclose()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+     
+      <div class="login-form">
+        <div class="form-control1">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form-control1">
+        <label for="password">Password</label>
+        <input type="password"  id="password" name="password">
+      </div>
+        <button type="submit" id="signin">Sign in</button>
+        <div class="register-link">
+          <p>Don't have an account? <a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></p>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <section class="popup" id="popup1">
+      <div class="login-popup none" id="popup-signup">
+        <button onclick="togglecloseregister()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+     
+      <div class="login-form">
+        <div class="form-control1">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="form-control1">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form-control1">
+        <label for="password">Password</label>
+        <input type="password"  id="password" name="password">
+      </div>
+        <button type="submit" id="signin">Sign Up</button>
+        <div class="register-link">
+          <p>Already have an account? <a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></p>
+        </div>
+      </div>
+    </div>
+
+    </section>
 
 
     <!-- back to top -->
@@ -1094,5 +1142,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/login.js"></script>
+<script src="js/signup.js"></script>
 </body>
 </html>
