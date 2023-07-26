@@ -1314,9 +1314,12 @@ header{
 .popup{
     transition: all .4s ease-in-out;
     transform: translate(0%,5%) scale(1);  
+<<<<<<< HEAD
     /* position: absolute; */
     /* background-color: #384854;
     color: white; */
+=======
+>>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
 }
 .popup .none{
     display: none!important;
@@ -1341,7 +1344,10 @@ header{
     height: 400px;
     
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
 }
 .close-btn{
 
@@ -1357,7 +1363,11 @@ header{
 }
 .login-form{
     padding-top: 40px;
+<<<<<<< HEAD
     
+=======
+    position: relative;
+>>>>>>> b9ec011ac6259c772343a38ece306f8f7db6ec27
     
 }
 .login-form .form-control1{
