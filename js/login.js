@@ -1,19 +1,56 @@
 function togglepopuplogin(){
-    let popup = document.getElementById('popup-login');
-    popup.classList.add('active');
-    popup.classList.remove('none');
     if(document.getElementById('popup-signup').classList.contains('active')){
         document.getElementById('popup-signup').classList.remove('active');
         document.getElementById('popup-signup').classList.add('none');
+        document.getElementById('popup1').classList.remove('overlay');
 
     }
+    let popup = document.getElementById('popup');
+    let modal =  document.getElementById('popup-login');
+    modal.classList.add('active');
+    popup.classList.add('overlay')
+    modal.classList.remove('none');
+   
 
 }
 // togglepopup();
 
 const toggleclose=()=>{
-    let popup = document.getElementById('popup-login');
-    popup.classList.add('none');
-    popup.classList.remove('active');
+    let popup = document.getElementById('popup');
+    let modal =  document.getElementById('popup-login');
+    modal.classList.remove('active');
+    modal.classList.add('none');
+    popup.classList.remove('overlay');
 }
 // toggleclose();
+
+
+
+const LoginForm=()=>{
+    const signupform = document.getElementById('login');
+
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if(email.length == 0){
+        alert("Enter valid email");
+    }
+    else if(password.length == 0){
+        alert("Enter valid password");
+    }
+    else if(password.length<6){
+        alert("Password should be 6 characters");
+    }
+    else if(email==localStorage.getItem('email', email) && localStorage.getItem('password', password)){
+        alert("Logged in");
+        var token = 'ecom'+Math.random(1,9999999);
+        sessionStorage.setItem('token',token);
+        toggleclose();
+
+    }
+    else{
+        alert("Email or password is Wrong.");
+    }
+
+
+}

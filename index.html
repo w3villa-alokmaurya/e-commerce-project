@@ -153,7 +153,7 @@
       <div class="login-popup none" id="popup-login">
         <button onclick="toggleclose()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
      
-      <div class="login-form">
+      <div class="login-form" id="login">
         <div class="form-control1">
         <label for="email">Email</label>
         <input type="email" name="email" id="email">
@@ -162,7 +162,7 @@
         <label for="password">Password</label>
         <input type="password"  id="password" name="password">
       </div>
-        <button type="submit" id="signin">Sign in</button>
+        <button type="submit" id="signin" onclick="LoginForm()">Sign in</button>
         <div class="register-link">
           <p>Don't have an account? <a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></p>
         </div>
@@ -176,20 +176,20 @@
       <div class="login-popup none" id="popup-signup">
         <button onclick="togglecloseregister()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
      
-      <div class="login-form">
+      <div  class="login-form" id="signup">
         <div class="form-control1">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" autocomplete="off">
         </div>
         <div class="form-control1">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="signupemail" autocomplete="off">
       </div>
       <div class="form-control1">
         <label for="password">Password</label>
-        <input type="password"  id="password" name="password">
+        <input type="password"  id="signuppassword" name="password">
       </div>
-        <button type="submit" id="signin">Sign Up</button>
+        <button type="submit" onclick="RegisterForm()" id="signin">Sign Up</button>
         <div class="register-link">
           <p>Already have an account? <a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></p>
         </div>
@@ -197,6 +197,7 @@
     </div>
 
     </section>
+    <!-- <div class="overlay none"></div> -->
 
 
     <!-- back to top -->
