@@ -50,9 +50,9 @@ a{
     color: black;
     cursor: pointer;
 }
-a:hover{
+/* a:hover{
     color: var(--theme-color)!important;
-}
+} */
 li{
     list-style: none;
 }
@@ -89,6 +89,9 @@ header{
 }
 .top-header a{
     font-size: 12px;
+}
+.top-header a:hover{
+    color: var(--theme-color)!important;
 }
 .top-header-left a{
     text-decoration: none;
@@ -217,7 +220,7 @@ header{
 }
 .lower{
     background-color: var(--theme-color);
-    color: white;
+    /* color: white; */
 }
 .lower-header{
     height: 50px;
@@ -229,18 +232,49 @@ header{
 
 .lower-header li{
     padding-right: 20px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
+    width: 120px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 15px;
+    color: black!important;
+    
+}
+.lower-header li:hover a{
+    color: black;
 }
 .lower-header a{
-    color: white;
+    /* color: white; */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+.lower-header a:hover{
+    color: black;
+}
+/* .lower-header li a:hover{
+    color: black!important;
+    background-color: white;
+} */
+/* .lower-header li{
+    width: 120px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 15px;
+    color: black!important;
+} */
+
+.lower-header li:hover{
+    background-color: white!important;
+    cursor: pointer;
+    color: black!important;
+
 }
 .yellow-box{
     background-color: rgb(255, 179, 16);
-    width: 200px;
+    width: 200px!important;
     height: 50px;
     padding-top: 15px;
     padding-left: 15px;
@@ -252,8 +286,8 @@ header{
     padding: 3px;
     font-size: 8px;
     border-radius: 2px;
-    top: -30px;
-    right: 0px;
+    top: -52px;
+    right: -80px;
 }
 .yellow-box-blog{
     background-color: rgb(255, 179, 16);
@@ -1474,5 +1508,51 @@ header{
     width: 30px;
     height: 30px;
     /* z-index: 2; */
+
+}
+.lower-header .yellow-box .dropdown-block:hover .dropdown-content{
+    background-color: rgb(237, 237, 237)!important;
+    right: -20px;
+    width: 200px;
+    top: 35px;
+}
+.lower-header .dropdown-block:hover .dropdown-content{
+    background-color: rgb(237, 237, 237)!important;
+    right: -100px;
+    width: 200px;
+    top: 35px;
+}
+.float-right{
+    float: right!important;
+}
+
+.float-left{
+    float: left;
+}
+.sub-dropdown-content{
+    display: none;
+}
+.sub-dropdown{
+    font-weight: 600!important;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+    
+}
+
+.sub-dropdown:hover .sub-dropdown-content{
+    position: absolute;
+    top: 0;
+    width: 200px!important;
+    /* right: -40px; */
+    right: 0px;
+    left: 200px;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 
 }
