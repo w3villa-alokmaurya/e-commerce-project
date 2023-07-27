@@ -1,16 +1,24 @@
 function togglepopupregister(){
-    if(document.getElementById('popup-login').classList.contains('active')){
-        document.getElementById('popup-login').classList.remove('active');
-        document.getElementById('popup-login').classList.add('none');
-        document.getElementById('popup').classList.remove('overlay');
-
+    var is_token = sessionStorage.getItem('token');
+    if(!is_token==''){
+        alert("you are Registered and already logged in.");
+        toggleclose();
+    }else{
+        if(document.getElementById('popup-login').classList.contains('active')){
+            document.getElementById('popup-login').classList.remove('active');
+            document.getElementById('popup-login').classList.add('none');
+            document.getElementById('popup').classList.remove('overlay');
+    
+    
+        }
+        let popup = document.getElementById('popup1');
+        let modal =  document.getElementById('popup-signup');
+        modal.classList.add('active');
+        popup.classList.add('overlay')
+        modal.classList.remove('none');
 
     }
-    let popup = document.getElementById('popup1');
-    let modal =  document.getElementById('popup-signup');
-    modal.classList.add('active');
-    popup.classList.add('overlay')
-    modal.classList.remove('none');
+    
    
 
 }

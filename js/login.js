@@ -1,15 +1,22 @@
 function togglepopuplogin(){
-    if(document.getElementById('popup-signup').classList.contains('active')){
-        document.getElementById('popup-signup').classList.remove('active');
-        document.getElementById('popup-signup').classList.add('none');
-        document.getElementById('popup1').classList.remove('overlay');
-
+    var is_token = sessionStorage.getItem('token');
+    if(!is_token==''){
+        alert("you are Logged in.");
+        toggleclose();
     }
-    let popup = document.getElementById('popup');
-    let modal =  document.getElementById('popup-login');
-    modal.classList.add('active');
-    popup.classList.add('overlay')
-    modal.classList.remove('none');
+    else {
+        if(document.getElementById('popup-signup').classList.contains('active')){
+            document.getElementById('popup-signup').classList.remove('active');
+            document.getElementById('popup-signup').classList.add('none');
+            document.getElementById('popup1').classList.remove('overlay');
+    
+        }
+        let popup = document.getElementById('popup');
+        let modal =  document.getElementById('popup-login');
+        modal.classList.add('active');
+        popup.classList.add('overlay')
+        modal.classList.remove('none');
+    }
    
 
 }
@@ -31,6 +38,8 @@ const LoginForm=()=>{
 
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
+    var storedemail = localStorage.getItem('email');
+    var storedpass  = localStorage.getItem('password');
 
     if(email.length == 0){
         alert("Enter valid email");
@@ -41,7 +50,7 @@ const LoginForm=()=>{
     else if(password.length<6){
         alert("Password should be 6 characters");
     }
-    else if(email==localStorage.getItem('email', email) && localStorage.getItem('password', password)){
+    else if(email== storedemail && password== storedpass){ 
         alert("Logged in");
         var token = 'ecom'+Math.random(1,9999999);
         sessionStorage.setItem('token',token);
