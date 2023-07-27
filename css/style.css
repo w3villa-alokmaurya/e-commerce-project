@@ -459,7 +459,7 @@ header{
 .features{
     background-color: #384854;
     color: white;
-    height: 100px;
+    height: auto;
     width: 100%;
     
 }
@@ -506,8 +506,8 @@ header{
     border-width: 3px;
     width: 70px;
     position: relative;
-    left: 600px;
-    z-index: -1;
+    left: 50%;
+    /* z-index: -1;feature */
 
 }
 .why-upper-text a{
@@ -620,6 +620,7 @@ header{
     overflow: hidden;
     height: auto; */
     /* margin-bottom: 20px; */
+    cursor: pointer;
 }
 .products-card img{
     width: 100%;
@@ -627,7 +628,8 @@ header{
     object-fit: cover;
 }
 .products-card img:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    cursor: pointer;
     transition: .4s;
     /* position: relative; */
 }
@@ -831,9 +833,10 @@ header{
 .featured-left img{
     width: 100%;
     border-radius: 3px;
-    height: 235px;
+    height: 210px;
     padding-bottom: 10px;
     padding-top: 10px;
+    object-fit: cover;
 }
 .featured-left-1{
     border-bottom: 2px #f14919 solid;
@@ -1335,7 +1338,13 @@ header{
     
 
 .popup .none{
-    display: none!important;
+    /* display: none!important; */
+    top: -50%;
+    /* left: -50; */
+    /* transform: translate(-50%,-50%); */
+    background-color: white;
+    /* visibility: hidden; */
+    position: fixed;
     
 }
 
@@ -1364,8 +1373,8 @@ header{
 .overlay .login-popup{   
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 400px;
+    max-width: 90%;
+    /* height: 400px; */
     /* position: relative;
     left: 0; */
     transition: 1s ;
@@ -1436,7 +1445,7 @@ header{
 }
 .search-bar{
     border: 1px solid rgba(128, 128, 128, 0.453);
-    width: 400px;
+    max-width: 350px;
     border-radius: 3px;
 }
 .search-bar .dropdown-block:hover .dropdown-content{

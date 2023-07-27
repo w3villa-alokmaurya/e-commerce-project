@@ -214,11 +214,15 @@ owl.owlCarousel({
             items:2,
             nav:false
         },
+        500:{
+            items:3
+        },
         767:{
             items:3,
             nav:false,
             loop:true,
         },
+        
         1000:{
             items:5,
             nav:false,
@@ -259,6 +263,9 @@ owl.owlCarousel({
             items:2,
             nav:false,
             loop:true,
+        },
+        800:{
+            items:3,
         },
         1000:{
             items:3,
@@ -303,7 +310,7 @@ owl.owlCarousel({
         },
         
         767:{
-            items:3,
+            items:2,
             nav:false,
             loop:true,
         },
