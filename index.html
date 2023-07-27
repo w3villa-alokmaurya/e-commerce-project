@@ -27,29 +27,51 @@
                     <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="#"><i class="fa-regular fa-envelope"></i>  About Us</a></li>
                     <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
-                    <li><a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
+                    <li><div class="more-menu dropdown-block">
+                      <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         FAQ
+                      </button>
+                      <span class="notch" style="left: -15px;"></span>
+                      <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                        
+                        <a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right"></i> Create</a>
+                        <a class="dropdown-item" href="#"><i class="fa-regular fa-gem"></i> Unlimited Options</a>
+                        <a class="dropdown-item" href="#">Faq</a>
+                        
+                      </div>
+                    </div></li>
                 </ul>
             </div>
             <div class="top-header-middle">
                 <ul class="d-flex mobile-language">
-                    <div class="language-dropdown dropdown">
-                        <button class=" dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJNSURBVHjaADEAzv8Bdn+ySSLrALyz/0lXtNYL/v//LScKIayCARET3EFo0tbz/wD+TSv5/Z6NCFtlhsERAgAxAM7/AHaAsuTp/v729f7Uz/75++Dm/vT2/v7Mxf7XzvP1/t7j/v72+P6wpv7y8MfU/j9LpQIAMQDO/wIA/wL/AADL3AoBGx8BtLIfCvf09wEB09AB2tzy9gEhCvMBc3EBOUOWugz39gAA9P4CiImBkQEEGBlOPBJkcHNl2LNdnPkLw927DD9eSTF/YqgtY2hrmXJY+MNHhl+/QAoBAojFk+mYNJOJDNt7BqBFT/4zaGsxdDczXL7DcOEaw5GzDDl5DPdu5oh8ZeD/9V9Yko2hByAAADEAzv8E/8fAAEhJANHWAP4AAN7hAOrlAOzrAPDzAPj2AOjnAL5ZAPv4APj6APz8AGZY7gAAAoiFUUmVQV6FgUuQAWiFpSWDgABDYjzDZ6CGHwycbAxzZjN8+8bw4zfDz18M2sqC+w8CBBDLZsEAxX/ij35KAP1io/yBobmJYcsOBnNDBn52hrV7GSIDGWZNz14u8eX7Dw9mtpkM7gABxAQMeJDrgarl3jA01jNU1r/7ycbw7QfD9z/H3gkzTJ3HEBUz1eXK/19f/v79w8DwCyCAmEBO/89go/bp//Hd/1s7Dz/hY2H9/z8h8H+0n4Tg/5UPxf+t3/zr+J6FGT8Y/v5mYPgNEEAsDP//3t867drS2UyJhe2x6xje/7UOFbPYvQdoZ9854/8vrk5n+JrCdeXNts1SIHdYAgQYAHK0/st9mgoPAAAAAElFTkSuQmCC" alt="" style="width: 15px; height: 10px; padding-right: 3px;">English
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="language-dropdown">
-                          <a class="dropdown-item" href="#">Choose language</a>
-                          
-                        </div>
-                      </div>
-                      <div class="currency-dropdown dropdown " style="padding-left: 5px;">
-                        <button class=" dropdown-toggle" type="button" id="currency-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          $ US Dollar
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="currency-dropdown">
-                          <a class="dropdown-item" href="#">Currency</a>
-                          
-                        </div>
-                      </div>
+                  <li><div class="more-menu dropdown-block">
+                    <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJNSURBVHjaADEAzv8Bdn+ySSLrALyz/0lXtNYL/v//LScKIayCARET3EFo0tbz/wD+TSv5/Z6NCFtlhsERAgAxAM7/AHaAsuTp/v729f7Uz/75++Dm/vT2/v7Mxf7XzvP1/t7j/v72+P6wpv7y8MfU/j9LpQIAMQDO/wIA/wL/AADL3AoBGx8BtLIfCvf09wEB09AB2tzy9gEhCvMBc3EBOUOWugz39gAA9P4CiImBkQEEGBlOPBJkcHNl2LNdnPkLw927DD9eSTF/YqgtY2hrmXJY+MNHhl+/QAoBAojFk+mYNJOJDNt7BqBFT/4zaGsxdDczXL7DcOEaw5GzDDl5DPdu5oh8ZeD/9V9Yko2hByAAADEAzv8E/8fAAEhJANHWAP4AAN7hAOrlAOzrAPDzAPj2AOjnAL5ZAPv4APj6APz8AGZY7gAAAoiFUUmVQV6FgUuQAWiFpSWDgABDYjzDZ6CGHwycbAxzZjN8+8bw4zfDz18M2sqC+w8CBBDLZsEAxX/ij35KAP1io/yBobmJYcsOBnNDBn52hrV7GSIDGWZNz14u8eX7Dw9mtpkM7gABxAQMeJDrgarl3jA01jNU1r/7ycbw7QfD9z/H3gkzTJ3HEBUz1eXK/19f/v79w8DwCyCAmEBO/89go/bp//Hd/1s7Dz/hY2H9/z8h8H+0n4Tg/5UPxf+t3/zr+J6FGT8Y/v5mYPgNEEAsDP//3t867drS2UyJhe2x6xje/7UOFbPYvQdoZ9854/8vrk5n+JrCdeXNts1SIHdYAgQYAHK0/st9mgoPAAAAAElFTkSuQmCC" alt=""> English
+                    </button>
+                    <span class="notch" style="left: 8px;"></span>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                      
+                      <a class="dropdown-item" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJNSURBVHjaADEAzv8Bdn+ySSLrALyz/0lXtNYL/v//LScKIayCARET3EFo0tbz/wD+TSv5/Z6NCFtlhsERAgAxAM7/AHaAsuTp/v729f7Uz/75++Dm/vT2/v7Mxf7XzvP1/t7j/v72+P6wpv7y8MfU/j9LpQIAMQDO/wIA/wL/AADL3AoBGx8BtLIfCvf09wEB09AB2tzy9gEhCvMBc3EBOUOWugz39gAA9P4CiImBkQEEGBlOPBJkcHNl2LNdnPkLw927DD9eSTF/YqgtY2hrmXJY+MNHhl+/QAoBAojFk+mYNJOJDNt7BqBFT/4zaGsxdDczXL7DcOEaw5GzDDl5DPdu5oh8ZeD/9V9Yko2hByAAADEAzv8E/8fAAEhJANHWAP4AAN7hAOrlAOzrAPDzAPj2AOjnAL5ZAPv4APj6APz8AGZY7gAAAoiFUUmVQV6FgUuQAWiFpSWDgABDYjzDZ6CGHwycbAxzZjN8+8bw4zfDz18M2sqC+w8CBBDLZsEAxX/ij35KAP1io/yBobmJYcsOBnNDBn52hrV7GSIDGWZNz14u8eX7Dw9mtpkM7gABxAQMeJDrgarl3jA01jNU1r/7ycbw7QfD9z/H3gkzTJ3HEBUz1eXK/19f/v79w8DwCyCAmEBO/89go/bp//Hd/1s7Dz/hY2H9/z8h8H+0n4Tg/5UPxf+t3/zr+J6FGT8Y/v5mYPgNEEAsDP//3t867drS2UyJhe2x6xje/7UOFbPYvQdoZ9854/8vrk5n+JrCdeXNts1SIHdYAgQYAHK0/st9mgoPAAAAAElFTkSuQmCC" alt=""> English</a>
+                      <a class="dropdown-item" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAG5SURBVHjaYmTwZkCAfwwMf8DoF4wEoh9IjB8MAAEYFJMbAEAYhvXBsLAFrAMj5iiR/LAsj2xn7q7qMkVZtmnGKdEAkRgg3PW+AAJpAKp+9vEZUB0TAxOQ9+3nt19/frGysP3+8+v7rx//Gf5//fnly4/PMkKyQMUAAcQCdMb///9//vlhpWijLKz6+cen0/fPGMjpszGxMTMyHb171E7V/vKzSwuOzwVaBdQAEEAgDWAH/AXyP33/wMHKKSMgzcnMee/1vZ9/fn74/uHtlzfMDMy//gJdBtIAEEBMQN8A3ffn728RbhEFEYXXX958+fXl2otrHGzs155f42Dmuvv67o5rO/6CvAQMBwaAACTN0Q0AEAwFQO3+i4hhLOJXQvvahxjgcm+IBFlar0K5m4WZG4CFraJjDsCZ/OAIIBagDX/A1v36/TPJOomLhRvoJXhY8bHzAaWyV2T9/PsTyAVqAAggmAYg/Pdn8r7Jf/6BFAMtAYoAyQKngsO3DgP1QAIaqAEggFiAcfH73x8JPglwkANFf4OkgUb8A5Erzi4H+k9OSB6oAWgnUANAADEyKKNEJMNPBvwAIMAAMHo3F4Y5Tq0AAAAASUVORK5CYII=" alt=""> Arabic</a>
+                      
+                      
+                    </div>
+                  </div></li>
+                  <li><div class="more-menu dropdown-block">
+                    <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-dollar-sign"></i> Dollar
+                    </button>
+                    <span class="notch" style="left: 10px;"></span>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                      
+                      <a class="dropdown-item" href="#"><i class="fa-solid fa-euro-sign"></i> Euro</a>
+                      <a class="dropdown-item" href="#"><i class="fa-solid fa-sterling-sign"></i> Pound</a>
+                      <a class="dropdown-item" href="#"><i class="fa-solid fa-indian-rupee-sign"></i> INR</a>
+                      
+                    </div>
+                  </div></li>
+                  
+                      
                 </ul>
                 <ul class="mobile-login">
                   <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i> Login</a></li>
@@ -59,11 +81,15 @@
             <div class="top-header-right ">
                 <ul class="d-flex">
                     <li>
-                        <div class="more-menu dropdown">
-                            <button class=" dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="more-menu dropdown-block">
+                            <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               More Menus
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="more-menu">
+                            <span class="notch"></span>
+                            <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                              
+                              <a class="dropdown-item" href="#">Best Menu</a>
+                              <a class="dropdown-item" href="#">Theme Options</a>
                               <a class="dropdown-item" href="#">Category</a>
                               
                             </div>
@@ -83,15 +109,39 @@
                 <span><i class="fa-solid fa-bars"></i></span>
               </div>
               <div class="search-bar d-flex">
-                  <div class="filter-dropdown dropdown">
-                      <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        All
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="filter-dropdown">
-                        <a class="dropdown-item" href="#">Category</a>
-                        
-                      </div>
-                    </div>
+                <div class="more-menu dropdown-block filter-dropdown">
+                  <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All
+                  </button>
+                  <span class="notch" style="left: 5px; top: 35px; background-color: white;"></span>
+                  <div class="dropdown-menu dropdown-content" style="background-color: white; color: black; left: -10px; top: 40px; height: 300px;  width: 200px; overflow: auto;" aria-labelledby="more-menu">
+                    
+                    <a class="dropdown-item" href="#">All</a>
+                    <a class="dropdown-item" href="#">Fashion</a>
+                    <a class="dropdown-item" href="#">Blog</a>
+                    <a class="dropdown-item" href="#">Health</a>
+                    <a class="dropdown-item" href="#">Beauty</a>
+                    <a class="dropdown-item" href="#">Bags</a>
+                    <a class="dropdown-item" href="#">Footwear</a>
+                    <a class="dropdown-item" href="#">Electronics</a>
+                    <a class="dropdown-item" href="#">Food</a>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Home decor</a>
+                    <a class="dropdown-item" href="#">Appliances</a>
+                    <a class="dropdown-item" href="#">Flowers</a>
+
+
+
+
+
+
+
+
+
+
+                    
+                  </div>
+                </div>
                   <form action="" class="search-form">
                       <input type="text" placeholder="Search here...">
                       <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
