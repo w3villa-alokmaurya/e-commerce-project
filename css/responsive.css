@@ -312,6 +312,9 @@
     
     width: 100%;
 }
+.most-viewed-card{
+    width: 400px;
+}
     /* .most-viewed-card{
         max-width: 190px!important;
         height: 250px;
@@ -365,6 +368,7 @@
     .featured-right{
         width: 100%;
         /* height: 200px; */
+        height: 440px;
     }
     .right-card{
         max-height: 320px;
