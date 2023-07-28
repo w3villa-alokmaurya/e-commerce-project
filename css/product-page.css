@@ -61,8 +61,8 @@
         height: 250px;
     }
     .main-product-section .box1{
-        width: 80px;
-        height: 80px;
+        width: 60px!important;
+        height: 60px!important;
     }
     .main-product-section .middle-side img{
         height: 250px!important;
@@ -98,6 +98,7 @@
 }
 .main-product-section .right-side .right-side-top-main{
     display: flex;
+    flex-wrap: wrap;
    
 }
 .products-main-1{
@@ -485,7 +486,7 @@ input[type="datetime"]::-webkit-calendar-picker-indicator {
     border-radius: 3px;
     position: relative;
     bottom: 20px;
-    left: 280px;
+    left: 40%;
 
 }
 .hide-text-auto1{
