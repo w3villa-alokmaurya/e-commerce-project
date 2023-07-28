@@ -237,8 +237,9 @@
         font-size: 10px;
     }
     .hero-right-1 h3{
-        font-size: 14px;
+        font-size: 13px;
         /* width: px; */
+        padding-bottom: 5px;
     }
     .right-hero-text{
         /* position: relative; */
