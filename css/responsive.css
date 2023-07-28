@@ -5,6 +5,10 @@
         font-size: 14px;
 
     } */
+
+    .dropdown-content{
+        right: -22px!important;
+    }
     .footer{
         flex-direction: column;
         padding-left: 10px;

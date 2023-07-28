@@ -13,13 +13,16 @@ owl.owlCarousel({
             items:3,
             nav:false
         },
-        767:{
+        530:{
             items:5,
+        },
+        700:{
+            items:6,
             nav:false,
             loop:true,
         },
         1000:{
-            items:7,
+            items:8,
             nav:false,
             loop:true,
         },
@@ -52,10 +55,12 @@ owl.owlCarousel({
     responsive:{
         0:{
             items:1,
-            nav:false
+            nav:false,
+            loop:true,
         },
         550:{
             items:2,
+            loop:true,
         },
         767:{
             items:2,
@@ -226,7 +231,7 @@ owl.owlCarousel({
         1000:{
             items:5,
             nav:false,
-            loop:false
+            loop:true,
         }
     }
     // dots:true,
