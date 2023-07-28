@@ -338,12 +338,14 @@
     background-color: var(--theme-color);
     /* left: 0; */
     color: var(--theme-color);
+    left: 0;
 }
 #pt2{
     /* overflow: hidden; */
     width: 0;
     position: absolute;
     height: 2px;
+    left: 15px;
 
 }
 

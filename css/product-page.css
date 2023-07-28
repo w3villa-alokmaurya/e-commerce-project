@@ -123,7 +123,7 @@
     width: 100%;
 }
 .right-side-top-main .w-110{
-    width: 100px!important;
+    width: auto!important;
 }
 .review-section-right{
     display: flex;

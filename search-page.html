@@ -18,134 +18,242 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- header section -->
-  <header>
-    <div class="container top-header  justify-content-between">
-      
-        <div class="top-header-left ">
-            <ul class="d-flex">
-                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#"><i class="fa-regular fa-envelope"></i>  About Us</a></li>
-                <li><a href="#"><i class="fa-regular fa-envelope"></i> Contact</a></li>
-                <li><a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a></li>
-            </ul>
-        </div>
-        <div class="top-header-middle">
-            <ul class="d-flex mobile-language">
-                <div class="language-dropdown dropdown">
-                    <button class=" dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      English
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="language-dropdown">
-                      <a class="dropdown-item" href="#">Choose language</a>
-                      
-                    </div>
-                  </div>
-                  <div class="currency-dropdown dropdown " style="padding-left: 5px;">
-                    <button class=" dropdown-toggle" type="button" id="currency-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      $ US Dollar
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="currency-dropdown">
-                      <a class="dropdown-item" href="#">Currency</a>
-                      
-                    </div>
-                  </div>
-            </ul>
-            <ul class="mobile-login">
-              <li><a href=""><i class="fa-solid fa-circle-user"></i> Login</a></li>
-              <li><a href=""><i class="fa-solid fa-pencil"></i> Register</a></li>
-            </ul>
-        </div>
-        <div class="top-header-right ">
-            <ul class="d-flex">
-                <li>
-                    <div class="more-menu dropdown">
-                        <button class=" dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          More Menus
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="more-menu">
-                          <a class="dropdown-item" href="#">Category</a>
-                          
-                        </div>
-                      </div>
-                </li>
-                <li><i class="fa-solid fa-truck-fast"></i> Delivery</li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="middle bg-gray">
-      <div class="middle-header d-flex  align-items-center container ">
-          <div class="brand-name">
-              <h1>Journal</h1>
-          </div>
-          <div class="bars-toggle">
-            <span><i class="fa-solid fa-bars"></i></span>
-          </div>
-          <div class="search-bar d-flex">
-              <div class="filter-dropdown dropdown">
-                  <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="filter-dropdown">
-                    <a class="dropdown-item" href="#">Category</a>
-                    
-                  </div>
-                </div>
-              <form action="" class="search-form">
-                  <input type="text" placeholder="Search here...">
-                  <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </form>
-          </div>
-          <div class="middle-header-menus ">
-              <ul class="d-flex">
-                  <li><a href=""><i class="fa-solid fa-circle-user"></i>Login</a></li>
-                  <li><a href=""><i class="fa-solid fa-pencil"></i></i>Register</a></li>
-                  <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
-                  <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
-              </ul>
-          </div>
-          <div class="middle-header-cart d-flex align-items-center">
-              <p>0 item(s)-$0.00</p>
-              <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-          </div>
-      </div>
-    </div>
-    <div class="lower">
-    <div class="lower-header d-flex align-items-center justify-content-between container">
-      <div class="lower-left">
-        <ul class="d-flex align-items-center">
-          <li class="yellow-box"><a href=""><i class="fa-solid fa-align-left"></i> All Departments <sup>Sale</sup> </a></li>
-                  <li><a href="">Multilevel</a></li>
-                  <li><a href="">mega menu <sup class="new-yellow-up">New</sup></a></li>
-                  <li><a href="">full width</a></li>
-
-        </ul>
-      </div>
-      <div class="lower-right">
-        <ul class="d-flex align-items-center">
-        <li><a href=""><i class="fa-solid fa-phone-volume"></i> 18005556789</a></li>
-                  <li class="yellow-box-blog" style="padding-right: 0; "><a href=""><i class="fa-solid fa-file-lines"></i> Blog</a></li>
-                </ul>
-                  
-                  
-      </div>
-    </div>
-    </div>
-
-    <div class="mobile-bottom-header">
-      <div class="brand-name">
-        <h1>Journal</h1>
-      </div>
-      <div class="right-side">
-        <ul>
-          <li><i class="fa-solid fa-bars"></i></li>
-          <li><i class="fa-solid fa-magnifying-glass"></i></li>
-          <li><i class="fa-solid fa-cart-shopping"></i></li>
-        </ul>
-      </div>
-    </div>
+ <!-- header section -->
+ <header>
+  <div class="container top-header  justify-content-between">
     
+      <div class="top-header-left ">
+          <ul class="d-flex">
+              <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+              <li><a href="#"><i class="fa-solid fa-envelope"></i>  About Us</a></li>
+              <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+              <li><div class="more-menu dropdown-block">
+                <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   FAQ
+                </button>
+                <span class="notch" style="left: -15px;"></span>
+                <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                  
+                  <a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right"></i> Create</a>
+                  <a class="dropdown-item" href="#"><i class="fa-regular fa-gem"></i> Unlimited Options</a>
+                  <a class="dropdown-item" href="#">Faq</a>
+                  
+                </div>
+              </div></li>
+          </ul>
+      </div>
+      <div class="top-header-middle">
+          <ul class="d-flex mobile-language">
+            <li><div class="more-menu dropdown-block">
+              <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJNSURBVHjaADEAzv8Bdn+ySSLrALyz/0lXtNYL/v//LScKIayCARET3EFo0tbz/wD+TSv5/Z6NCFtlhsERAgAxAM7/AHaAsuTp/v729f7Uz/75++Dm/vT2/v7Mxf7XzvP1/t7j/v72+P6wpv7y8MfU/j9LpQIAMQDO/wIA/wL/AADL3AoBGx8BtLIfCvf09wEB09AB2tzy9gEhCvMBc3EBOUOWugz39gAA9P4CiImBkQEEGBlOPBJkcHNl2LNdnPkLw927DD9eSTF/YqgtY2hrmXJY+MNHhl+/QAoBAojFk+mYNJOJDNt7BqBFT/4zaGsxdDczXL7DcOEaw5GzDDl5DPdu5oh8ZeD/9V9Yko2hByAAADEAzv8E/8fAAEhJANHWAP4AAN7hAOrlAOzrAPDzAPj2AOjnAL5ZAPv4APj6APz8AGZY7gAAAoiFUUmVQV6FgUuQAWiFpSWDgABDYjzDZ6CGHwycbAxzZjN8+8bw4zfDz18M2sqC+w8CBBDLZsEAxX/ij35KAP1io/yBobmJYcsOBnNDBn52hrV7GSIDGWZNz14u8eX7Dw9mtpkM7gABxAQMeJDrgarl3jA01jNU1r/7ycbw7QfD9z/H3gkzTJ3HEBUz1eXK/19f/v79w8DwCyCAmEBO/89go/bp//Hd/1s7Dz/hY2H9/z8h8H+0n4Tg/5UPxf+t3/zr+J6FGT8Y/v5mYPgNEEAsDP//3t867drS2UyJhe2x6xje/7UOFbPYvQdoZ9854/8vrk5n+JrCdeXNts1SIHdYAgQYAHK0/st9mgoPAAAAAElFTkSuQmCC" alt=""> English
+              </button>
+              <span class="notch" style="left: 8px;"></span>
+              <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                
+                <a class="dropdown-item" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJNSURBVHjaADEAzv8Bdn+ySSLrALyz/0lXtNYL/v//LScKIayCARET3EFo0tbz/wD+TSv5/Z6NCFtlhsERAgAxAM7/AHaAsuTp/v729f7Uz/75++Dm/vT2/v7Mxf7XzvP1/t7j/v72+P6wpv7y8MfU/j9LpQIAMQDO/wIA/wL/AADL3AoBGx8BtLIfCvf09wEB09AB2tzy9gEhCvMBc3EBOUOWugz39gAA9P4CiImBkQEEGBlOPBJkcHNl2LNdnPkLw927DD9eSTF/YqgtY2hrmXJY+MNHhl+/QAoBAojFk+mYNJOJDNt7BqBFT/4zaGsxdDczXL7DcOEaw5GzDDl5DPdu5oh8ZeD/9V9Yko2hByAAADEAzv8E/8fAAEhJANHWAP4AAN7hAOrlAOzrAPDzAPj2AOjnAL5ZAPv4APj6APz8AGZY7gAAAoiFUUmVQV6FgUuQAWiFpSWDgABDYjzDZ6CGHwycbAxzZjN8+8bw4zfDz18M2sqC+w8CBBDLZsEAxX/ij35KAP1io/yBobmJYcsOBnNDBn52hrV7GSIDGWZNz14u8eX7Dw9mtpkM7gABxAQMeJDrgarl3jA01jNU1r/7ycbw7QfD9z/H3gkzTJ3HEBUz1eXK/19f/v79w8DwCyCAmEBO/89go/bp//Hd/1s7Dz/hY2H9/z8h8H+0n4Tg/5UPxf+t3/zr+J6FGT8Y/v5mYPgNEEAsDP//3t867drS2UyJhe2x6xje/7UOFbPYvQdoZ9854/8vrk5n+JrCdeXNts1SIHdYAgQYAHK0/st9mgoPAAAAAElFTkSuQmCC" alt=""> English</a>
+                <a class="dropdown-item" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAG5SURBVHjaYmTwZkCAfwwMf8DoF4wEoh9IjB8MAAEYFJMbAEAYhvXBsLAFrAMj5iiR/LAsj2xn7q7qMkVZtmnGKdEAkRgg3PW+AAJpAKp+9vEZUB0TAxOQ9+3nt19/frGysP3+8+v7rx//Gf5//fnly4/PMkKyQMUAAcQCdMb///9//vlhpWijLKz6+cen0/fPGMjpszGxMTMyHb171E7V/vKzSwuOzwVaBdQAEEAgDWAH/AXyP33/wMHKKSMgzcnMee/1vZ9/fn74/uHtlzfMDMy//gJdBtIAEEBMQN8A3ffn728RbhEFEYXXX958+fXl2otrHGzs155f42Dmuvv67o5rO/6CvAQMBwaAACTN0Q0AEAwFQO3+i4hhLOJXQvvahxjgcm+IBFlar0K5m4WZG4CFraJjDsCZ/OAIIBagDX/A1v36/TPJOomLhRvoJXhY8bHzAaWyV2T9/PsTyAVqAAggmAYg/Pdn8r7Jf/6BFAMtAYoAyQKngsO3DgP1QAIaqAEggFiAcfH73x8JPglwkANFf4OkgUb8A5Erzi4H+k9OSB6oAWgnUANAADEyKKNEJMNPBvwAIMAAMHo3F4Y5Tq0AAAAASUVORK5CYII=" alt=""> Arabic</a>
+                
+                
+              </div>
+            </div></li>
+            <li><div class="more-menu dropdown-block">
+              <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-dollar-sign"></i> Dollar
+              </button>
+              <span class="notch" style="left: 10px;"></span>
+              <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                
+                <a class="dropdown-item" href="#"><i class="fa-solid fa-euro-sign"></i> Euro</a>
+                <a class="dropdown-item" href="#"><i class="fa-solid fa-sterling-sign"></i> Pound</a>
+                <a class="dropdown-item" href="#"><i class="fa-solid fa-indian-rupee-sign"></i> INR</a>
+                
+              </div>
+            </div></li>
+            
+                
+          </ul>
+          <ul class="mobile-login">
+            <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i> Login</a></li>
+            <li><a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i> Register</a></li>
+          </ul>
+      </div>
+      <div class="top-header-right ">
+          <ul class="d-flex">
+              <li>
+                  <div class="more-menu dropdown-block">
+                      <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Menus
+                      </button>
+                      <span class="notch"></span>
+                      <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+                        
+                        <a class="dropdown-item" href="#">Best Menu</a>
+                        <a class="dropdown-item" href="#">Theme Options</a>
+                        <a class="dropdown-item" href="#">Category</a>
+                        
+                      </div>
+                    </div>
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-truck-fast"></i> Delivery</a>
+              </li>
+          </ul>
+      </div>
+
+  </div>
+  <div class="middle bg-gray">
+    <div class="middle-header d-flex  align-items-center container">
+      <div class="brand-name">
+        <a href=""><h1>Journal</h1></a>
+    </div>
+        <div class="bars-toggle">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </div>
+        <div class="search-bar d-flex">
+          <div class="more-menu dropdown-block filter-dropdown">
+            <button class="dropdown-toggle" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              All
+            </button>
+            <span class="notch" style="left: 5px; top: 35px; background-color: white;"></span>
+            <div class="dropdown-menu dropdown-content" style="background-color: white; color: black; left: -10px; top: 40px; height: 300px;  width: 200px; overflow: auto;" aria-labelledby="more-menu">
+              
+              <a class="dropdown-item" href="#">All</a>
+              <a class="dropdown-item" href="#">Fashion</a>
+              <a class="dropdown-item" href="#">Blog</a>
+              <a class="dropdown-item" href="#">Health</a>
+              <a class="dropdown-item" href="#">Beauty</a>
+              <a class="dropdown-item" href="#">Bags</a>
+              <a class="dropdown-item" href="#">Footwear</a>
+              <a class="dropdown-item" href="#">Electronics</a>
+              <a class="dropdown-item" href="#">Food</a>
+              <a class="dropdown-item" href="#">Sports</a>
+              <a class="dropdown-item" href="#">Home decor</a>
+              <a class="dropdown-item" href="#">Appliances</a>
+              <a class="dropdown-item" href="#">Flowers</a>
+
+
+
+
+
+
+
+
+
+
+              
+            </div>
+          </div>
+            <form action="" class="search-form">
+                <input type="text" placeholder="Search here...">
+                <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="middle-header-menus ">
+            <ul class="d-flex">
+                <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></li>
+                <li><a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></li>
+                <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
+                <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
+            </ul>
+        </div>
+        <div class="middle-header-cart d-flex align-items-center">
+            <p>0 item(s)-$0.00</p>
+            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </div>
+  </div>
+  <div class="lower">
+  <div class="lower-header d-flex align-items-center justify-content-between container">
+    <div class="lower-left">
+      <ul class="d-flex align-items-center">
+        <!-- <li class="yellow-box"><a href=""><i class="fa-solid fa-align-left"></i> All Departments <sup>Sale</sup> </a></li> -->
+        <li class="yellow-box dropdown-block"><div class="more-menu dropdown-block">
+          <a href=""><i class="fa-solid fa-align-left"></i> All Departments <sup>Sale</sup> </a>
+          <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+            
+            <a class="dropdown-item" href="#"><i class="fa-solid fa-align-left"></i> Shop By Category</a>
+            <a class="dropdown-item" href="#"><i class="fa-brands fa-apple"></i> Shop By Brand</a>
+            <a class="dropdown-item" href="#"><i class="fa-solid fa-percent"></i> Special deals</a>
+            <a class="dropdown-item" href="#"><i class="fa-brands fa-galactic-republic"></i> Best Sellers</a>
+            <a class="dropdown-item" href="#"><i class="fa-solid fa-certificate"></i> Custom links</a>
+            <a class="dropdown-item" href="#"><i class="fa-solid fa-shop"></i> See All Products</a>
+            
+          </div>
+        </div></li>
+        <li class="dropdown-block">
+          <div class="more-menu dropdown-block">
+          <a href="">Multilevel </a>
+          <div class="dropdown-menu dropdown-content" aria-labelledby="more-menu">
+            
+            <div class="dropdown-item sub-dropdown" href="#">Accesories <i class="fa-solid fa-caret-right float-right"></i>
+                <div class="sub-dropdown-content">
+                  <a class="dropdown-item" href="#">Pants</a>
+                  <a class="dropdown-item" href="#">T-Shirts</a>
+                  <a class="dropdown-item" href="#">Top</a>
+                  <a class="dropdown-item" href="#">Dresses</a>
+
+                </div>
+             
+
+              </div>
+              <div class="dropdown-item sub-dropdown"  href="#">Pants <i class="fa-solid fa-caret-right float-right"></i>
+                <div class="sub-dropdown-content" style="top: 47px;">
+                  
+                  <a class="dropdown-item" href="#">Top</a>
+                  <a class="dropdown-item" href="#">Dresses</a>
+
+                </div>
+             
+
+              </div>
+              <div class="dropdown-item sub-dropdown" href="#">T-Shirts <i class="fa-solid fa-caret-right float-right"></i>
+                <div class="sub-dropdown-content" style="top: 87px;">
+                  <a class="dropdown-item" href="#">Pants</a>
+                  <a class="dropdown-item" href="#">T-Shirts</a>
+                  
+                  <a class="dropdown-item" href="#">Dresses</a>
+
+                </div>
+             
+
+              </div>
+            <a class="dropdown-item" href="#">Top</a>
+            <a class="dropdown-item" href="#">Dresses</a>
+
+            
+          </div>
+        </div>
+      </li>
+                <li style="width: 132px;"><a href="">mega menu <sup class="new-yellow-up">New</sup></a></li>
+                <li><a href="">full width</a></li>
+
+      </ul>
+    </div>
+    <div class="lower-right">
+      <ul class="d-flex align-items-center">
+      <li style="width: 135px;"><a href=""><i class="fa-solid fa-phone-volume"></i> 18005556789</a></li>
+                <li class="yellow-box-blog" style="padding-right: 0; "><a href=""><i class="fa-solid fa-file-lines"></i> Blog</a></li>
+              </ul>
+                
+                
+    </div>
+  </div>
+  </div>
+
+  <div class="mobile-bottom-header">
+    <div class="brand-name">
+      <h1>Journal</h1>
+    </div>
+    <div class="right-side">
+      <ul>
+        <li><i class="fa-solid fa-bars"></i></li>
+        <li><i role="button" onclick="redirect_search()" class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+      </ul>
+    </div>
+  </div>
+  
 </header>
 <!-- 
 breadcrumbs links -->
@@ -358,7 +466,7 @@ breadcrumbs links -->
                 <div class="left-side-searches">
                     <span title="listview" role="button" onclick="listview()"><i class="fa-solid fa-list"></i></span>
                     <span title="gridview" role="button" onclick="gridview()"><i class="fa-solid fa-table-cells"></i></span>
-                    <span><a href=""><i style="width: 30px; padding-left: 4px; height: 30px; border-radius:50%; padding-top:4px; font-size:16px;border: 2px solid var(--theme-color);" class="fa-solid fa-arrow-down-up-across-line"></i> <span class="mob-none">Product Compare</span></a></span>
+                    <span><a href=""><i style="width: 20px; padding-left: 1px; height: 20px; border-radius:50%; padding-top:2px; font-size:13px;border: 2px solid var(--theme-color);" class="fa-solid fa-arrow-down-up-across-line"></i> <span class="mob-none">Product Compare</span></a></span>
 
                 </div>
                 <div class="right-side-searches">
@@ -780,5 +888,7 @@ breadcrumbs links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/login.js"></script>
+<script src="js/signup.js"></script>
 </body>
 </html>
