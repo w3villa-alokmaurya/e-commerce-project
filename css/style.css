@@ -1495,7 +1495,7 @@ img:hover{
 }
 
 .dropdown-content{
-    display: none;
+    display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 1;
@@ -1504,6 +1504,21 @@ img:hover{
 
     
 }
+.megamenu{
+    flex-direction:row; 
+    width: 1300px!important; 
+    left: -335px!important;
+    left: 20px;
+    background-color: #edf1f4!important;
+}
+.megamenu .dropdown-subcontent{
+    border-right: 1px solid rgba(161, 159, 159, 0.51);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* .dropdown-menu{
+    display: flex!important;
+} */
 .dropdown-content a{
     color: white;
     padding-left: 20px;
