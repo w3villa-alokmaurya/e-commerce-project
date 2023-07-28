@@ -368,6 +368,7 @@ header{
     position: fixed;
     bottom: 20px;
     right: 35px;
+    z-index: 2;
 }
 .hero-left img{
 
@@ -1408,10 +1409,12 @@ img:hover{
     /* display: none!important; */
     top: -60%;
     /* left: -50; */
-    /* transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
     background-color: white;
     /* visibility: hidden; */
     position: fixed;
+    transition: 1s;
+    left: 40%;
     
 }
 

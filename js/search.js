@@ -1,6 +1,8 @@
 function listview(){
     document.getElementById('listview').classList.add('displaynone');
     document.getElementById('gridview').classList.add('displayblock');
+
+    
 }
 
 

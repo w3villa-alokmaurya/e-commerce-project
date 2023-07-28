@@ -61,6 +61,12 @@
         color: white;
         font-size: 13px;
     }
+    .features-section i{
+        width: 35px;
+        height: 35px;
+        padding-top: 5px;
+        padding-right: -5px!important
+    }
     .top-header-left{
         display: none;
         visibility: hidden;
@@ -132,7 +138,7 @@
         margin-bottom: 0;
         padding-left: 0;
         justify-content: space-between;
-        width: 186px;
+        max-width: 186px;
 
     }
     .container{
@@ -252,7 +258,7 @@
     .first-feature{
         width: 50%;
         padding-right: 20px;
-        padding-bottom: 0px;
+        padding-bottom: 20px;
         
 
 
