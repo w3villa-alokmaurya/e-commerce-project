@@ -5,6 +5,9 @@
         font-size: 14px;
 
     } */
+    .megamenu{
+        flex-wrap: wrap;
+    }
 
     
 
@@ -447,6 +450,16 @@
 .hero-right{
     max-width: 350px!important;
 }
+/* .megamenu{
+    width: 1000px!important;
+    left: -200px!important;
+}
+.dropdown-subcontent{
+    width: 150px!important;
+} */
+/* #megamenu .dropdown-block:hover .dropdown-content{
+    display: none!important;
+} */
 
     
 }
@@ -455,6 +468,10 @@
         margin-left: 20px;
         margin-right: 20px;
         width: 1000px!important;
+    } */
+    /* .megamenu{
+        width: 750px!important;
+        left: -200px!important;
     } */
     
     .hero-section{
