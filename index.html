@@ -479,42 +479,52 @@
         <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
         
       </div>
-      <div class="button-container tabs">
-        <button id="top_categories" class="category-btn active" onclick="display('top_categories')"><span class="active"></span>Top categories</button>
-        <button id="electronics" class="category-btn" onclick="display('electronics')"><span class=""></span>Electronic</button>
-        <button id="beauty" class="category-btn" onclick="display('beauty')"><span class=""></span>Beauty</button>
-        <button id="fashion" class="category-btn" onclick="display('fashion')"><span class=""></span>Fashion</button>
+      <div class="button-container">
+        <button id="top_categories" class="category-btn active" ><span class="active"></span>Top categories</button>
+        <button id="electronics" class="category-btn" ><span class=""></span>Electronic</button>
+        <button id="beauty" class="category-btn" ><span class=""></span>Beauty</button>
+        <button id="fashion" class="category-btn" ><span class=""></span>Fashion</button>
       </div>
       <div class="carousal-wrapper tab-content">
         <div id="category-products" class="category-products owl-carousel owl-theme blog-cards ">
-          <div class="category-product">
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product">
+          <div class="category-product" data-electronics="electronic">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashiongirl" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product">
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?rockstar" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product">
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?jeans" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product">
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?newfashion" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product">
+          <div class="category-product" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
             <p>Fashion</p>
+  
+          </div>
+          <div class="category-product" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
   
           </div>
          
@@ -1266,12 +1276,12 @@
           </h3>
           <p class="line start"></p>
           <p>Stay up to date with news and promotions by signing up for our newsletter.</p>
-          <form action="" class="subscribe-form">
-            <input type="email" placeholder="abc@gmail.com">
+          <form action="" class="subscribe-form" id="newsletter-form">
+            <input type="email" placeholder="abc@gmail.com" id="newsletter-email" required>
             <button type="submit">
               <span><i class="fa-solid fa-envelope"></i> Send</span>
             </button>
-            <div class="checkbox"><input type="checkbox" name="" id="">
+            <div class="checkbox"><input type="checkbox" name="" id="" required>
               <label for="">I have read and agree to the <a href="">Privacy policy</a></label></div>
             
           </form>

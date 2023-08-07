@@ -602,6 +602,12 @@ header{
     
 
 }
+.show{
+    display: block;
+}
+.remove{
+    display: none;
+}
 .button-container .active{
     background-color: var(--theme-color)!important;
     color: white;
