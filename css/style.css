@@ -5,6 +5,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.active{
+    display: block;
+    /* background-color: var(--theme-color);butt */
+}
+.display-none{
+    display: none!important;
+}
+
 
 :root{
     --theme-color: rgba(13,82,214,1);
@@ -594,9 +602,10 @@ header{
     
 
 }
-.category-btn.active{
+.button-container .active{
     background-color: var(--theme-color)!important;
     color: white;
+    display: block!important;
 }
 
 .category-btn span{
@@ -609,12 +618,16 @@ header{
     /* left: 0; */
     transform: rotate(320deg);
     overflow: hidden;
+    display: none;
 
 }
 .category-btn:hover{
     background-color: var(--theme-color)!important;
     color: white;
 }
+/* .category-btn:hover span{
+    display: block!important;
+} */
 
 .category-products{
     width: 100%;

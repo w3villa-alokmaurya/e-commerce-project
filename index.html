@@ -359,7 +359,7 @@
 
 
     <!-- back to top -->
-    <button
+    <button onclick="scrollToTop()"
         type="button"
         class="btn btn-primary btn-floating btn-lg"
         id="btn-back-to-top"
@@ -479,13 +479,13 @@
         <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
         
       </div>
-      <div class="button-container">
-        <button class="category-btn active"><span></span>Top categories</button>
-        <button class="category-btn">Electronic</button>
-        <button class="category-btn">Beauty</button>
-        <button class="category-btn">Fashion</button>
+      <div class="button-container tabs">
+        <button id="top_categories" class="category-btn active" onclick="display('top_categories')"><span class="active"></span>Top categories</button>
+        <button id="electronics" class="category-btn" onclick="display('electronics')"><span class=""></span>Electronic</button>
+        <button id="beauty" class="category-btn" onclick="display('beauty')"><span class=""></span>Beauty</button>
+        <button id="fashion" class="category-btn" onclick="display('fashion')"><span class=""></span>Fashion</button>
       </div>
-      <div class="carousal-wrapper">
+      <div class="carousal-wrapper tab-content">
         <div id="category-products" class="category-products owl-carousel owl-theme blog-cards ">
           <div class="category-product">
             <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
@@ -1306,5 +1306,7 @@
 <script src="js/slider.js"></script>
 <script src="js/login.js"></script>
 <script src="js/signup.js"></script>
+<script src="js/buyfromusfilter.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
