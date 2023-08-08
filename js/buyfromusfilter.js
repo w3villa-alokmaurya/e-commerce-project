@@ -124,165 +124,43 @@ fashion = [
 
 
 
-// function display(category){
+  const allFilterBtns = document.querySelectorAll('.buy');
+  const  allFilterItems = document.querySelectorAll('.top_categories');
 
-//     // let show_category = false;
-//     // let cat = document.getElementById(category);
-//     // let notch = document.getElementById(category).firstChild;  
-//     // current = 'top_categories';
-//     // prev = 'top_categories';
-//     // localStorage.setItem('prev', prev);
-//     // localStorage.setItem('current', current);
+  window.addEventListener('DOMContentLoaded', () => {
+    allFilterBtns[0].classList.add('active-btn');
+    // allFilterBtns[0].firstChild.classList.add('active-btn');
+});
 
-//     // if(category=="top_categories"){
-//     //     prev = localStorage.getItem('current');
-//     //     localStorage.setItem('prev', prev);
-//     //     let prevcat = document.getElementById(prev);
-//     //     if(prevcat.classList.contains('active')){
-//     //         prevcat.classList.remove('active');
-//     //         prevcat.firstChild.classList.remove('active');
-//     //     }
-       
-//     //     show_category=true;
-//     //     cat.classList.add('active');
-//     //     notch.classList.add('active');
-//     //     // console.log(category);
-//     //     localStorage.setItem('current', category);
+  allFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        showFilteredContent(btn);
+        
+    });
+});
+
+function showFilteredContent(btn){
+    allFilterItems.forEach((item) => {
+        if(item.classList.contains(btn.id)){
+            resetActiveBtn();
+            btn.classList.add('active-btn');
+            // btn.firsChild.classList.add('active-btn');
+            // console.log(btn.firstChild);
+            item.style.display = "block";
+            
+        } else {
+            item.style.display = "none";
+            
+
+        }
+    });
+}
+function resetActiveBtn(){
+    allFilterBtns.forEach((btn) => {
+        btn.classList.remove('active-btn');
+        // btn.firstChild.classList.remove('active-btn');
+        // console.log(btn)
         
         
-//     // }
-//     // else if(category == "fashion"){
-//     //     prev = localStorage.getItem('current');
-//     //     // console.log(prev);
-//     //     let prevcat = document.getElementById(prev);
-//     //     if(prevcat.classList.contains('active')){
-//     //         prevcat.classList.remove('active');
-//     //         prevcat.firstChild.classList.remove('active');
-//     //     }
-//     //     localStorage.setItem('prev', prev);
-//     //     // console.log(localStorage.getItem('prev'));
-//     //     show_category=true;
-//     //     cat.classList.add('active');
-//     //     notch.classList.add('active');
-//     //     // console.log(category);
-//     //     localStorage.setItem('current', category);
-//     //     // console.log(localStorage.getItem('current'));
-
-//     // }
-//     // else if(category=="beauty"){
-//     //     prev = localStorage.getItem('current');
-//     //     console.log(prev);
-//     //     let prevcat = document.getElementById(prev);
-//     //     if(prevcat.classList.contains('active')){
-//     //         prevcat.classList.remove('active');
-//     //         prevcat.firstChild.classList.remove('active');
-//     //     }
-//     //     localStorage.setItem('prev', prev);
-//     //     // console.log(localStorage.getItem('prev'));
-//     //     show_category=true;
-//     //     cat.classList.add('active');
-//     //     notch.classList.add('active');
-//     //     // console.log(category);
-//     //     localStorage.setItem('current', category);
-//     //     // console.log(localStorage.getItem('current'));
-
-//     // }
-//     // else if(category=="electronics"){
-//     //     prev = localStorage.getItem('current');
-//     //     console.log(prev);
-//     //     let prevcat = document.getElementById(prev);
-//     //     if(prevcat.classList.contains('active')){
-//     //         prevcat.classList.remove('active');
-//     //         prevcat.firstChild.classList.remove('active');
-//     //     }
-//     //     localStorage.setItem('prev', prev);
-//     //     // console.log(localStorage.getItem('prev'));
-//     //     show_category=true;
-//     //     cat.classList.add('active');
-//     //     notch.classList.add('active');
-//     //     // console.log(category);
-//     //     localStorage.setItem('current', category);
-//     //     // console.log(localStorage.getItem('current'));
-        
-//     // }
-
-
-//     let product_tabs = document.querySelectorAll('.button-container button');
-//     let tabcontent = document.querySelectorAll('.tab-content div')
-//     product_tabs.forEach((tab, index) => {
-//     tab.addEventListener("click", () => {
-//       tabcontent.forEach((content) => {
-//         content.classList.remove("active");
-//       });
-//       product_tabs.forEach((tab) => {
-//         tab.classList.remove("active");
-//         // tab.firstChild.classList.remove("active");
-        
-//       });
-//       tabcontent[index].classList.add("active");
-//       product_tabs[index].classList.add("active");
-//     });
-//   });
-    
-    
-// }
-
-const topCategoriestabs = document.getElementById('top_categories');
-const electronicstabs = document.getElementById('electronics');
-const beautytabs =  document.getElementById('beauty');
-const fashiontabs = document.getElementById('fashion');
-
-const category_products = document.querySelectorAll('.category-product');
-
-// Turns node list into an array
-const allFilteredDivsArray = Array.from(category_products)
-
-topCategoriestabs.addEventListener('click', topCategories)
-function topCategories() {
-  allFilteredDivsArray.forEach(div => {
-    div.classList.remove('remove')
-    div.classList.add('show')
-  })
+    });
 }
-
-electronicstabs.addEventListener('click', electronics)
-function electronics() {
-  allFilteredDivsArray.forEach(div => {
-    div.classList.remove('remove')
-
-    if (!div.dataset.electronics) {
-      div.classList.add('remove')
-    }
-
-  })
-}
-
-beautytabs.addEventListener('click', beauty)
-function beauty() {
-  allFilteredDivsArray.forEach(div => {
-    div.classList.remove('remove')
-
-    if (!div.dataset.beauty) {
-      div.classList.add('remove')
-    }
-
-  })
-}
-
-fashiontabs.addEventListener('click', fashion)
-function fashion() {
-  allFilteredDivsArray.forEach(div => {
-    div.classList.remove('remove')
-    
-    if (!div.dataset.fashion) {
-      div.classList.add('remove')
-    }
-
-  })
-}
-
-
-
-
-
-  

@@ -131,27 +131,16 @@
                     <a class="dropdown-item" href="#">Home decor</a>
                     <a class="dropdown-item" href="#">Appliances</a>
                     <a class="dropdown-item" href="#">Flowers</a>
-
-
-
-
-
-
-
-
-
-
-                    
                   </div>
                 </div>
-                  <form action="" class="search-form">
-                      <input type="text" placeholder="Search here...">
+                  <form action="search-page.html" class="search-form" id="search-form">
+                      <input type="text" placeholder="Search here..." id="search-input">
                       <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </form>
               </div>
               <div class="middle-header-menus ">
                   <ul class="d-flex">
-                      <li><a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></li>
+                      <li ><a id="login" onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></li>
                       <li><a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></li>
                       <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
                       <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
@@ -320,15 +309,13 @@
         <label for="password">Password</label>
         <input type="password"  id="password" name="password">
       </div>
+      
         <button type="submit" id="signin" onclick="LoginForm()">Sign in</button>
         <div class="register-link">
           <p>Don't have an account? <a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></p>
         </div>
       </div>
     </div>
-
-    
-
     </section>
     <section class="popup" id="popup1">
       <div class="login-popup none" id="popup-signup">
@@ -480,49 +467,116 @@
         
       </div>
       <div class="button-container">
-        <button id="top_categories" class="category-btn active" ><span class="active"></span>Top categories</button>
-        <button id="electronics" class="category-btn" ><span class=""></span>Electronic</button>
-        <button id="beauty" class="category-btn" ><span class=""></span>Beauty</button>
-        <button id="fashion" class="category-btn" ><span class=""></span>Fashion</button>
+        <button id="top_categories" class="category-btn buy" ><span class=""></span>Top categories</button>
+        <button id="electronics" class="category-btn buy" ><span class=""></span>Electronic</button>
+        <button id="beauty" class="category-btn buy" ><span class=""></span>Beauty</button>
+        <button id="fashion" class="category-btn buy" ><span class=""></span>Fashion</button>
       </div>
       <div class="carousal-wrapper tab-content">
         <div id="category-products" class="category-products owl-carousel owl-theme blog-cards ">
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-electronics="electronic">
+          <div class="category-product top_categories electronics" data-electronics="electronics">
             <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
             <p>Electronics</p>
   
           </div>
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          
+          
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product top_categories electronics" data-electronics="electronics">
+            <img src="https://source.unsplash.com/1600x900/?fashion" alt="">
+            <p>Electronics</p>
+  
+          </div>
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashiongirl" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?rockstar" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?jeans" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?newfashion" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-fashion="fashion">
+          <div class="category-product top_categories fashion" data-fashion="fashion">
             <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
             <p>Fashion</p>
   
           </div>
-          <div class="category-product" data-beauty="beauty">
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?girl" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
+            <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
+            <p>Beauty</p>
+  
+          </div>
+          <div class="category-product top_categories beauty" data-beauty="beauty">
             <img src="https://source.unsplash.com/1600x900/?fashiontrending" alt="">
             <p>Beauty</p>
   
@@ -1318,5 +1372,7 @@
 <script src="js/signup.js"></script>
 <script src="js/buyfromusfilter.js"></script>
 <script src="js/main.js"></script>
+<!-- <script type="json" src="data/products.json"></script> -->
+<!-- <script src="data/products.json"></script> -->
 </body>
 </html>

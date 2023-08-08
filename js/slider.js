@@ -208,9 +208,9 @@ $('.stop').on('click', function () {
 var owl = $('#category-products');
 owl.owlCarousel({
     items: 5,
-    loop: true,
+    // loop: true,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsiveClass:true,
@@ -225,13 +225,13 @@ owl.owlCarousel({
         767:{
             items:3,
             nav:false,
-            loop:true,
+            // loop:true,
         },
         
         1000:{
             items:5,
             nav:false,
-            loop:true,
+            // loop:true,
         }
     }
     // dots:true,
@@ -282,8 +282,8 @@ owl.owlCarousel({
             nav:false,
             loop:false
         }
-    }
-    // dots:true,
+    },
+    // dots:false,
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])

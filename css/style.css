@@ -608,7 +608,7 @@ header{
 .remove{
     display: none;
 }
-.button-container .active{
+.button-container .active-btn{
     background-color: var(--theme-color)!important;
     color: white;
     display: block!important;
