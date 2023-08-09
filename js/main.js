@@ -1,4 +1,3 @@
-
 // scroll to top 
 const scrollToTop = () => {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
@@ -25,30 +24,24 @@ const newsletter = () =>{
 newsletterForm.addEventListener("submit",newsletter);
 
 
-
-function checkLoggedIn(){
-  const token = sessionStorage.getItem('token');
-
-  if(!token==''){
-    const name = localStorage.getItem('name');
-    var login=document.getElementById('login');
-    // login.lastElementChild.textContent=name;
-  }
-  else{
-    console.log("not lgged")
-  }
-}
-
-checkLoggedIn();
-
-var productsData;
+let productsData;
 //Search form
-async function loadProducts() {
-  const response = await fetch('../data/products.json');
-  const data = await response.json();
-
+function loadProducts() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('../data/products.json');
+    const data = await response.json();
+    resolve(data)
+  })
 }
 
+const fetchData = async () => {
+  const productsData = await loadProducts()
+  console.log("Main yha hu", productsData )
+}
+
+fetchData()
+
+console.log(productsData)
 
 const searchForm = document.getElementById('search-form');
 const searchHandle=()=>{
@@ -57,9 +50,6 @@ const searchHandle=()=>{
 
 }
 searchForm.addEventListener("submit" ,searchHandle);
-
-
-
 
 
 //products data
@@ -86,9 +76,3 @@ searchForm.addEventListener("submit" ,searchHandle);
 //     }
 //   });
 // }
-
-  
-  
-  
- 
-  

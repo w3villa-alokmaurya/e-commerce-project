@@ -55,6 +55,7 @@ const LoginForm=()=>{
         var token = 'ecom'+Math.random(1,9999999);
         sessionStorage.setItem('token',token);
         toggleclose();
+        location.reload();
 
     }
     else{
@@ -62,4 +63,12 @@ const LoginForm=()=>{
     }
 
 
+}
+
+function togglelogout(){
+    
+    sessionStorage.setItem('token','')
+    location.reload();
+    alert("Logged Out");
+    
 }
