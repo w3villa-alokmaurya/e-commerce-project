@@ -50,6 +50,11 @@ input{
 p{
     font-size: 16px;
     font-weight: 400;
+    /* white-space: nowrap;
+    overflow: hidden; */
+    /* text-overflow: ellipsis;
+    overflow: hidden; */
+    
 
 }
 h1{
@@ -669,14 +674,14 @@ header{
 }
 .category-product p{
     position: relative;
-    bottom: 40px;
+    bottom: 50px;
     font-size: 14px;
     font-weight: 500;
     color: black;
     background-color:#edf1f4;
-    max-width: 50%;
+    max-width: 66%;
     height: auto;
-    left: 60px;
+    left: 42px;
     text-align: center;
     border-radius: 5px;
     padding: 5px;

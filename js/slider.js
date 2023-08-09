@@ -41,50 +41,6 @@ $('.stop').on('click', function () {
 })
 
 
-// for blog posts
-
-var owl = $('#blog-cards');
-owl.owlCarousel({
-    items: 3,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:false,
-            loop:true,
-        },
-        550:{
-            items:2,
-            loop:true,
-        },
-        767:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        1000:{
-            items:3,
-            nav:false,
-            loop:true,
-        },
-        1200:{
-            items:3,
-            nav:false,
-            loop:false
-        }
-    }
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
 
 
 
@@ -109,51 +65,6 @@ $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
 
-// for testimonials
-
-
-var owl = $('#testimonials');
-owl.owlCarousel({
-    items: 3,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsiveClass:true,
-    
-
-    responsive:{
-        0:{
-            items:1,
-            nav:false
-        },
-        430:{
-            items:2,
-        },
-        767:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        1000:{
-            items:3,
-            nav:false,
-            loop:false
-        },
-        1200:{
-            items:3,
-            nav:false,
-            loop:false
-        }
-    }
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
 
 // most viewed
 
@@ -202,46 +113,6 @@ $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
 
-// category products
-
-
-var owl = $('#category-products');
-owl.owlCarousel({
-    items: 5,
-    // loop: true,
-    margin: 10,
-    // autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:2,
-            nav:false
-        },
-        500:{
-            items:3
-        },
-        767:{
-            items:3,
-            nav:false,
-            // loop:true,
-        },
-        
-        1000:{
-            items:5,
-            nav:false,
-            // loop:true,
-        }
-    }
-    // dots:true,
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
 
 //featured products
 

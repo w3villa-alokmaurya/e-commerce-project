@@ -1,0 +1,75 @@
+{
+    "blogs":[
+        {
+            "id": 1,
+            "title":"Hey this is nice camera",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?camera",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 2,
+            "title":"Hey this is nice camera",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?dress",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 3,
+            "title":"Hey this is nice camera",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?camera",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 4,
+            "title":"Hey this is nice camera",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?fashion",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 5,
+            "title":"Hey this is nice desk",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?desk",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 6,
+            "title":"Hey this is nice bulb",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?bulb",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        },
+        {
+            "id": 7,
+            "title":"Hey this is nice mobile",
+            "description":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.",
+            "image":"https://source.unsplash.com/400x300/?mobile",
+            "date":"2 Aug",
+            "author":"admin",
+            "views":"30",
+            "comments":"20"
+        }
+
+    ]
+}

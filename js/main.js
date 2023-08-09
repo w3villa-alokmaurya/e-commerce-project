@@ -23,6 +23,11 @@ const newsletter = () =>{
 }
 newsletterForm.addEventListener("submit",newsletter);
 
+
+//End Newsletter form **************************//
+
+
+// fetch Data  function/////////////////////////////////////////////////////////
 function fetchData(url, options = {}) {
   return fetch(url, options)
     .then(response => {
@@ -86,53 +91,53 @@ const productsCardData=()=>{fetchData(apiUrl)
  
       
     });
-    console.log(feturedProducts.innerHTML=productsCard);
+    feturedProducts.innerHTML=productsCard;
     var owl = $('#featured-products');
-owl.owlCarousel({
-    items: 4,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:false
+    owl.owlCarousel({
+        items: 4,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            620:{
+                items:2,
+                nav:false,
+                loop:true,
+            },
+            767:{
+                items:2,
+                nav:false,
+                loop:true,
+            },
+            800:{
+                items:3,
+            },
+            1000:{
+                items:3,
+                nav:false,
+                loop:true,
+            },
+            1200:{
+                items:4,
+                nav:false,
+                loop:false
+            }
         },
-        620:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        767:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        800:{
-            items:3,
-        },
-        1000:{
-            items:3,
-            nav:false,
-            loop:true,
-        },
-        1200:{
-            items:4,
-            nav:false,
-            loop:false
-        }
-    },
-    // dots:false,
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
+        // dots:false,
+    });
+    $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+    })
+    $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+    })
 
   })
   .catch(error => {
@@ -141,11 +146,287 @@ $('.stop').on('click', function () {
 }
 productsCardData();
 
-// feturedProducts.addEventListener('mouseover', productsCardData);
+// this is for truncate string ******
+const limit =(string = '', limit = 0) =>{  
+  return string.substring(0, limit)
+}
+
+// Blog Section Posts **************************************************
+
+const blogUrl = '../data/blogs.json';
+const blogCardSection = document.getElementById('blog-cards-section');
+
+const blogPosts = () =>{
+  fetchData(blogUrl)
+  .then(data=>{
+    let blogCard = '<div id="blog-cards" class="owl-carousel owl-theme blog-cards " style="margin-top: 40px; margin-bottom: 20px;">';
+    const blogs = data['blogs'];
+    blogs.forEach(blog=>{
+      let description = limit(blog.description, 300);
+
+      blogCard+=`<div class="blog-card">
+      <p class="date"><span>02</span><br>Aug</p>
+      <img src="${blog.image}" alt="">
+      <div class="middle-blog-text">
+        <p><i class="fa-solid fa-user"></i> ${blog.author}</p>
+        <p><i class="fa-solid fa-comment"></i> ${blog.comments}</p>
+        <p><i class="fa-solid fa-eye"></i> ${blog.views}views</p>
+        
+        
+      </div>
+      <div class="bottom-blog-text">
+        <h1>${blog.title}</h1>
+        <p>${description}</p>
+        <button>Read more <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div> `;
+      
+    });
+    blogCardSection.innerHTML=blogCard;
+    // console.log(blogCardSection);
+    // for blog posts Slider
+
+        var owl = $('#blog-cards');
+        owl.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                    loop:true,
+                },
+                550:{
+                    items:2,
+                    loop:true,
+                },
+                767:{
+                    items:2,
+                    nav:false,
+                    loop:true,
+                },
+                1000:{
+                    items:3,
+                    nav:false,
+                    loop:true,
+                },
+                1200:{
+                    items:3,
+                    nav:false,
+                    loop:false
+                }
+            }
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+
+
+  });
+}
+blogPosts();
+
+
+// ENd blog ******************************************************************************
+
+
+
+// Testimonial section ***//
+
+const testimonialUrl = '../data/testimonials.json';
+const testimonialsSection = document.getElementById('testimonials-section');
+
+const testimonialCards = ()=>{
+  fetchData(testimonialUrl)
+  .then(data=>{
+   let testimonialsCards = '<div id="testimonials" class="owl-carousel owl-theme blog-cards " style="margin-top: 40px; margin-bottom: 20px;">';
+   const Testimonials = data['testimonials'];
+   Testimonials.forEach(testimonial=>{
+    let Review = limit(testimonial.review, 200);
+    testimonialsCards+=`<div class="test-card">
+    <p class="quote-s"><i class="fa-solid fa-quote-left"></i></p>
+    <p>${Review}</p>
+    <p class="name"> - ${testimonial.name}</p>
+
+  </div>`
+   });
+   // for testimonials slider
+      var owl = $('#testimonials');
+      owl.owlCarousel({
+          items: 3,
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+          responsiveClass:true,
+          
+
+          responsive:{
+              0:{
+                  items:1,
+                  nav:false
+              },
+              430:{
+                  items:2,
+              },
+              767:{
+                  items:2,
+                  nav:false,
+                  loop:true,
+              },
+              1000:{
+                  items:3,
+                  nav:false,
+                  loop:false
+              },
+              1200:{
+                  items:3,
+                  nav:false,
+                  loop:false
+              }
+          }
+      });
+      $('.play').on('click', function () {
+          owl.trigger('play.owl.autoplay', [1000])
+      })
+      $('.stop').on('click', function () {
+          owl.trigger('stop.owl.autoplay')
+      })
+
+   
+  });
+}
+testimonialCards();
+
+//End Testimonials //
+
+
+
+// Buy From US Section  //
+
+const buyFromUsUrl = '../data/buyfromus.json';
+const buyFromUsSection = document.getElementById('buyfromussection');
+
+const buyFromUs=(term)=>{
+  fetchData(buyFromUsUrl)
+  .then(data=>{
+    let buyFromUsCards = `<div id="category-products-${term}" class="category-products owl-carousel owl-theme blog-cards ">`;
+
+    data[term].forEach(card=>{
+      buyFromUsCards+=`<div class="category-product top_categories fashion" data-fashion="fashion">
+         <img src="${card.img}" alt="">
+        <p>${card.name}</p>
+  
+      </div>`;
+      
+    });
+    buyFromUsSection.innerHTML=buyFromUsCards;
+    
+
+    // category products
+
+
+var owl = $('#category-products-'+term);
+owl.owlCarousel({
+    items: 5,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:false
+        },
+        500:{
+            items:3
+        },
+        767:{
+            items:3,
+            nav:false,
+            // loop:true,
+        },
+        
+        1000:{
+            items:5,
+            nav:false,
+            // loop:true,
+        }
+    }
+    // dots:true,
+});
+$('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+})
+$('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+})
+
+
+
+   
+      
+    // console.log(buyFromUsCards);
+    
+    
+    // document.getElementById('top_categories').addEventListener('click', displayData);
+  })
+}
+
+buyFromUs('top_categories');
+let btns = document.querySelectorAll('#category-btns *');  
+
+// const resetActive=(btns, currentActive)=>{
+//   // currentActive.classList.add('active-btn');
+//   btns.forEach((btn)=>{
+//     btn.classList.remove('active-btn');
+    
+//       console.log(btn);
+    
+    
+//   });
+    
+// }
+
+const handleClick=(id)=>{
+  buyFromUs(id);
+  let currentActive = document.getElementById(id);
+  // let previousActive;
+  // if(btns[0].firstElementChild.classList.contains("active-btn")){
+  //   btns[0].firstElementChild.classList.remove("active-btn")
+  //   currentActive.classList.add("active-btn")
+  //   previousActive = currentActive;
+  // }else{
+
+  // }
+  
+const childen = btns.childNodes;
+  console.log(btns.childNodes);
+  childen.forEach(li => {
+    console.log(li.innerText);
+});
+
+  currentActive.classList.add('active-btn');
+
+}
+
+//End section //
 
 
 
 //Search form
+
 
 const searchForm = document.getElementById('search-form');
 const searchHandle=()=>{

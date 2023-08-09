@@ -64,6 +64,19 @@
         "category": "electronics",
         "image": "https://source.unsplash.com/400x300/?camera"
         
+      },
+      {
+        "id": 6,
+        "title": "Fashion",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "brand": "Apple",
+        "category": "fashion",
+        "image": "https://source.unsplash.com/400x300/?girl"
+        
       }
       
 

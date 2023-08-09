@@ -1,0 +1,40 @@
+{
+    "testimonials":[
+        {
+            "id": 1,
+            "name":"Alok",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        },
+        {
+            "id": 2,
+            "name":"Alok maurya",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        },
+        {
+            "id": 3,
+            "name":"Vineet",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        },
+        {
+            "id": 4,
+            "name":"Alok",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        },
+        {
+            "id": 5,
+            "name":"Alok",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        },
+        {
+            "id": 6,
+            "name":"Alok",
+            "review":"Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module."
+            
+        }
+    ]
+}
