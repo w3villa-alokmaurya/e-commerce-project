@@ -931,6 +931,10 @@ header{
     
 
 }
+/* .featured-products{
+    display: flex!important;
+    flex-wrap: wrap;
+} */
 .featured-right-1{
     border-bottom: 2px #f14919 solid;
     border-width: 3px;

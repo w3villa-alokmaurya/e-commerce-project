@@ -245,52 +245,56 @@ $('.stop').on('click', function () {
 
 //featured products
 
-var owl = $('#featured-products');
-owl.owlCarousel({
-    items: 4,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    esponsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:false
-        },
-        620:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        767:{
-            items:2,
-            nav:false,
-            loop:true,
-        },
-        800:{
-            items:3,
-        },
-        1000:{
-            items:3,
-            nav:false,
-            loop:true,
-        },
-        1200:{
-            items:4,
-            nav:false,
-            loop:false
-        }
-    },
-    // dots:false,
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
+
+
+
+
+// var owl = $('#featured-products');
+// owl.owlCarousel({
+//     items: 4,
+//     loop: true,
+//     margin: 10,
+//     autoplay: true,
+//     autoplayTimeout: 2000,
+//     autoplayHoverPause: true,
+//     responsiveClass:true,
+//     responsive:{
+//         0:{
+//             items:1,
+//             nav:false
+//         },
+//         620:{
+//             items:2,
+//             nav:false,
+//             loop:true,
+//         },
+//         767:{
+//             items:2,
+//             nav:false,
+//             loop:true,
+//         },
+//         800:{
+//             items:3,
+//         },
+//         1000:{
+//             items:3,
+//             nav:false,
+//             loop:true,
+//         },
+//         1200:{
+//             items:4,
+//             nav:false,
+//             loop:false
+//         }
+//     },
+//     // dots:false,
+// });
+// $('.play').on('click', function () {
+//     owl.trigger('play.owl.autoplay', [1000])
+// })
+// $('.stop').on('click', function () {
+//     owl.trigger('stop.owl.autoplay')
+// })
 
 
 //new fashion
