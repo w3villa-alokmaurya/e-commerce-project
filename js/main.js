@@ -140,20 +140,73 @@ const handleClick = (id) => {
 const apiUrl = 'data/products.json';
 const feturedProducts = document.getElementById('featured-products1');
 const addToCart=(productid ,quantityid, category)=>{
-  const quantity = document.getElementById(quantityid.id).value;
-
-  // console.log(quantity);
+  const quantity = document.getElementById(quantityid).value;
   const currentProduct = productid;
-  const  categoryId = category.id;
+  const  categoryId = category;
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  // console.log(length.cartItems);
+ let a= cartItems.find(({ productId }) => productId == currentProduct);
+if(!a==''){
+  alert("Item is already added to cart");
+}
+else{
   cartItems.push({
     productId:currentProduct,
     category:categoryId,
     quantity:quantity
   });
+
   let set = localStorage.setItem('cartItems',JSON.stringify(cartItems));
     alert("Product Added to cart");
+    location.reload(); 
+  
 }
+
+}
+const addToWishlist=(productid, category)=>{
+  const currentProduct = productid;
+  const  categoryId = category;
+  const wish = document.getElementById('wishlist'+productid);
+  wish.classList.replace('fa-regular', 'fa-solid');
+  wish.style="color:red";
+  let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
+  // console.log(length.cartItems);
+ let a= wishlistItems.find(({ productId }) => productId == currentProduct);
+if(!a==''){
+  alert("Item is already added to wishlist");
+}
+else{
+  wishlistItems.push({
+    productId:currentProduct,
+    category:categoryId,
+    });
+
+
+  let set = localStorage.setItem('wishlistItems',JSON.stringify(wishlistItems));
+    alert("Product Added to wishlist");
+  
+}
+
+}
+
+const cartpopup=()=>{
+
+    let popup = document.getElementById('popup');
+    let modal =  document.getElementById('popup-cart');
+    modal.classList.add('active');
+    popup.classList.add('overlay')
+    modal.classList.remove('none');
+}
+const toggleclosecart=()=>{
+  let popup = document.getElementById('popup');
+  let modal =  document.getElementById('popup-cart');
+  modal.classList.remove('active');
+  modal.classList.add('none');
+  popup.classList.remove('overlay');
+}
+document.getElementById('cart-item-n1').addEventListener('click', cartpopup);
+
+
 
 const productsCardData = (term) => {
   fetchData(apiUrl)
@@ -163,7 +216,6 @@ const productsCardData = (term) => {
 
     data[term].forEach(product => {
       // console.log(product);
-
       
       productsCard += `<div class="products-card" id="${product.id}">
       <div class="left">custom labels</div>
@@ -186,10 +238,10 @@ const productsCardData = (term) => {
             <input id="quantity${product.id}" type="number" name="number"
           min = "1" max="10" step="1" value="1">
           
-            <button id="${term+product.id}" onclick="addToCart(${product.id}, quantity${product.id}, ${term})">Add to cart</button>
+            <button id="${term+product.id}" onclick="addToCart('${product.id}', 'quantity${product.id}', '${term}')">Add to cart</button>
           </div>
           <div class="product-icon">
-            <i class="fa-regular fa-heart"></i>
+            <a onclick="addToWishlist('${product.id}','${term}')"><i id="wishlist${product.id}" class="fa-regular fa-heart"></i></a>
             <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
           </div>
       </div>
@@ -433,18 +485,7 @@ testimonialCards();
 
 //Search form
 
-function redirect_search() {
-  window.location.href = "/search-page";
 
-}
-
-const searchForm = document.getElementById('search-form');
-const searchHandle = () => {
-  const searchInput = document.getElementById('search-input').value;
-  console.log(searchInput);
-
-}
-searchForm.addEventListener("submit", searchHandle);
 
 
 //products data
