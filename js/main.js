@@ -1,25 +1,25 @@
 // scroll to top 
 const scrollToTop = () => {
-    window.scroll({top: 0, left: 0, behavior: 'smooth'});
-    }
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+}
 // newsletter form
 const newsletterForm = document.getElementById('newsletter-form');
-const newsletter = () =>{
-   
-    const email = document.getElementById('newsletter-email').value;
-    const storedNewsletterEmail= localStorage.getItem('newsletter_email');
-    if(email==''){
-        alert("Please fill all the details");
-    }else if(storedNewsletterEmail==email){
-        alert("Already Subscribed");
-    }else {
-        localStorage.setItem('newsletter_email', email);
-        alert("Subscribed Successfully");
-    }
-    
+const newsletter = () => {
+
+  const email = document.getElementById('newsletter-email').value;
+  const storedNewsletterEmail = localStorage.getItem('newsletter_email');
+  if (email == '') {
+    alert("Please fill all the details");
+  } else if (storedNewsletterEmail == email) {
+    alert("Already Subscribed");
+  } else {
+    localStorage.setItem('newsletter_email', email);
+    alert("Subscribed Successfully");
+  }
+
 
 }
-newsletterForm.addEventListener("submit",newsletter);
+newsletterForm.addEventListener("submit", newsletter);
 
 //End Newsletter form **************************//
 
@@ -39,7 +39,7 @@ function fetchData(url, options = {}) {
 }
 
 // this is for truncate string ******
-const limit =(string = '', limit = 0) =>{  
+const limit = (string = '', limit = 0) => {
   return string.substring(0, limit)
 }
 
@@ -48,84 +48,84 @@ const limit =(string = '', limit = 0) =>{
 const buyFromUsUrl = '../data/buyfromus.json';
 const buyFromUsSection = document.getElementById('buyfromussection');
 
-const buyFromUs=(term)=>{
+const buyFromUs = (term) => {
   fetchData(buyFromUsUrl)
-  .then(data=>{
-    let buyFromUsCards = `<div id="category-products-${term}" class="category-products owl-carousel owl-theme blog-cards ">`;
+    .then(data => {
+      let buyFromUsCards = `<div id="category-products-${term}" class="category-products owl-carousel owl-theme blog-cards ">`;
 
-    data[term].forEach(card=>{
-      buyFromUsCards+=`<div class="category-product top_categories fashion" data-fashion="fashion">
+      data[term].forEach(card => {
+        buyFromUsCards += `<div class="category-product top_categories fashion" data-fashion="fashion">
          <img src="${card.img}" alt="">
         <p>${card.name}</p>
   
       </div>`;
-      
-    });
-    buyFromUsSection.innerHTML=buyFromUsCards;
-    
 
-    // category products
+      });
+      buyFromUsSection.innerHTML = buyFromUsCards;
 
 
-var owl = $('#category-products-'+term);
-owl.owlCarousel({
-    items: 5,
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:2,
-            nav:false
-        },
-        500:{
-            items:3
-        },
-        767:{
-            items:3,
-            nav:false,
+      // category products
+
+
+      var owl = $('#category-products-' + term);
+      owl.owlCarousel({
+        items: 5,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 2,
+            nav: false
+          },
+          500: {
+            items: 3
+          },
+          767: {
+            items: 3,
+            nav: false,
             // loop:true,
-        },
-        
-        1000:{
-            items:5,
-            nav:false,
+          },
+
+          1000: {
+            items: 5,
+            nav: false,
             // loop:true,
+          }
         }
-    }
-    // dots:true,
-});
-$('.play').on('click', function () {
-    owl.trigger('play.owl.autoplay', [1000])
-})
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
+        // dots:true,
+      });
+      $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+      })
+      $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+      })
 
-  })
+    })
 }
 
 buyFromUs('top_categories');
-const btns = document.querySelectorAll('#category-btns *');  
+const btns = document.querySelectorAll('#category-btns *');
 
-const resetActive=(btns)=>{
-  btns.forEach(btn=>{
-    if(btn.classList.contains('active-btn')){
+const resetActive = (btns) => {
+  btns.forEach(btn => {
+    if (btn.classList.contains('active-btn')) {
       btn.classList.remove('active-btn');
     }
   })
 }
 
-const makeActiveBtn=(currentActive)=>{
+const makeActiveBtn = (currentActive) => {
   currentActive.classList.add('active-btn');
   currentActive.firstChild.classList.add('active-btn');
 
 }
 
-const handleClick=(id)=>{
+const handleClick = (id) => {
   buyFromUs(id);
   let currentActive = document.getElementById(id);
   resetActive(btns);
@@ -139,14 +139,33 @@ const handleClick=(id)=>{
 // Products Data
 const apiUrl = '../data/products.json';
 const feturedProducts = document.getElementById('featured-products1');
+const addToCart=(productid ,quantityid, category)=>{
+  const quantity = document.getElementById(quantityid.id).value;
 
-const productsCardData=(term)=>{fetchData(apiUrl)
+  // console.log(quantity);
+  const currentProduct = productid;
+  const  categoryId = category.id;
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cartItems.push({
+    productId:currentProduct,
+    category:categoryId,
+    quantity:quantity
+  });
+  let set = localStorage.setItem('cartItems',JSON.stringify(cartItems));
+    alert("Product Added to cart");
+}
+
+const productsCardData = (term) => {
+  fetchData(apiUrl)
   .then(data => {
-    let productsCard=`<div id="featured-products-${term}" class="featured-products owl-carousel owl-theme">`;
+    let productsCard = `<div id="featured-products-${term}" class="featured-products owl-carousel owl-theme">`;
+  
 
     data[term].forEach(product => {
       // console.log(product);
-     productsCard += `<div class="products-card">
+
+      
+      productsCard += `<div class="products-card" id="${product.id}">
       <div class="left">custom labels</div>
       <div class="right">
         <p class="right-1">-70%</p>
@@ -164,9 +183,10 @@ const productsCardData=(term)=>{fetchData(apiUrl)
       </div>
         <div class="cart-product d-flex justify-content-between">
           <div class="add-to-cart-btn">
-            <input type="number" name="number"
+            <input id="quantity${product.id}" type="number" name="number"
           min = "1" max="10" step="1" value="1">
-            <button>Add to cart</button>
+          
+            <button id="${term+product.id}" onclick="addToCart(${product.id}, quantity${product.id}, ${term})">Add to cart</button>
           </div>
           <div class="product-icon">
             <i class="fa-regular fa-heart"></i>
@@ -178,54 +198,60 @@ const productsCardData=(term)=>{fetchData(apiUrl)
         <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
       </div>
     </div>`;
-      
+    
+
     });
-    feturedProducts.innerHTML=productsCard;
-    var owl = $('#featured-products-'+term);
+
+   
+     
+    feturedProducts.innerHTML = productsCard;
+   
+
+    var owl = $('#featured-products-' + term);
     owl.owlCarousel({
-        items: 4,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:false
-            },
-            620:{
-                items:2,
-                nav:false,
-                loop:true,
-            },
-            767:{
-                items:2,
-                nav:false,
-                loop:true,
-            },
-            800:{
-                items:3,
-            },
-            1000:{
-                items:3,
-                nav:false,
-                loop:true,
-            },
-            1200:{
-                items:4,
-                nav:false,
-                loop:false
-            }
+      items: 4,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
         },
-        // dots:false,
+        620: {
+          items: 2,
+          nav: false,
+          loop: true,
+        },
+        767: {
+          items: 2,
+          nav: false,
+          loop: true,
+        },
+        800: {
+          items: 3,
+        },
+        1000: {
+          items: 3,
+          nav: false,
+          loop: true,
+        },
+        1200: {
+          items: 4,
+          nav: false,
+          loop: false
+        }
+      },
+      // dots:false,
     });
     $('.play').on('click', function () {
-        owl.trigger('play.owl.autoplay', [1000])
+      owl.trigger('play.owl.autoplay', [1000])
     })
     $('.stop').on('click', function () {
-        owl.trigger('stop.owl.autoplay')
+      owl.trigger('stop.owl.autoplay')
     })
 
   })
@@ -236,7 +262,7 @@ const productsCardData=(term)=>{fetchData(apiUrl)
 productsCardData('featured');
 const featuredProductsBtns = document.querySelectorAll('#featured-products-btns *');
 
-const handleClick1=(id)=>{
+const handleClick1 = (id) => {
   productsCardData(id);
   let currentActive = document.getElementById(id);
   resetActive(featuredProductsBtns);
@@ -244,21 +270,19 @@ const handleClick1=(id)=>{
 }
 
 // end section ****************//
-
-
 // Blog Section Posts **************************************************
 
 const blogUrl = '../data/blogs.json';
 const blogCardSection = document.getElementById('blog-cards-section');
 
-const blogPosts = (term) =>{
+const blogPosts = (term) => {
   fetchData(blogUrl)
-  .then(data=>{
-    let blogCard = `<div id="blog-cards-${term}" class="owl-carousel owl-theme blog-cards " margin-bottom: 20px;">`;
-    const blogs = data[term];
-    blogs.forEach(blog=>{
-      let description = limit(blog.description, 300);
-      blogCard+=`<div class="blog-card">
+    .then(data => {
+      let blogCard = `<div id="blog-cards-${term}" class="owl-carousel owl-theme blog-cards " margin-bottom: 20px;">`;
+      const blogs = data[term];
+      blogs.forEach(blog => {
+        let description = limit(blog.description, 300);
+        blogCard += `<div class="blog-card">
       <p class="date"><span>02</span><br>Aug</p>
       <img src="${blog.image}" alt="">
       <div class="middle-blog-text">
@@ -274,60 +298,58 @@ const blogPosts = (term) =>{
         <button>Read more <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div> `;
-      
-    });
-    blogCardSection.innerHTML=blogCard;
-    // for blog posts Slider
 
-        var owl = $('#blog-cards-'+term);
-        owl.owlCarousel({
-            items: 3,
+      });
+      blogCardSection.innerHTML = blogCard;
+      // for blog posts Slider
+
+      var owl = $('#blog-cards-' + term);
+      owl.owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
             loop: true,
-            margin: 10,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:false,
-                    loop:true,
-                },
-                550:{
-                    items:2,
-                    loop:true,
-                },
-                767:{
-                    items:2,
-                    nav:false,
-                    loop:true,
-                },
-                1000:{
-                    items:3,
-                    nav:false,
-                    loop:true,
-                },
-                1200:{
-                    items:3,
-                    nav:false,
-                    loop:false
-                }
-            }
-        });
-        $('.play').on('click', function () {
-            owl.trigger('play.owl.autoplay', [1000])
-        })
-        $('.stop').on('click', function () {
-            owl.trigger('stop.owl.autoplay')
-        })
-
-
-  });
+          },
+          550: {
+            items: 2,
+            loop: true,
+          },
+          767: {
+            items: 2,
+            nav: false,
+            loop: true,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+            loop: true,
+          },
+          1200: {
+            items: 3,
+            nav: false,
+            loop: false
+          }
+        }
+      });
+      $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+      })
+      $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+      })
+    });
 }
 blogPosts('latest_posts');
 const blogPostsBtns = document.querySelectorAll('#blog-posts-btns *');
-const handleClick2=(id)=>{
+const handleClick2 = (id) => {
   blogPosts(id);
   let currentActive = document.getElementById(id);
   resetActive(blogPostsBtns);
@@ -341,88 +363,88 @@ const handleClick2=(id)=>{
 const testimonialUrl = '../data/testimonials.json';
 const testimonialsSection = document.getElementById('testimonials-section');
 
-const testimonialCards = ()=>{
+const testimonialCards = () => {
   fetchData(testimonialUrl)
-  .then(data=>{
-   let testimonialsCards = '<div id="testimonials-cards" class="owl-carousel owl-theme blog-cards " style="margin-top: 40px; margin-bottom: 20px;">';
-   const Testimonials = data['testimonials'];
-   Testimonials.forEach(testimonial=>{
-    let Review = limit(testimonial.review, 200);
-    testimonialsCards+=`<div class="test-card">
+    .then(data => {
+      let testimonialsCards = '<div id="testimonials-cards" class="owl-carousel owl-theme blog-cards " style="margin-top: 40px; margin-bottom: 20px;">';
+      const Testimonials = data['testimonials'];
+      Testimonials.forEach(testimonial => {
+        let Review = limit(testimonial.review, 200);
+        testimonialsCards += `<div class="test-card">
     <p class="quote-s"><i class="fa-solid fa-quote-left"></i></p>
     <p>${Review}</p>
     <p class="name"> - ${testimonial.name}</p>
 
   </div>`
-   });
-    testimonialsSection.innerHTML=testimonialsCards;
-    // for testimonials slider
-    var owl = $('#testimonials-cards');
-    owl.owlCarousel({
+      });
+      testimonialsSection.innerHTML = testimonialsCards;
+      // for testimonials slider
+      var owl = $('#testimonials-cards');
+      owl.owlCarousel({
         items: 3,
         loop: true,
         margin: 10,
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
-        responsiveClass:true,
-        
+        responsiveClass: true,
 
-        responsive:{
-            0:{
-                items:1,
-                nav:false
-            },
-            430:{
-                items:2,
-            },
-            767:{
-                items:2,
-                nav:false,
-                loop:true,
-            },
-            1000:{
-                items:3,
-                nav:false,
-                loop:false
-            },
-            1200:{
-                items:3,
-                nav:false,
-                loop:false
-            }
+
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          430: {
+            items: 2,
+          },
+          767: {
+            items: 2,
+            nav: false,
+            loop: true,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+            loop: false
+          },
+          1200: {
+            items: 3,
+            nav: false,
+            loop: false
+          }
         }
-    });
-    $('.play').on('click', function () {
+      });
+      $('.play').on('click', function () {
         owl.trigger('play.owl.autoplay', [1000])
-    })
-    $('.stop').on('click', function () {
+      })
+      $('.stop').on('click', function () {
         owl.trigger('stop.owl.autoplay')
-    })
+      })
 
 
-  });
+    });
 }
 testimonialCards();
 
 //End Testimonials //******************************************** */
+
+
+
 //Search form
-
-
 
 function redirect_search() {
   window.location.href = "/search-page";
-  
-}
 
+}
 
 const searchForm = document.getElementById('search-form');
-const searchHandle=()=>{
-    const searchInput = document.getElementById('search-input').value;
-    console.log(searchInput);
+const searchHandle = () => {
+  const searchInput = document.getElementById('search-input').value;
+  console.log(searchInput);
 
 }
-searchForm.addEventListener("submit" ,searchHandle);
+searchForm.addEventListener("submit", searchHandle);
 
 
 //products data

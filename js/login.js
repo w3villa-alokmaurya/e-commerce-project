@@ -66,7 +66,6 @@ const LoginForm=()=>{
 }
 
 function togglelogout(){
-    
     sessionStorage.setItem('token','')
     location.reload();
     alert("Logged Out");
