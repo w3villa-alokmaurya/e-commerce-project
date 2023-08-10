@@ -45,7 +45,7 @@ const limit = (string = '', limit = 0) => {
 
 // Buy From US Section  //
 
-const buyFromUsUrl = '../data/buyfromus.json';
+const buyFromUsUrl = 'data/buyfromus.json';
 const buyFromUsSection = document.getElementById('buyfromussection');
 
 const buyFromUs = (term) => {
@@ -137,7 +137,7 @@ const handleClick = (id) => {
 
 // Featured product section*****/////////////
 // Products Data
-const apiUrl = '../data/products.json';
+const apiUrl = 'data/products.json';
 const feturedProducts = document.getElementById('featured-products1');
 const addToCart=(productid ,quantityid, category)=>{
   const quantity = document.getElementById(quantityid.id).value;
@@ -272,7 +272,7 @@ const handleClick1 = (id) => {
 // end section ****************//
 // Blog Section Posts **************************************************
 
-const blogUrl = '../data/blogs.json';
+const blogUrl = 'data/blogs.json';
 const blogCardSection = document.getElementById('blog-cards-section');
 
 const blogPosts = (term) => {
@@ -360,7 +360,7 @@ const handleClick2 = (id) => {
 // ENd blog ******************************************************************************
 // Testimonial section ***//
 
-const testimonialUrl = '../data/testimonials.json';
+const testimonialUrl = 'data/testimonials.json';
 const testimonialsSection = document.getElementById('testimonials-section');
 
 const testimonialCards = () => {
