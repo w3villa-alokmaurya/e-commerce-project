@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shopping-cart.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -381,133 +382,58 @@
 
     </section>
     
-    <section class="popup" id="popup2">
-      <div class="login-popup none" id="popup-cart">
-        <button onclick="toggleclosecart()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <section class="shopping-cart-section container">
         <div class="shopping-cart">
-          <h1>Shopping Cart</h1>
-          <p class="line start" style="border-width: 1px;"></p>
-          <hr style="margin-top: -16px;">
-          <div class="cart">
-            <div class="cart-product">
-              
-              <!-- <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
+            <h1>Wishlist</h1>
+            <p class="line start" style="border-width: 1px;"></p>
+            <hr style="margin-top: -16px; margin-bottom: 10px;">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-up1" >
+                        <div class="head-cart">
+                            <h3 style="padding-left: 10px;">Image</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-up1" style="width: 200px;">
+                        <div class="head-cart">
+                            <h3>Product Name</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-up1">
+                        <div class="head-cart">
+                            <h3>Model</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-up1">
+                        <div class="head-cart">
+                            <h3>Quantity</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-up1">
+                        <div class="head-cart">
+                            <h3>Unit Price</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="cart-up1">
+                        <div class="head-cart">
+                            <h3>Total</h3>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
-                </div>
-                
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div>
-              <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
-                </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
+                <div class="item-cart-dynamic" id="item-cart-dynamic">
+
                 </div>
                 
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div>
-              <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
-                </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
-                </div>
-                
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div> -->
 
             </div>
-          </div>
-          
         </div>
-        
-       
-      </div>
-    </div>
     </section>
     <!-- <div class="overlay none"></div> -->
 
@@ -525,421 +451,7 @@
 
 
 
-    <!-- hero section  -->
-    <section class="hero-section container d-flex">
-      <div class="carousel-wrapper">
-      <div id="banner-slider" class="owl-carousel owl-theme">
-        <div class="hero-left">
-          <div class="hero-text">
-            <button class="hero-mobile-button">Mobile</button>
-          <h2>Best mobile options at any resolutions</h2>
-          <button class="hero-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          
-  
-          </div>
-          <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
 
-        </div> 
-        <div class="hero-left">
-          <div class="hero-text">
-            <button class="hero-mobile-button">Mobile</button>
-          <h2>Best mobile options at any resolutions</h2>
-          <button class="hero-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          
-  
-          </div><img src="images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg" alt="">
-
-        </div> 
-        <div class="hero-left">
-          <div class="hero-text">
-            <button class="hero-mobile-button">Mobile</button>
-          <h2>Best mobile options at any resolutions</h2>
-          <button class="hero-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></button>
-          
-  
-          </div><img src="images/tamara-bellis-LJqRUWr9V0w-unsplash.jpg" alt="">
-
-        </div> 
-      </div>
-    </div>
-      <div class="hero-right d-flex">
-        <div class="hero-right-1">
-          <div class="right-hero-text">
-            <p>wearables</p>
-            <h3>intelligent & durable design</h3>
-          </div>
-            <img src="images/image3.png" alt="">
-        </div>
-        
-        <div class="hero-right-1">
-          <div class="right-hero-text">
-          <p>computers</p>
-          <h3>bulid your own high powered pc</h3>
-          
-        </div>
-        <img src="images/core-i3-4170-processor-punta-original-imaggvkxbkyefhzj.webp" alt="">
-
-      </div>
-
-    </section>
-
-
-    <!-- Features section -->
-   
-    <section class="features">
-      <div class="container features-section d-flex justify-content-around align-items-center">
-        <div class="first-feature">
-          <div class="d-flex">
-            <p class="padding-right-5"><i class="fa-solid fa-truck-fast"></i></p>
-            <p><span class="white">Free Shipping</span><br>
-              <span class="gray">Free delivery over $100</span></p>
-            
-          </div>
-        </div>
-        <div class="first-feature">
-          <div class="d-flex">
-            <p class="padding-right-5"><i class="fa-solid fa-reply"></i></p>
-            <p><span class="white">Free Returns</span><br>
-              <span class="gray">Hassle free returns</span></p>
-            
-          </div>
-        </div>
-        <div class="first-feature">
-          <div class="d-flex">
-            <p class="padding-right-5"><i class="fa-solid fa-lock"></i></p>
-            <p><span class="white">Secure Shopping</span><br>
-              <span class="gray">Best security features</span></p>
-            
-          </div>
-        </div>
-        <div class="first-feature">
-          <div class="d-flex">
-            <p ><i class="fa-solid fa-cube"></i></p>
-            <p><span class="white">Unlimited blocks</span><br>
-              <span class="gray">Any content any page</span></p>
-            
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- why buy from us section -->
-
-    <section class="why-buy-from-us container">
-      <div class="why-upper-text text-center">
-        <h1>Why buy from us ? </h1>
-        <p class="line"></p>
-        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Journal has been the best selling and most loved opencart theme since first launch 2013. Tried and tested by over 20k people, journal is the best Openkart theme framework on the market today. <a href="">Learn more</a></p>
-        
-      </div>
-      <div class="button-container" id="category-btns">
-        <button id="top_categories" onclick="handleClick(this.id)" class="category-btn active-btn buy" ><span class="active-btn"></span>Top categories</button>
-        <button id="electronics" onclick="handleClick(this.id)" class="category-btn buy" ><span class=""></span>Electronic</button>
-        <button id="beauty" onclick="handleClick(this.id)" class="category-btn buy" ><span class=""></span>Beauty</button>
-        <button id="fashion" onclick="handleClick(this.id)" class="category-btn buy" ><span class=""></span>Fashion</button>
-      </div>
-      <div class="carousal-wrapper tab-content">
-        <div id="buyfromussection" class="category-products blog-cards ">
-      
-         
-      </div>
-      </div>
-
-    </section>
-
-
-    <!-- featured-products section -->
-
-    <section class="why-buy-from-us featured-products-container container">
-      <div class="why-upper-text text-center">
-        <h1>Featured Products</h1>
-        <p class="line"></p>
-        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
-        
-      </div>
-      <div class="button-container" id="featured-products-btns">
-        <button id="featured" onclick="handleClick1(this.id)" class="category-btn active-btn"><span class="active-btn"></span>Featured</button>
-        <button id="latest" onclick="handleClick1(this.id)" class="category-btn"><span class=""></span>Latest</button>
-        <button id="bestsellers" onclick="handleClick1(this.id)" class="category-btn"><span class=""></span>bestsellers</button>
-        <button id="specials" onclick="handleClick1(this.id)" class="category-btn"><span class=""></span>specials</button>
-      </div>
-
-      <div id="featured-products1" class="featured-products">
-      </div>
-      <div class="show-allbutton">
-        <button >See all products <i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-
-    </section>
-
-<!-- 
-    featured category section -->
-    <section class="featured-category-container">
-      <div class="featured-category container">
-        <div class="why-upper-text text-center">
-          <h1>Featured Category</h1>
-          <p class="line"></p>
-          <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Easily create category based modules and display products from specific categories or brands only. The advanced page builder allows you to create any grid layout with full control at any breakpoint.</p>
-          
-        </div>
-        <div class="featured-categories-products d-flex">
-          <div class="featured-left">
-            <h3 style="font-size: 20px; font-weight:500;">Fashion</h3>
-            <p class="featured-left-1"></p>
-            <img src="https://source.unsplash.com/400x300/?fashion" alt="">
-            <p>Accesories</p>
-            <p>Dresses</p>
-            <p>pants</p>
-            <p>T-Shirts</p>
-            <a href="#">See all in Fashion</a>
-
-          </div>
-          <div class="featured-right">
-            <h3 style="font-size: 20px;">New in Fashion</h3>
-            <p class="featured-right-1"></p>
-            <div id="new-fashion" class="right-cards owl-carousel owl-theme">
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?style" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?stylish" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?blackdress" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img class="" src="https://source.unsplash.com/400x300/?girl" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img  src="https://source.unsplash.com/400x300/?mens" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-
-            </div>
-        </div>
-      </div>
-
-      </div>
-    </section>
-
-    <!-- shop buy brand -->
-
-    <section class="why-buy-from-us featured-products-container container">
-      <div class="why-upper-text text-center">
-        <h1>Shop by Brand</h1> 
-        <p class="line"></p>      
-      </div>
-      <div id="brands" class="owl-carousel owl-theme " style="margin-top: 40px; margin-bottom: 20px;">
-        <div class="item">
-          <img src="https://source.unsplash.com/200x200/?nikelogo" alt="">
-        </div>
-        <div class="item">
-          <img src="https://source.unsplash.com/200x200/?BoatLogo" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo3.png" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo3.png" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo1.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo2.jpeg" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo3.png" alt="">
-        </div>
-        <div class="item">
-          <img src="https://source.unsplash.com/200x200/?Addidas" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo3.png" alt="">
-        </div>
-        <div class="item">
-          <img src="images/logo2.jpeg" alt="">
-        </div>
-        
-    </div>
-    </section>
-
-
-    <!-- gallery section -->
-
-    <section class="gallery-section">
-      <div class="container">   
-        <div class="why-upper-text text-center">
-          <h1 style="color: white;">Improved Gallery Module</h1> 
-          <p class="line"></p>  
-          <p style="width: 1000px; text-align: center; margin-left: auto; margin-right: auto;"></p>>The Gallery module supports images,videos and can also act as banners that can point at any other page pr open other Popup module. Create different modules with images, videos, banners pr a combinations of all. Add your modules on any page in ny any grid format.</p>    
-        </div> 
-        <div class="image-gallery">
-          
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?nike" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?iphone" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?computer" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?girl" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?boys" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?mens" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?stylish" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?fashiontrending" alt="">
-          </div>
-          <div class="image">
-            <img src="https://source.unsplash.com/200x200/?womens" alt="">
-          </div>
-
-        </div>
-      </div>
-      
-    </section>
-
-
-    <!-- blog posts section -->
-
-    <section class="why-buy-from-us blog-container">
-      <div class="container">
-      <div class="why-upper-text text-center">
-        <h1>From Our Blog</h1>
-        <p class="line"></p>
-        <p style="width: 100%; text-align: center; margin-left: auto; margin-right: auto;">Display any products as tabs or accordations with optional grid or carousal mode. Custom products per row per module and per breakpoint. Each module can display products in either grid or list view with different styles per module.</p>
-        
-      </div>
-      <div class="button-container" id="blog-posts-btns">
-        <button id="latest_posts" onclick="handleClick2(this.id)" class="category-btn active-btn"><span class="active-btn"></span>Latest Posts</button>
-        <button id="most_rated" onclick="handleClick2(this.id)" class="category-btn"><span></span>Most Rated</button>
-      </div>
-
-      <div class="carousal-wrapper">
-        <div id="blog-cards-section" class="blog-cards " style="margin-top: 40px; margin-bottom: 20px;">
-          
-      </div>
-      </div>
-    </div>
-    </section>
-
-
-    <!-- testimonials section -->
-
-    <section class="why-buy-from-us testimonials-section">
-      <div class="container">
-      <div class="why-upper-text text-center">
-        <h1>What people are saying about us</h1>
-        <p class="line"></p>
-        
-      </div>
-
-      <div class="carousal-wrapper">
-        <div id="testimonials-section" class="blog-cards " style="margin-bottom: 20px;">
-      </div>
-      </div>
-    </div>
-    </section>
 <!-- 
     most viewed section -->
 

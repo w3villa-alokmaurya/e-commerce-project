@@ -62,7 +62,7 @@ const search = (key) => {
                                 <p class="right-2">hot</p>
                                 </div>
                                 
-                                <img src="https://source.unsplash.com/400x300/?shoes" alt="">
+                                <img src="${value.image}" alt="">
                                 <div class="box-product d-flex justify-content-between">
                                 <a href="#">Ericson</a>
                                 <p>Model 519</p>
@@ -88,14 +88,14 @@ const search = (key) => {
                                 </div>
                             </div>`;
                              gridproducts += `<div class="grid-view-products">
-                            <div class="left-side-grid products-card w-100">
+                            <div class="left-side-grid products-card">
                               <div class="left">Pre Order</div>
                                 <div class="right">
                                   <p class="right-1">-70%</p>
                                   <p class="right-2">hot</p>
                                 </div>
                                 
-                                <img src="https://source.unsplash.com/400x300/?fashiongirl" alt="">
+                                <img src="${value.image}" alt="">
             
                             </div>
                             <div class="right-side-grid">
@@ -104,7 +104,7 @@ const search = (key) => {
                               </div>
                               <div class="right-side-grid-middle">
                                 <h3>${value.title}</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatem nam error optio consectetur vel! Aliquam quod libero consequatur magnam nostrum, mollitia est omnis! Facere fuga voluptate ut dolore inventore.</p>
+                                <p>${value.description}</p>
                                 <h3 class="orange-color">1,717.49$ <span><del>2,000$</del></h3></span>
                                 <small>Ex tax:1,717.49$</small>
                               </div>
@@ -131,7 +131,7 @@ const search = (key) => {
 
                             document.getElementById('search-products').innerHTML = products;
                             document.getElementById('gridview').innerHTML = gridproducts;
-                            console.log(gridproducts);
+                            // console.log(gridproducts);
                 })
             } else {
                 console.log("Main Yha hu")

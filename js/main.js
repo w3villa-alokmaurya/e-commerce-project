@@ -490,30 +490,100 @@ const searchRedirect=()=>{
   window.location.href=redirect;
 }
 
-// searchForm.addEventListener('submit', searchHandle);
+const removeCartItems=(quantity1,productid,category)=>{
+  const quantity = quantity1;
+  const currentProduct = productid;
+  const  categoryId = category;
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  // console.log(length.cartItems);
+ let a = cartItems.find(({ productId }) => productId == currentProduct);
+ let b = cartItems.find(({ category }) => category == category);
+if(!a==''&& b===''){
+  alert("Item is not in to cart");
+}
+else{
+  cartItems.pop({
+    productId:currentProduct,
+    category:categoryId,
+    quantity:quantity
+  });
+
+  let set = localStorage.setItem('cartItems',JSON.stringify(cartItems));
+    alert("Product removed to cart");
+    location.reload(); 
+  
+}
+
+  
+}
+const shoppingCart=()=>{
+  let cartProducts = JSON.parse(localStorage.getItem('cartItems'));
+  // console.log(cartProducts);
+  let cartdata='';
+  
+    cartProducts.forEach(item=>{
+     let  category = item.category;
+     let id = item.productId;
+     let quantity = item.quantity;
+     fetchData(apiUrl)
+        .then(data=>{
+        let cartproducts =  data[category];
+        cartproducts.filter((data)=>{
+          if(data.id==id){
+            let totalprice = (data.price)*(quantity);
+            cartdata+=`<div class="cart-item">
+            <div class="cart-up1" >
+                
+                <div class="cart-body" style="padding-left: 10px;">
+                    <img src="${data.image}" alt="">
+                </div>
+            </div>
+            <div class="cart-up1" style="width: 200px;">
+               
+                <div class="cart-body">
+                    <a href="">${data.title}</a>
+                    
+                </div>
+            </div>
+            <div class="cart-up1">
+                
+                <div class="cart-body">
+                    <p>Model 206</p>
+                </div>
+            </div>
+            <div class="cart-up1">
+               
+                <div class="cart-body">
+                    <input type="number" min="1" step="1" max="10" value="${quantity}" disabled>
+                   
+                    <button title="remove" onclick="removeCartItems('${quantity}','${category}','${id}')"><i class="fa-solid fa-close"></i></button>
+                </div>
+            </div>
+            <div class="cart-up1">
+                
+                <div class="cart-body">
+                    <p>$${data.price}.00</p>
+                </div>
+            </div>
+            <div class="cart-up1">
+                <div class="cart-body">
+                    <p>$ ${totalprice}.00</p>
+                </div>
+            </div>
+            
+        </div>`;
+
+            
+          }
+          
+        })
+        document.getElementById('item-cart-dynamic').innerHTML=cartdata;
+
+      })
+      
+    })
 
 
-//products data
+}
+shoppingCart();
 
-// SEARCH FILTER
-// const search = document.getElementById("search");
-// const productName = document.querySelectorAll(".product-details h2");
-// const noResult = document.querySelector(".no-result");
-
-// search.addEventListener("keyup", filterProducts);
-
-// function filterProducts(e) {
-//   const text = e.target.value.toLowerCase();
-
-//   productName.forEach((product) => {
-//     const item = product.textContent;
-
-//     if (item.toLowerCase().indexOf(text) != -1) {
-//       product.parentElement.parentElement.style.display = "block";
-//       noResult.style.display = "none";
-//     } else {
-//       product.parentElement.parentElement.style.display = "none";
-//       noResult.style.display = "block";
-//     }
-//   });
-// }
