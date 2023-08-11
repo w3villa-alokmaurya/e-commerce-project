@@ -133,10 +133,10 @@
               <a class="dropdown-item" href="#">Flowers</a>
             </div>
           </div>
-            <form action="search-page.html" class="search-form" id="search-form">
+            <div action="" class="search-form" id="search-form">
                 <input type="text" placeholder="Search here..." id="search-input">
-                <button class="search-bar-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+                <button class="search-bar-btn" onclick="searchRedirect()" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </div>
         <div class="middle-header-menus ">
             <ul class="d-flex">
@@ -168,10 +168,26 @@
                 <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
             </ul>
         </div>
+       
+
+        
         <div class="middle-header-cart d-flex align-items-center">
             <p>0 item(s)-$0.00</p>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+            <span id="cart-item-n"></span>
+            <button class="cart-btn" id="cart-item-n1"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
+        <script>
+          const countCartItems=()=>{
+            let items=JSON.parse(localStorage.getItem('cartItems'));
+            let alength= items.length;
+            return alength;
+          }
+          totalcartitems = countCartItems();
+          if(totalcartitems>0){
+            document.getElementById('cart-item-n').innerText=totalcartitems;
+            document.getElementById('cart-item-n').classList.add('cart-item-count');
+          }
+        </script>
     </div>
   </div>
   <div class="lower">
@@ -316,6 +332,95 @@
   </div>
   
 </header>
+
+
+<section class="popup" id="popup">
+<div class="login-popup none" id="popup-login">
+  <button onclick="toggleclose()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+<div class="login-form" id="login">
+  <div class="form-control1">
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email">
+</div>
+<div class="form-control1">
+  <label for="password">Password</label>
+  <input type="password"  id="password" name="password">
+</div>
+
+  <button type="submit" id="signin" onclick="LoginForm()">Sign in</button>
+  <div class="register-link">
+    <p>Don't have an account? <a onclick="togglepopupregister()"><i class="fa-solid fa-pencil"></i></i>Register</a></p>
+  </div>
+</div>
+</div>
+</section>
+<section class="popup" id="popup1">
+<div class="login-popup none" id="popup-signup">
+  <button onclick="togglecloseregister()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+<div  class="login-form" id="signup">
+  <div class="form-control1">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" autocomplete="off">
+  </div>
+  <div class="form-control1">
+  <label for="email">Email</label>
+  <input type="email" name="email" id="signupemail" autocomplete="off">
+</div>
+<div class="form-control1">
+  <label for="password">Password</label>
+  <input type="password"  id="signuppassword" name="password">
+</div>
+  <button type="submit" onclick="RegisterForm()" id="signin">Sign Up</button>
+  <div class="register-link">
+    <p>Already have an account? <a onclick="togglepopuplogin()"><i class="fa-solid fa-circle-user"></i>Login</a></p>
+  </div>
+</div>
+</div>
+
+</section>
+
+<section class="popup" id="popup2">
+<div class="login-popup none" id="popup-cart">
+  <button onclick="toggleclosecart()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+  <div class="products-card" id="1">
+    <div class="left">custom labels</div>
+    <div class="right">
+      <p class="right-1">-70%</p>
+      <p class="right-2">hot</p>
+    </div>
+    
+    <img src="https://source.unsplash.com/400x300/?iPhone" alt="">
+    <div class="box-product d-flex justify-content-between">
+      <a href="#">Ericson</a>
+      <p>Model 519</p>
+    </div>
+    <div class="price ">
+      <h3>iPhone 9</h3>
+      <p>$999 <del>$3,299.00</del></p>
+    </div>
+      <div class="cart-product d-flex justify-content-between">
+        <div class="add-to-cart-btn">
+          <input id="quantity1" type="number" name="number" min="1" max="10" step="1" value="1">
+        
+          <button id="featured1" onclick="addToCart('1', 'quantity1', 'featured')">Add to cart</button>
+        </div>
+        <div class="product-icon">
+          <a onclick="addToWishlist('1','featured')"><i id="wishlist1" class="fa-regular fa-heart"></i></a>
+          <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
+        </div>
+    </div>
+    <div class="bottom-card d-flex justify-content-between align-items-center">
+      <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+      <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
+    </div>
+  </div>
+ 
+</div>
+</div>
+</section>
+<!-- <div class="overlay none"></div> -->
 <!-- 
 breadcrumbs links -->
 
@@ -495,7 +600,7 @@ breadcrumbs links -->
             <div class="search-form-1">
                 <div class="search-input">
                     <div style="width: 70%;height: 40px;">
-                        <input type="text" style="width: 100%; height: 40px; border: 1px solid rgba(128, 128, 128, 0.636); padding: 5px; padding-left: 20px; padding-right: 20px;">
+                        <input id="search-input-value" type="text" style="width: 100%; height: 40px; border: 1px solid rgba(128, 128, 128, 0.636); padding: 5px; padding-left: 20px; padding-right: 20px;">
                     </div>
                     <div style="width: 30%; padding-left: 20px;"><select name="" id="" style="width: 100%; height: 40px; border: 1px solid rgba(128, 128, 128, 0.707); padding: 5px; padding-left: 20px;">
                             <option value="categories">categories</option>
@@ -518,15 +623,15 @@ breadcrumbs links -->
                 </div>
                 
                 
-                <button class="search-page-search-btn" type="submit">Search</button>
+                <button class="search-page-search-btn" id="search-page-search-btn" type="submit" onclick="search(document.getElementById('search-input-value').value)">Search</button>
             </div>
             <h3>Product meeting in search criteria</h3>
             <p class="left-hr-line " style="margin-bottom: 0; padding-bottom: 0; padding-top: 0; bottom: -8px;"></p>
             <hr style="margin-top: 25px;"/>
             <div class="middle-searches">
                 <div class="left-side-searches">
-                    <span title="listview" role="button" onclick="listview()"><i class="fa-solid fa-list"></i></span>
-                    <span title="gridview" role="button" onclick="gridview()"><i class="fa-solid fa-table-cells"></i></span>
+                    <span title="listview" role="button" onclick="listView()"><i class="fa-solid fa-list"></i></span>
+                    <span title="gridview" role="button" onclick="gridView()"><i class="fa-solid fa-table-cells"></i></span>
                     <span><a href=""><i style="width: 20px; padding-left: 1px; height: 20px; border-radius:50%; padding-top:2px; font-size:13px;border: 2px solid var(--theme-color);" class="fa-solid fa-arrow-down-up-across-line"></i> <span class="mob-none">Product Compare</span></a></span>
 
                 </div>
@@ -553,8 +658,8 @@ breadcrumbs links -->
             </div>          
             <hr/>
             <div id="listview" class="search-products-main" >
-                <div  class="featured-products search-products">
-                    
+                <div  class="featured-products search-products" id="search-products">
+<!--                     
                     <div class="products-card">
                       <div class="left">custom labels</div>
                       <div class="right">
@@ -650,7 +755,7 @@ breadcrumbs links -->
                         <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
                         <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
                       </div>
-                    </div>
+                    </div> -->
             
             
                     
@@ -662,7 +767,7 @@ breadcrumbs links -->
             <!-- search-grid view -->
 
             <div class="search-grid-view" id="gridview">
-              <div class="grid-view-products">
+              <!-- <div class="grid-view-products">
                 <div class="left-side-grid products-card w-100">
                   <div class="left">Pre Order</div>
                     <div class="right">
@@ -786,7 +891,7 @@ breadcrumbs links -->
                 </div>
               </div>
               <hr style="padding-bottom: 10px;"/>
-            </div>
+            </div> -->
 
             <!-- end grid view -->
             <p style="color: var(--font-p-color); text-align: center; margin-top: -15px; padding-top: 0; margin-bottom: 20px;">You have reached the limit.</p>
@@ -941,8 +1046,6 @@ breadcrumbs links -->
         </div>
 
         </div>
-        
-
     </footer>
 
    <script src="js/search.js"></script>
@@ -951,5 +1054,6 @@ breadcrumbs links -->
 <script src="js/slider.js"></script>
 <script src="js/login.js"></script>
 <script src="js/signup.js"></script>
+<!-- <script src="js/main.js"></script> -->
 </body>
 </html>
