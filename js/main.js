@@ -139,67 +139,67 @@ const handleClick = (id) => {
 // Products Data
 const apiUrl = 'data/products.json';
 const feturedProducts = document.getElementById('featured-products1');
-const addToCart=(productid ,quantityid, category)=>{
+const addToCart = (productid, quantityid, category) => {
   const quantity = document.getElementById(quantityid).value;
   const currentProduct = productid;
-  const  categoryId = category;
+  const categoryId = category;
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   // console.log(length.cartItems);
- let a= cartItems.find(({ productId }) => productId == currentProduct);
-if(!a==''){
-  alert("Item is already added to cart");
-}
-else{
-  cartItems.push({
-    productId:currentProduct,
-    category:categoryId,
-    quantity:quantity
-  });
+  let a = cartItems.find(({ productId }) => productId == currentProduct);
+  if (!a == '') {
+    alert("Item is already added to cart");
+  }
+  else {
+    cartItems.push({
+      productId: currentProduct,
+      category: categoryId,
+      quantity: quantity
+    });
 
-  let set = localStorage.setItem('cartItems',JSON.stringify(cartItems));
+    let set = localStorage.setItem('cartItems', JSON.stringify(cartItems));
     alert("Product Added to cart");
-    location.reload(); 
-  
-}
+    location.reload();
+
+  }
 
 }
-const addToWishlist=(productid, category)=>{
+const addToWishlist = (productid, category) => {
   const currentProduct = productid;
-  const  categoryId = category;
-  const wish = document.getElementById('wishlist'+productid);
+  const categoryId = category;
+  const wish = document.getElementById('wishlist' + productid);
   wish.classList.replace('fa-regular', 'fa-solid');
-  wish.style="color:red";
+  wish.style = "color:red";
   let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
   // console.log(length.cartItems);
- let a= wishlistItems.find(({ productId }) => productId == currentProduct);
-if(!a==''){
-  alert("Item is already added to wishlist");
-}
-else{
-  wishlistItems.push({
-    productId:currentProduct,
-    category:categoryId,
+  let a = wishlistItems.find(({ productId }) => productId == currentProduct);
+  if (!a == '') {
+    alert("Item is already added to wishlist");
+  }
+  else {
+    wishlistItems.push({
+      productId: currentProduct,
+      category: categoryId,
     });
 
 
-  let set = localStorage.setItem('wishlistItems',JSON.stringify(wishlistItems));
+    let set = localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
     alert("Product Added to wishlist");
-  
-}
+
+  }
 
 }
 
-const cartpopup=()=>{
+const cartpopup = () => {
 
-    let popup = document.getElementById('popup');
-    let modal =  document.getElementById('popup-cart');
-    modal.classList.add('active');
-    popup.classList.add('overlay')
-    modal.classList.remove('none');
-}
-const toggleclosecart=()=>{
   let popup = document.getElementById('popup');
-  let modal =  document.getElementById('popup-cart');
+  let modal = document.getElementById('popup-cart');
+  modal.classList.add('active');
+  popup.classList.add('overlay')
+  modal.classList.remove('none');
+}
+const toggleclosecart = () => {
+  let popup = document.getElementById('popup');
+  let modal = document.getElementById('popup-cart');
   modal.classList.remove('active');
   modal.classList.add('none');
   popup.classList.remove('overlay');
@@ -210,14 +210,14 @@ document.getElementById('cart-item-n1').addEventListener('click', cartpopup);
 
 const productsCardData = (term) => {
   fetchData(apiUrl)
-  .then(data => {
-    let productsCard = `<div id="featured-products-${term}" class="featured-products owl-carousel owl-theme">`;
-  
+    .then(data => {
+      let productsCard = `<div id="featured-products-${term}" class="featured-products owl-carousel owl-theme">`;
 
-    data[term].forEach(product => {
-      // console.log(product);
-      
-      productsCard += `<div class="products-card" id="${product.id}">
+
+      data[term].forEach(product => {
+        // console.log(product);
+
+        productsCard += `<div class="products-card" id="${product.id}">
       <div class="left">custom labels</div>
       <div class="right">
         <p class="right-1">-70%</p>
@@ -238,7 +238,7 @@ const productsCardData = (term) => {
             <input id="quantity${product.id}" type="number" name="number"
           min = "1" max="10" step="1" value="1">
           
-            <button id="${term+product.id}" onclick="addToCart('${product.id}', 'quantity${product.id}', '${term}')">Add to cart</button>
+            <button id="${term + product.id}" onclick="addToCart('${product.id}', 'quantity${product.id}', '${term}')">Add to cart</button>
           </div>
           <div class="product-icon">
             <a onclick="addToWishlist('${product.id}','${term}')"><i id="wishlist${product.id}" class="fa-regular fa-heart"></i></a>
@@ -250,66 +250,66 @@ const productsCardData = (term) => {
         <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
       </div>
     </div>`;
-    
 
-    });
 
-   
-     
-    feturedProducts.innerHTML = productsCard;
-   
+      });
 
-    var owl = $('#featured-products-' + term);
-    owl.owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 10,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: true,
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false
+
+
+      feturedProducts.innerHTML = productsCard;
+
+
+      var owl = $('#featured-products-' + term);
+      owl.owlCarousel({
+        items: 4,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          620: {
+            items: 2,
+            nav: false,
+            loop: true,
+          },
+          767: {
+            items: 2,
+            nav: false,
+            loop: true,
+          },
+          800: {
+            items: 3,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+            loop: true,
+          },
+          1200: {
+            items: 4,
+            nav: false,
+            loop: false
+          }
         },
-        620: {
-          items: 2,
-          nav: false,
-          loop: true,
-        },
-        767: {
-          items: 2,
-          nav: false,
-          loop: true,
-        },
-        800: {
-          items: 3,
-        },
-        1000: {
-          items: 3,
-          nav: false,
-          loop: true,
-        },
-        1200: {
-          items: 4,
-          nav: false,
-          loop: false
-        }
-      },
-      // dots:false,
-    });
-    $('.play').on('click', function () {
-      owl.trigger('play.owl.autoplay', [1000])
+        // dots:false,
+      });
+      $('.play').on('click', function () {
+        owl.trigger('play.owl.autoplay', [1000])
+      })
+      $('.stop').on('click', function () {
+        owl.trigger('stop.owl.autoplay')
+      })
+
     })
-    $('.stop').on('click', function () {
-      owl.trigger('stop.owl.autoplay')
-    })
-
-  })
-  .catch(error => {
-    console.error('error');
-  });
+    .catch(error => {
+      console.error('error');
+    });
 }
 productsCardData('featured');
 const featuredProductsBtns = document.querySelectorAll('#featured-products-btns *');
@@ -485,53 +485,53 @@ testimonialCards();
 
 
 
-const searchRedirect=()=>{
-  const redirect = "/search-page.html?query="+document.getElementById('search-input').value;
-  window.location.href=redirect;
+const searchRedirect = () => {
+  const redirect = "search-page.html?query=" + document.getElementById('search-input').value;
+  window.location.href = redirect;
 }
 
-const removeCartItems=(quantity1,productid,category)=>{
+const removeCartItems = (quantity1, productid, category) => {
   const quantity = quantity1;
   const currentProduct = productid;
-  const  categoryId = category;
+  const categoryId = category;
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   // console.log(length.cartItems);
- let a = cartItems.find(({ productId }) => productId == currentProduct);
- let b = cartItems.find(({ category }) => category == category);
-if(!a==''&& b===''){
-  alert("Item is not in to cart");
-}
-else{
-  cartItems.pop({
-    productId:currentProduct,
-    category:categoryId,
-    quantity:quantity
-  });
+  let a = cartItems.find(({ productId }) => productId == currentProduct);
+  let b = cartItems.find(({ category }) => category == category);
+  if (!a == '' && b === '') {
+    alert("Item is not in to cart");
+  }
+  else {
+    cartItems.pop({
+      productId: currentProduct,
+      category: categoryId,
+      quantity: quantity
+    });
 
-  let set = localStorage.setItem('cartItems',JSON.stringify(cartItems));
+    let set = localStorage.setItem('cartItems', JSON.stringify(cartItems));
     alert("Product removed to cart");
-    location.reload(); 
-  
-}
+    location.reload();
 
-  
+  }
+
+
 }
-const shoppingCart=()=>{
+const shoppingCart = () => {
   let cartProducts = JSON.parse(localStorage.getItem('cartItems'));
   // console.log(cartProducts);
-  let cartdata='';
-  
-    cartProducts.forEach(item=>{
-     let  category = item.category;
-     let id = item.productId;
-     let quantity = item.quantity;
-     fetchData(apiUrl)
-        .then(data=>{
-        let cartproducts =  data[category];
-        cartproducts.filter((data)=>{
-          if(data.id==id){
-            let totalprice = (data.price)*(quantity);
-            cartdata+=`<div class="cart-item">
+  let cartdata = '';
+
+  cartProducts.forEach(item => {
+    let category = item.category;
+    let id = item.productId;
+    let quantity = item.quantity;
+    fetchData(apiUrl)
+      .then(data => {
+        let cartproducts = data[category];
+        cartproducts.filter((data) => {
+          if (data.id == id) {
+            let totalprice = (data.price) * (quantity);
+            cartdata += `<div class="cart-item">
             <div class="cart-up1" >
                 
                 <div class="cart-body" style="padding-left: 10px;">
@@ -573,15 +573,15 @@ const shoppingCart=()=>{
             
         </div>`;
 
-            
+
           }
-          
+
         })
-        document.getElementById('item-cart-dynamic').innerHTML=cartdata;
+        document.getElementById('item-cart-dynamic').innerHTML = cartdata;
 
       })
-      
-    })
+
+  })
 
 
 }

@@ -1,61 +1,61 @@
 function listview() {
-    document.getElementById('listview').classList.add('displaynone');
-    document.getElementById('gridview').classList.add('displayblock');
+  document.getElementById('listview').classList.add('displaynone');
+  document.getElementById('gridview').classList.add('displayblock');
 
 
 }
 
 
 function gridview() {
-    document.getElementById('gridview').classList.add('displaynone');
-    document.getElementById('listview').classList.add('displayblock');
+  document.getElementById('gridview').classList.add('displaynone');
+  document.getElementById('listview').classList.add('displayblock');
 }
 
 
 
 // fetch Data  function/////////////////////////////////////////////////////////
 function fetchData(url, options = {}) {
-    return fetch(url, options)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json(); // This parses the response body as JSON
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            throw error; // Re-throw the error to propagate it
-        });
+  return fetch(url, options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // This parses the response body as JSON
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+      throw error; // Re-throw the error to propagate it
+    });
 }
 //Search form
 
 const searchproduct = "/data/products.json"
 
 const search = (key) => {
-    fetchData(searchproduct)
-        .then(data => {
-            let fullarr = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
-            // console.log(fullarr);
-            let products = '';
-            let gridproducts='';
-            if(key === ""){
-                products += `<p>Not found</p>`;
-                document.getElementById('search-products').innerHTML = products;
-                document.getElementById('gridview').innerHTML = products;
-                return
-            }
-            results = fullarr.filter((data) => {
-                if (data.title.toLowerCase().includes(key.toLowerCase())) {
-                    return true;
-                }
-                return false;
-            })
-            document.getElementById('search-input-value').value = key;
-            if (results.length > 0) {
-                results.forEach(value => {
-                    // Find all the product with the search term
+  fetchData(searchproduct)
+    .then(data => {
+      let fullarr = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
+      // console.log(fullarr);
+      let products = '';
+      let gridproducts = '';
+      if (key === "") {
+        products += `<p>Not found</p>`;
+        document.getElementById('search-products').innerHTML = products;
+        document.getElementById('gridview').innerHTML = products;
+        return
+      }
+      results = fullarr.filter((data) => {
+        if (data.title.toLowerCase().includes(key.toLowerCase())) {
+          return true;
+        }
+        return false;
+      })
+      document.getElementById('search-input-value').value = key;
+      if (results.length > 0) {
+        results.forEach(value => {
+          // Find all the product with the search term
 
-                            products += `<div class="products-card">
+          products += `<div class="products-card">
                                 <div class="left">custom labels</div>
                                 <div class="right">
                                 <p class="right-1">-70%</p>
@@ -87,7 +87,7 @@ const search = (key) => {
                                 <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
                                 </div>
                             </div>`;
-                             gridproducts += `<div class="grid-view-products">
+          gridproducts += `<div class="grid-view-products">
                             <div class="left-side-grid products-card">
                               <div class="left">Pre Order</div>
                                 <div class="right">
@@ -129,52 +129,52 @@ const search = (key) => {
                           </div>
                           <hr style="padding-bottom: 10px;"/>`;
 
-                            document.getElementById('search-products').innerHTML = products;
-                            document.getElementById('gridview').innerHTML = gridproducts;
-                            // console.log(gridproducts);
-                })
-            } else {
-                console.log("Main Yha hu")
-                products += `<p>Not found</p>`;
-                document.getElementById('search-products').innerHTML = products;
-
-            }
-
+          document.getElementById('search-products').innerHTML = products;
+          document.getElementById('gridview').innerHTML = gridproducts;
+          // console.log(gridproducts);
         })
+      } else {
+        console.log("Main Yha hu")
+        products += `<p>Not found</p>`;
+        document.getElementById('search-products').innerHTML = products;
+
+      }
+
+    })
 }
 //   const searchForm = document.getElementById('search-form');
 
 const searchHandle = () => {
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var query = url.searchParams.get("query");
-    search(query);
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var query = url.searchParams.get("query");
+  search(query);
 
 }
 
-const gridView=()=>{
-    const gridShow = document.getElementById('gridview');
-    gridShow.classList.add('displayblock');
-    gridShow.classList.remove('displaynone');
-    const listShow = document.getElementById('listview');
-    listShow.classList.add('displaynone');
-    listShow.classList.remove('displayblock');
+const gridView = () => {
+  const gridShow = document.getElementById('gridview');
+  gridShow.classList.add('displayblock');
+  gridShow.classList.remove('displaynone');
+  const listShow = document.getElementById('listview');
+  listShow.classList.add('displaynone');
+  listShow.classList.remove('displayblock');
 }
-const listView=()=>{
-    const gridShow = document.getElementById('gridview');
-    gridShow.classList.add('displaynone');
-    gridShow.classList.remove('displayblock');
-    const listShow = document.getElementById('listview');
-    listShow.classList.add('displayblock');
-    listShow.classList.remove('displaynone');
+const listView = () => {
+  const gridShow = document.getElementById('gridview');
+  gridShow.classList.add('displaynone');
+  gridShow.classList.remove('displayblock');
+  const listShow = document.getElementById('listview');
+  listShow.classList.add('displayblock');
+  listShow.classList.remove('displaynone');
 }
 listView();
 searchHandle();
 
-const refreshsearch=()=>{
-    const query= document.getElementById('search-input-value').value;
-    const url = "/search-page.html?query="+query;
-    window.location.href=url;
-    
+const refreshsearch = () => {
+  const query = document.getElementById('search-input-value').value;
+  const url = "/search-page.html?query=" + query;
+  window.location.href = url;
+
 }
 document.getElementById('search-page-search-btn').addEventListener('click', refreshsearch)
