@@ -25,7 +25,7 @@
       
         <div class="top-header-left ">
             <ul class="d-flex">
-                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="#"><i class="fa-solid fa-envelope"></i>  About Us</a></li>
                 <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
                 <li><div class="more-menu dropdown-block">
@@ -106,7 +106,7 @@
     <div class="middle bg-gray">
       <div class="middle-header d-flex  align-items-center container">
           <div class="brand-name">
-              <a href=""><h1>Journal</h1></a>
+              <a href="index.html"><h1>Journal</h1></a>
           </div>
           <div class="bars-toggle">
             <span><i class="fa-solid fa-bars"></i></span>
@@ -172,7 +172,7 @@
           </div>
           <script>
             const countWishItems=()=>{
-              let items=JSON.parse(localStorage.getItem('wishlistItems'));
+              let items=JSON.parse(localStorage.getItem('wishlistItems')) || [];
               let alength= items.length;
               return alength;
             }
@@ -190,7 +190,7 @@
           </div>
           <script>
             const countCartItems=()=>{
-              let items=JSON.parse(localStorage.getItem('cartItems'));
+              let items=JSON.parse(localStorage.getItem('cartItems')) || [];
               let alength= items.length;
               return alength;
             }
@@ -344,8 +344,6 @@
     </div>
     
 </header>
-
-
     <section class="popup" id="popup">
       <div class="login-popup none" id="popup-login">
         <button onclick="toggleclose()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -651,6 +649,7 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/common.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/login.js"></script>
 <script src="js/signup.js"></script>

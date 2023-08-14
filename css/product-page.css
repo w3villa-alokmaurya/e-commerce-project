@@ -50,11 +50,14 @@
         flex-direction: column-reverse;
 
     }
+    .products-main-1 .middle-side .left-side-grid{
+        height: 390px!important;
+    }
     .middle-left
     .main-product-section .middle-side{
     width:84%;
     /* height: 500px; */
-    height: 250px;
+    height: 390px;
     }
     .main-product-section .left-side{
         width: 13%;

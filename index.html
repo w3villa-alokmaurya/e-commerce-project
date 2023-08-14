@@ -105,7 +105,7 @@
         <div class="middle bg-gray">
           <div class="middle-header d-flex  align-items-center container">
               <div class="brand-name">
-                  <a href=""><h1>Journal</h1></a>
+                  <a href="index.html"><h1>Journal</h1></a>
               </div>
               <div class="bars-toggle">
                 <span><i class="fa-solid fa-bars"></i></span>
@@ -171,7 +171,7 @@
               </div>
               <script>
                 const countWishItems=()=>{
-                  let items=JSON.parse(localStorage.getItem('wishlistItems'));
+                  let items=JSON.parse(localStorage.getItem('wishlistItems')) || [];
                   let alength= items.length;
                   return alength;
                 }
@@ -189,7 +189,7 @@
               </div>
               <script>
                 const countCartItems=()=>{
-                  let items=JSON.parse(localStorage.getItem('cartItems'));
+                  let items=JSON.parse(localStorage.getItem('cartItems')) || [];
                   let alength= items.length;
                   return alength;
                 }
@@ -391,138 +391,6 @@
     </div>
 
     </section>
-    
-    <section class="popup" id="popup2">
-      <div class="login-popup none" id="popup-cart">
-        <button onclick="toggleclosecart()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-        <div class="shopping-cart">
-          <h1>Shopping Cart</h1>
-          <p class="line start" style="border-width: 1px;"></p>
-          <hr style="margin-top: -16px;">
-          <div class="cart">
-            <div class="cart-product">
-              
-              <!-- <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
-                </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
-                </div>
-                
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div>
-              <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
-                </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
-                </div>
-                
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div>
-              <div class="ccart">
-                <div class="sub-cart">
-                  <h3>Image</h3>
-                  <img src="https://source.unsplash.com/600x900/?Iphones" alt="">
-                </div>
-                <div class="sub-cart">
-                  <h3>Product Name</h3>
-                  <a href="">cameras</a>
-                  <p>lorem hdhdhhd</p>
-                  <p>ok list red</p>
-                  <p>yes yes yes</p>
-                </div>
-                <div class="sub-cart">
-                  <h3>Model</h3>
-                  <p>Model 206</p>
-                </div>
-                
-                <div class="sub-cart">
-                  <h3>Quantity</h3>
-                  
-                  <div>
-                    <input type="number" min="1" max="10" value="1">
-                    <button><i class="fa-solid fa-close"></i></button>
-                  </div>
-                </div>
-                <div class="sub-cart">
-                  <h3>Unit Price</h3>
-                  <p>$ 247.00</p>
-                </div>
-                
-                
-                <div class="sub-cart">
-                  <h3>total</h3>
-                  <p>$247.00</p>
-                </div>
-              </div> -->
-
-            </div>
-          </div>
-          
-        </div>
-        
-       
-      </div>
-    </div>
-    </section>
-    <!-- <div class="overlay none"></div> -->
-
-
     <!-- back to top -->
     <button onclick="scrollToTop()"
         type="button"
@@ -531,11 +399,6 @@
         >
   <i class="fas fa-arrow-up"></i>
 </button>
-
-
-
-
-
     <!-- hero section  -->
     <section class="hero-section container d-flex">
       <div class="carousel-wrapper">
@@ -593,8 +456,6 @@
       </div>
 
     </section>
-
-
     <!-- Features section -->
    
     <section class="features">
@@ -679,7 +540,7 @@
       <div id="featured-products1" class="featured-products">
       </div>
       <div class="show-allbutton">
-        <button >See all products <i class="fa-solid fa-arrow-right"></i></button>
+        <a href="allproducts.html"><button >See all products <i class="fa-solid fa-arrow-right"></i></button></a>
       </div>
 
     </section>
@@ -709,114 +570,11 @@
           <div class="featured-right">
             <h3 style="font-size: 20px;">New in Fashion</h3>
             <p class="featured-right-1"></p>
-            <div id="new-fashion" class="right-cards owl-carousel owl-theme">
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?style" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
+            <div id="new-in-fashion" class="">
 
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?stylish" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img src="https://source.unsplash.com/400x300/?blackdress" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img class="" src="https://source.unsplash.com/400x300/?girl" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
-              <div class="right-card">
-                <div class="left">2-3 days</div>
-                <div class="right">
-                  <p class="right-1">New</p>
-                  <p class="right-2">hot</p>
-                </div>
-                <img  src="https://source.unsplash.com/400x300/?mens" alt="">
-                <a href="">Bodycorn Dress</a>
-                <p style="padding-left: 10px; font-size: 14px;">$399.00</p>
-                <hr/>
-                <div class="cart-product d-flex justify-content-between">
-                  <div class="category-cart-btn">
-                    <button>Add to cart</button>
-                  </div>
-                  <div class="product-icon margin-top-10px">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
-                  </div>
-              </div>
-
-              </div>
 
             </div>
+            
         </div>
       </div>
 
@@ -1153,6 +911,7 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/common.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/login.js"></script>
 <script src="js/signup.js"></script>

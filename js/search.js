@@ -62,7 +62,7 @@ const search = (key) => {
                                 <p class="right-2">hot</p>
                                 </div>
                                 
-                                <img src="${value.image}" alt="">
+                                <a href="product-page.html?productCategory=${value.productCategory}&productid=${value.id}" ><img src="${value.image}" alt=""></a>
                                 <div class="box-product d-flex justify-content-between">
                                 <a href="#">Ericson</a>
                                 <p>Model 519</p>
@@ -95,7 +95,7 @@ const search = (key) => {
                                   <p class="right-2">hot</p>
                                 </div>
                                 
-                                <img src="${value.image}" alt="">
+                                <a href="product-page.html?productCategory=${value.productCategory}&productid=${value.id}" ><img src="${value.image}" alt=""></a>
             
                             </div>
                             <div class="right-side-grid">
