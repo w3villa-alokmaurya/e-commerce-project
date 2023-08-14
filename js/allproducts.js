@@ -11,8 +11,6 @@ const pagination = (limit, items) => {
     }
 }
 
-const apiUrl = "/data/products.json";
-
 //For all products ******//
 const handleClickpage = (id) => {
     const pageno = document.getElementById(id).value;

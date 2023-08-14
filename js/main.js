@@ -88,7 +88,6 @@ const handleClick = (id) => {
 
 // Featured product section*****/////////////
 // Products Data
-const apiUrl = "data/products.json";
 const feturedProducts = document.getElementById("featured-products1");
 const addToCart = (productid, quantityid, category) => {
   const quantity = document.getElementById(quantityid).value;
