@@ -189,24 +189,22 @@ const addToWishlist = (productid, category) => {
 
 }
 
-const cartpopup = () => {
+// const cartpopup = () => {
 
-  let popup = document.getElementById('popup');
-  let modal = document.getElementById('popup-cart');
-  modal.classList.add('active');
-  popup.classList.add('overlay')
-  modal.classList.remove('none');
-}
-const toggleclosecart = () => {
-  let popup = document.getElementById('popup');
-  let modal = document.getElementById('popup-cart');
-  modal.classList.remove('active');
-  modal.classList.add('none');
-  popup.classList.remove('overlay');
-}
-document.getElementById('cart-item-n1').addEventListener('click', cartpopup);
-
-
+//   let popup = document.getElementById('popup');
+//   let modal = document.getElementById('popup-cart');
+//   modal.classList.add('active');
+//   popup.classList.add('overlay')
+//   modal.classList.remove('none');
+// }
+// const toggleclosecart = () => {
+//   let popup = document.getElementById('popup');
+//   let modal = document.getElementById('popup-cart');
+//   modal.classList.remove('active');
+//   modal.classList.add('none');
+//   popup.classList.remove('overlay');
+// }
+// document.getElementById('cart-item-n1').addEventListener('click', cartpopup);
 
 const productsCardData = (term) => {
   fetchData(apiUrl)
@@ -481,38 +479,38 @@ testimonialCards();
 
 //End Testimonials //******************************************** */
 
-
-
-
-
 const searchRedirect = () => {
   const redirect = "search-page.html?query=" + document.getElementById('search-input').value;
   window.location.href = redirect;
 }
 
-const removeCartItems = (quantity1, productid, category) => {
+const removeCartItems = (quantity1, category, productid) => {
   const quantity = quantity1;
   const currentProduct = productid;
   const categoryId = category;
+  // console.log(currentProduct)
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   // console.log(length.cartItems);
-  let a = cartItems.find(({ productId }) => productId == currentProduct);
-  let b = cartItems.find(({ category }) => category == category);
-  if (!a == '' && b === '') {
-    alert("Item is not in to cart");
-  }
-  else {
-    cartItems.pop({
-      productId: currentProduct,
-      category: categoryId,
-      quantity: quantity
-    });
+  // let a = cartItems.find(({ productId }) => productId == currentProduct);
+  // let b = cartItems.find(({ category }) => category == category);
+  // if (!a == '' && b === '') {
+  //   alert("Item is not in to cart");
+  // }
+  // else {
 
-    let set = localStorage.setItem('cartItems', JSON.stringify(cartItems));
+ 
+
+  // }
+
+  cartItems.filter((item=>{
+    if(item.productId.includes(currentProduct)){
+      cartItems.splice(cartItems.indexOf(item),1);
+      
+    }
+  }));
+     let set = localStorage.setItem('cartItems', JSON.stringify(cartItems));
     alert("Product removed to cart");
     location.reload();
-
-  }
 
 
 }
@@ -585,5 +583,62 @@ const shoppingCart = () => {
 
 
 }
+const wishList = () => {
+  let wishlistProducts = JSON.parse(localStorage.getItem('wishlistItems'));
+  // console.log(cartProducts);
+  let wishdata = '';
+
+  wishlistProducts.forEach(item => {
+    let category = item.category;
+    let id = item.productId;
+    fetchData(apiUrl)
+      .then(data => {
+        let wishproducts = data[category];
+        wishproducts.filter((data) => {
+          if (data.id == id) {
+            wishdata += `<div class="cart-item">
+            <div class="cart-up1" >
+                
+                <div class="cart-body" style="padding-left: 10px;">
+                    <img src="${data.image}" alt="">
+                </div>
+            </div>
+            <div class="cart-up1" style="width: 200px;">
+               
+                <div class="cart-body">
+                    <a href="">${data.title}</a>
+                    
+                </div>
+            </div>
+            <div class="cart-up1">
+                
+                <div class="cart-body">
+                    <p>Model 206</p>
+                </div>
+            </div>
+            <div class="cart-up1">
+                
+                <div class="cart-body">
+                    <p>$${data.price}.00</p>
+                </div>
+            </div>
+           
+            
+        </div>`;
+
+
+          }
+
+        })
+        document.getElementById('item-wish-dynamic').innerHTML = wishdata;
+
+      })
+
+  })
+
+
+}
+
 shoppingCart();
 
+wishList();

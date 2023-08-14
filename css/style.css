@@ -672,6 +672,10 @@ header{
     /* width: 400px; */
     /* width: 230px!important; */
 }
+#wish-item-n{
+    color: black!important;
+    padding-left: 2px;
+}
 .cart-item-count{
     position: relative;
     top: -20px;
@@ -1702,6 +1706,12 @@ img:hover{
     padding-top: 10px;
     padding-bottom: 10px;
 
+}
+#cart-item-n1 a{
+    color: white!important;
+}
+#cart-item-n1 a:hover{
+    color: white
 }
 .cart-product1 img{
     object-fit: cover;
