@@ -164,17 +164,28 @@
                  document.getElementById('register').innerHTML='<a onclick="togglelogout()"><i class="fa-solid fa-pencil"></i></i>Logout</a>'
                 }
                 </script>
-                <li><a href=""><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
-                <li><a href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
+               
+                <li><a id="wish-item-n1" href="wishlist.html"><i class="fa-regular fa-heart"></i></i>Wishlist</a></li>
+                <li><a  href=""><i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>Compare</a></li>
             </ul>
         </div>
-       
+        <script>
+          const countWishItems=()=>{
+            let items=JSON.parse(localStorage.getItem('wishlistItems'));
+            let alength= items.length;
+            return alength;
+          }
+           let totalitems=countWishItems();                        
+          if(totalitems>0){
+            document.getElementById('wish-item-n').innerText=totalitems;
+            document.getElementById('wish-item-n').classList.add('cart-item-count');
+          }
+        </script>
 
-        
         <div class="middle-header-cart d-flex align-items-center">
             <p>0 item(s)-$0.00</p>
             <span id="cart-item-n"></span>
-            <button class="cart-btn" id="cart-item-n1"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="cart-btn" id="cart-item-n1"><a href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a></button>
         </div>
         <script>
           const countCartItems=()=>{
