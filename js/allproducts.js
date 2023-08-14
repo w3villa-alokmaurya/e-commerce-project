@@ -13,6 +13,7 @@ const pagination = (limit, items) => {
 
 
 //For all products ******//
+const apiUrl = "/data/products.json";
 const handleClickpage = (id) => {
     const pageno = document.getElementById(id).value;
     window.location.href = "/allproducts.html?pageno=" + pageno;
