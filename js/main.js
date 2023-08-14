@@ -190,7 +190,7 @@ const productsCardData = (term) => {
         <p class="right-2">hot</p>
       </div>
       
-      <img src="${product.image}" alt="">
+      <a href="product-page.html?productCategory=${product.productCategory}&productid=${product.id}"> <img src="${product.image}" alt=""></>
       <div class="box-product d-flex justify-content-between">
         <a href="#">Ericson</a>
         <p>Model 519</p>
