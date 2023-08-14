@@ -14,7 +14,7 @@ const pagination = (limit, items) => {
 //For all products ******//
 const handleClickpage = (id) => {
     const pageno = document.getElementById(id).value;
-    window.location.href = "/allproducts.html?pageno=" + pageno;
+    window.location.href = "allproducts.html?pageno=" + pageno;
 }
 const BuildPage = (pageno, limit, fullarr) => {
     const trimStart = (pageno - 1) * limit;
