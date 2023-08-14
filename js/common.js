@@ -1,4 +1,4 @@
-const apiUrl = "/data/products.json";
+
 // scroll to top
 const scrollToTop = () => {
     window.scroll({ top: 0, left: 0, behavior: "smooth" });
