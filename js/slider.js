@@ -7,29 +7,29 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 1000,
     autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:3,
-            nav:false
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 3,
+            nav: false
         },
-        530:{
-            items:5,
+        530: {
+            items: 5,
         },
-        700:{
-            items:6,
-            nav:false,
-            loop:true,
+        700: {
+            items: 6,
+            nav: false,
+            loop: true,
         },
-        1000:{
-            items:8,
-            nav:false,
-            loop:true,
+        1000: {
+            items: 8,
+            nav: false,
+            loop: true,
         },
-        1200:{
-            items:9,
-            nav:false,
-            loop:false
+        1200: {
+            items: 9,
+            nav: false,
+            loop: false
         }
     }
 });
@@ -54,9 +54,9 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    dots:true,
-    responsiveClass:true,
-  
+    dots: true,
+    responsiveClass: true,
+
 });
 $('.play').on('click', function () {
     owl.trigger('play.owl.autoplay', [1000])
@@ -77,33 +77,33 @@ owl.owlCarousel({
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    dots:false,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:false
+    dots: false,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false
         },
-        430:{
-            items:2,
+        430: {
+            items: 2,
         },
-        767:{
-            items:3,
-            nav:false,
-            loop:true,
+        767: {
+            items: 3,
+            nav: false,
+            loop: true,
         },
-        1000:{
-            items:4,
-            nav:false,
-            loop:true,
+        1000: {
+            items: 4,
+            nav: false,
+            loop: true,
         },
-        1200:{
-            items:4,
-            nav:false,
-            loop:false
+        1200: {
+            items: 4,
+            nav: false,
+            loop: false
         }
     }
-    
+
 });
 
 $('.play').on('click', function () {

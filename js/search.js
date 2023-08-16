@@ -1,15 +1,13 @@
 function listview() {
   document.getElementById('listview').classList.add('displaynone');
   document.getElementById('gridview').classList.add('displayblock');
-
-
 }
-
-
 function gridview() {
   document.getElementById('gridview').classList.add('displaynone');
   document.getElementById('listview').classList.add('displayblock');
 }
+
+Tabs('#most-viewed-search-tabs', '#most-viewed-search-tabcontent');
 
 //Search form
 

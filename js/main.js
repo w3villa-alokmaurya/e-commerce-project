@@ -164,16 +164,13 @@ const productsCardData = (term) => {
             <input id="quantity${product.id}" type="number" name="number"
           min = "1" max="10" step="1" value="1">
           
-            <button id="${term + product.id}" onclick="addToCart('${
-          product.id
-        }', 'quantity${product.id}', '${term}')">Add to cart</button>
+            <button id="${term + product.id}" onclick="addToCart('${product.id
+          }', 'quantity${product.id}', '${term}')">Add to cart</button>
           </div>
           <div class="product-icon">
-            <a onclick="addToWishlist('${
-              product.id
-            }','${term}')"><i id="wishlist${
-          product.id
-        }" class="fa-regular fa-heart"></i></a>
+            <a onclick="addToWishlist('${product.id
+          }','${term}')"><i id="wishlist${product.id
+          }" class="fa-regular fa-heart"></i></a>
             <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
           </div>
       </div>
@@ -402,11 +399,7 @@ testimonialCards();
 
 //End Testimonials //******************************************** */
 
-const searchRedirect = () => {
-  const redirect =
-    "search-page.html?query=" + document.getElementById("search-input").value;
-  window.location.href = redirect;
-};
+
 
 const removeCartItems = (quantity1, category, productid) => {
   const quantity = quantity1;
@@ -423,8 +416,6 @@ const removeCartItems = (quantity1, category, productid) => {
   alert("Product removed to cart");
   location.reload();
 };
-
-
 
 const shoppingCart = () => {
   let cartProducts = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -488,10 +479,7 @@ const shoppingCart = () => {
   });
 };
 
-
 shoppingCart();
-
-
 // New in Fashion section*************************//
 
 const newFahionProducts = (term) => {
@@ -500,11 +488,11 @@ const newFahionProducts = (term) => {
       let fullarr = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
       let productsCard = `<div id="new-fashion-${term}" class="right-cards owl-carousel owl-theme">`;
       // console.log(productsCard)
-      let itemdata = fullarr.filter((item)=>{
-        if(item.category == term){
+      let itemdata = fullarr.filter((item) => {
+        if (item.category == term) {
           return true;
         }
-        else{
+        else {
           return false
         }
       })
@@ -525,16 +513,13 @@ const newFahionProducts = (term) => {
           <input id="quantity${product.id}" type="number" name="number"
           min = "1" max="10" step="1" value="1" hidden>
           
-            <button id="${product.id}" onclick="addToCart('${
-              product.id
-            }', 'quantity${product.id}', '${product.productCategory}')">Add to cart</button>
+            <button id="${product.id}" onclick="addToCart('${product.id
+          }', 'quantity${product.id}', '${product.productCategory}')">Add to cart</button>
           </div>
           <div class="product-icon margin-top-10px">
-          <a onclick="addToWishlist('${
-            product.id
-          }','${product.productCategory}')"><i id="wishlist${
-        product.id
-      }" class="fa-regular fa-heart"></i></a>
+          <a onclick="addToWishlist('${product.id
+          }','${product.productCategory}')"><i id="wishlist${product.id
+          }" class="fa-regular fa-heart"></i></a>
             <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
           </div>
       </div>
@@ -544,7 +529,7 @@ const newFahionProducts = (term) => {
 
       document.getElementById('new-in-fashion').innerHTML = productsCard;
 
-      var owl = $("#new-fashion-"+term);
+      var owl = $("#new-fashion-" + term);
       owl.owlCarousel({
         items: 4,
         loop: true,
@@ -598,7 +583,7 @@ const newFahionProducts = (term) => {
 newFahionProducts('fashion');
 
 
-const searchFilterHideShow=(id)=>{
+const searchFilterHideShow = (id) => {
   const element = document.getElementById(id);
 
 }

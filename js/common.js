@@ -34,8 +34,34 @@ function fetchData(url, options = {}) {
             throw error; // Re-throw the error to propagate it
         });
 }
+//search redirect to search page
+const searchRedirect = () => {
+    const redirect =
+      "search-page.html?query=" + document.getElementById("search-input").value;
+    window.location.href = redirect;
+  };
 
 // this is for truncate string ******
 const limit = (string = "", limit = 0) => {
     return string.substring(0, limit);
 };
+
+const Tabs=(tabs, tabcontent)=>{
+    const pageTabs = document.querySelectorAll(`${tabs} div`);
+    const pagetabcontent = document.querySelectorAll(`${tabcontent} div`);
+    pageTabs.forEach((tab, index)=>{
+        tab.addEventListener('click',()=>{
+            pagetabcontent.forEach((content)=>{
+                content.classList.remove('active');
+            });
+            pageTabs.forEach((tab)=>{
+                tab.classList.remove('active')
+            });
+            pagetabcontent[index].classList.add('active');
+            pageTabs[index].classList.add('active');
+
+        })
+    })
+
+}
+// Tabs('#most-viewed','#most-viewed-content');

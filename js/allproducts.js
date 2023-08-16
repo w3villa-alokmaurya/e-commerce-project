@@ -2,40 +2,40 @@
 // Pagination ******///
 
 const pagination = (limit, items) => {
-    const numberOfItems = items.length;
-    const itemPerPage = limit;
-    const numberOfPages = Math.ceil(numberOfItems / itemPerPage);
-    for (let i = 0; i < numberOfPages; i++) {
-        $('#pagination').append(`<button id="page${i + 1}" onclick="handleClickpage(this.id)" class="btn btn-primary"
+  const numberOfItems = items.length;
+  const itemPerPage = limit;
+  const numberOfPages = Math.ceil(numberOfItems / itemPerPage);
+  for (let i = 0; i < numberOfPages; i++) {
+    $('#pagination').append(`<button id="page${i + 1}" onclick="handleClickpage(this.id)" class="btn btn-primary"
       value="${i + 1}">${i + 1}</button>`);
-    }
+  }
 }
 
 //For all products ******//
 const handleClickpage = (id) => {
-    const pageno = document.getElementById(id).value;
-    window.location.href = "allproducts.html?pageno=" + pageno;
+  const pageno = document.getElementById(id).value;
+  window.location.href = "allproducts.html?pageno=" + pageno;
 }
 const BuildPage = (pageno, limit, fullarr) => {
-    const trimStart = (pageno - 1) * limit;
-    const trimEnd = trimStart + limit;
-    return fullarr.slice(trimStart, trimEnd);
+  const trimStart = (pageno - 1) * limit;
+  const trimEnd = trimStart + limit;
+  return fullarr.slice(trimStart, trimEnd);
 
 }
 
 const AllProductsData = () => {
-    fetchData(apiUrl)
-        .then((data) => {
-            let productsCard = `<div id="featured-products" class="featured-products" style="display:flex;flex-wrap:wrap;">`;
-            let fullarr = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
-            let itemPerPage = 8;
-            let url_string = window.location.href;
-            let url = new URL(url_string);
-            let pageno = url.searchParams.get("pageno") || '1';
-            pagination(itemPerPage, fullarr);
-            const paginated = BuildPage(pageno, itemPerPage, fullarr);
-            paginated.forEach((product) => {
-                productsCard += `<div class="products-card" id="${product.id}">
+  fetchData(apiUrl)
+    .then((data) => {
+      let productsCard = `<div id="featured-products" class="featured-products" style="display:flex;flex-wrap:wrap;">`;
+      let fullarr = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
+      let itemPerPage = 8;
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let pageno = url.searchParams.get("pageno") || '1';
+      pagination(itemPerPage, fullarr);
+      const paginated = BuildPage(pageno, itemPerPage, fullarr);
+      paginated.forEach((product) => {
+        productsCard += `<div class="products-card" id="${product.id}">
         <div class="left">custom labels</div>
         <div class="right">
           <p class="right-1">-70%</p>
@@ -57,12 +57,12 @@ const AllProductsData = () => {
             min = "1" max="10" step="1" value="1">
             
               <button id="${product.id}" onclick="addToCart('${product.id
-                    }', 'quantity${product.id}', '${product.productCategory}')">Add to cart</button>
+          }', 'quantity${product.id}', '${product.productCategory}')">Add to cart</button>
             </div>
             <div class="product-icon">
               <a onclick="addToWishlist('${product.id
-                    }','${product.productCategory}')"><i id="wishlist${product.id
-                    }" class="fa-regular fa-heart"></i></a>
+          }','${product.productCategory}')"><i id="wishlist${product.id
+          }" class="fa-regular fa-heart"></i></a>
               <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
             </div>
         </div>
@@ -71,12 +71,12 @@ const AllProductsData = () => {
           <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
         </div>
       </div>`;
-            });
+      });
 
-            document.getElementById('all-products').innerHTML = productsCard;
-        })
-        .catch((error) => {
-            console.error("error");
-        });
+      document.getElementById('all-products').innerHTML = productsCard;
+    })
+    .catch((error) => {
+      console.error("error");
+    });
 }
 AllProductsData();

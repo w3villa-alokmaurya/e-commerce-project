@@ -2,15 +2,15 @@ const wishList = () => {
     let wishlistProducts = JSON.parse(localStorage.getItem("wishlistItems")) || [];
     // console.log(cartProducts);
     let wishdata = "";
-  
+
     wishlistProducts.forEach((item) => {
-      let category = item.category;
-      let id = item.productId;
-      fetchData(apiUrl).then((data) => {
-        let wishproducts = data[category];
-        wishproducts.filter((data) => {
-          if (data.id == id) {
-            wishdata += `<div class="cart-item">
+        let category = item.category;
+        let id = item.productId;
+        fetchData(apiUrl).then((data) => {
+            let wishproducts = data[category];
+            wishproducts.filter((data) => {
+                if (data.id == id) {
+                    wishdata += `<div class="cart-item">
               <div class="cart-up1" >
                   
                   <div class="cart-body" style="padding-left: 10px;">
@@ -41,12 +41,12 @@ const wishList = () => {
              
               
           </div>`;
-          }
+                }
+            });
+            document.getElementById("item-wish-dynamic").innerHTML = wishdata;
         });
-        document.getElementById("item-wish-dynamic").innerHTML = wishdata;
-      });
     });
-  };
+};
 
 wishList();
 
@@ -58,11 +58,11 @@ const removeWishListItems = (category, productid) => {
     // console.log(currentProduct)
     let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
     wishlistItems.filter((item) => {
-      if (item.productId.includes(currentProduct)) {
-        wishlistItems.splice(wishlistItems.indexOf(item), 1);
-      }
+        if (item.productId.includes(currentProduct)) {
+            wishlistItems.splice(wishlistItems.indexOf(item), 1);
+        }
     });
     let set = localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
     alert("Product removed to wishlist");
     location.reload();
-  };
+};
