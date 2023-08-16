@@ -116,7 +116,6 @@ const search = (key) => {
           // console.log(gridproducts);
         })
       } else {
-        console.log("Main Yha hu")
         products += `<p>Not found</p>`;
         document.getElementById('search-products').innerHTML = products;
 
@@ -159,4 +158,64 @@ const refreshsearch = () => {
   window.location.href = url;
 
 }
-document.getElementById('search-page-search-btn').addEventListener('click', refreshsearch)
+document.getElementById('search-page-search-btn').addEventListener('click', refreshsearch);
+
+// Search filter
+
+const handleFilter=(id)=>{
+  const element = document.getElementById(id);
+  const mainElement = document.getElementById(`${id}-1`);
+  if(mainElement.classList.contains('active')){
+    element.innerHTML=`<i class="fa-solid fa-plus"></i>`
+    mainElement.classList.replace('active','search-filter-none');
+  }
+  else{
+    element.innerHTML=`<i class="fa-solid fa-minus"></i>`
+    mainElement.classList.replace('search-filter-none','active');
+  }
+  
+
+}
+
+const rangeSlider=()=>{
+  let rangeMin = 10;
+  const range = document.querySelector(".range-selected");
+  const rangeInput = document.querySelectorAll(".price-selector input");
+  const rangePrice = document.querySelectorAll(".price-input input");
+
+  rangeInput.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minRange = parseInt(rangeInput[0].value);
+      let maxRange = parseInt(rangeInput[1].value);
+      if (maxRange - minRange < rangeMin) {
+        if (e.target.className === "min") {
+          rangeInput[0].value = maxRange - rangeMin;
+        } else {
+          rangeInput[1].value = minRange + rangeMin;
+        }
+      } else {
+        rangePrice[0].value = minRange;
+        rangePrice[1].value = maxRange;
+        range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+        range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+      }
+    });
+  });
+  
+  rangePrice.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minPrice = rangePrice[0].value;
+      let maxPrice = rangePrice[1].value;
+      if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
+        if (e.target.className === "min") {
+          rangeInput[0].value = minPrice;
+          range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+        } else {
+          rangeInput[1].value = maxPrice;
+          range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+        }
+      }
+    });
+  });
+}
+rangeSlider()

@@ -504,139 +504,146 @@ breadcrumbs links -->
             <button><i class="fa-solid fa-close"></i> Clear</button>
           </div>
           <p class="left-hr-line w-25" style="bottom: 0; padding-top: 3px;"></p>
-          <div class="filter-middle-header" style="padding-top: 20px;">
-            <h3>Price</h3>
-            <p>
-              <i class="fa-solid fa-minus"></i>
-            </p>
+          <div>
+            <div class="filter-middle-header" style="padding-top: 20px;">
+              <h3>Price</h3>
+              <p id="filter-price-main" onclick="handleFilter(this.id)">
+                <i class="fa-solid fa-minus"></i>
+              </p>
 
-          </div>
-          <div class="price-selector" style="padding-bottom: 20px; padding-top: 20px;">
-            <input type="range" name="" id="pt1" min="0" value="0" max="100">
-            <input type="range" name="" id="pt2" min="0" value="100" max="100">
-
-          </div>
-          <div action="" class="input-fields" style="padding-bottom: 10px;">
-            <div class="input">
-              <input type="number" min="10" step="10" value="10" max="100000">
-              <label for="">$</label>
             </div>
-            <div class="input">
-              <input type="number" min="10" step="10" value="10" max="100000">
-              <label for="">$</label>
+            <div class="active" id="filter-price-main-1">
+              <span class="range-selected">0</span>
+              <div class="price-selector" style="padding-bottom: 20px; padding-top: 20px;">
+                <input type="range" name="" id="pt1" min="0" value="0" max="100" step="10">
+                <input type="range" name="" id="pt2" min="0" value="100" max="100" step="10">
+
+              </div>
+              <div action="" class="input-fields price-input" style="padding-bottom: 10px;">
+                <div class="input">
+                  <input type="number" min="10" step="10" value="10" max="100000">
+                  <label for="">$</label>
+                </div>
+                <div class="input">
+                  <input type="number" min="10" step="10" value="10" max="100000">
+                  <label for="">$</label>
+                </div>
+
+
+              </div>
             </div>
 
 
           </div>
+
           <hr />
-          <div class="filter-middle-header">
-            <h3>Availibility</h3>
-            <p>
-              <i class="fa-solid fa-minus"></i>
-            </p>
+          <div>
+            <div class="filter-middle-header">
+              <h3>Availibility</h3>
+              <p id="filter-availability-main" onclick="handleFilter(this.id)">
+                <i class="fa-solid fa-minus"></i>
+              </p>
+
+            </div>
+            <div class="checkboxes active" id="filter-availability-main-1">
+              <p><input type="checkbox" name="" id="">
+                <label for="">In Stock</label>
+              </p>
+              <p><input type="checkbox" name="" id="">
+                <label for="">Out of Stock</label>
+              </p>
+
+
+            </div>
 
           </div>
-          <div class="checkboxes">
-            <p><input type="checkbox" name="" id="">
-              <label for="">In Stock</label>
-            </p>
-            <p><input type="checkbox" name="" id="">
-              <label for="">Out of Stock</label>
-            </p>
 
-
-          </div>
           <hr>
           <div class="filter-middle-header">
             <h3>Subcategories</h3>
-            <p>
+            <p id="sub-category-main" onclick="handleFilter(this.id)">
               <i class="fa-solid fa-minus"></i>
             </p>
 
           </div>
-          <div class="sub-category-item">
+          <div class="sub-category-item active" id="sub-category-main-1">
             <img src="images/image4.jpeg" alt="">
             <p>Electronics</p>
           </div>
           <hr>
           <div class="filter-middle-header">
-            <h3>Subcategories</h3>
-            <p>
+            <h3>Brands</h3>
+            <p id="filter-brands-main" onclick="handleFilter(this.id)">
               <i class="fa-solid fa-minus"></i>
             </p>
 
           </div>
-          <div class="search-filter-brands">
-
+          <div class="search-filter-brands active" id="filter-brands-main-1">
             <img src="images/image9.jpeg" alt="">
             <img src="images/image8.jpeg" alt="">
             <img src="images/image6.jpeg" alt="">
           </div>
 
           <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>Select</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
+          <div>
+            <div class="filter-middle-header">
+              <h3>Test1</h3>
+              <p id="filter-test1-main" onclick="handleFilter(this.id)">
+                <i class="fa-solid fa-minus"></i>
+              </p>
+
+            </div>
+            <div class="checkboxes active" id="filter-test1-main-1">
+              <p><input type="checkbox" name="" id="">
+                <label for="">8 GB</label>
+              </p>
+              <p><input type="checkbox" name="" id="">
+                <label for="">30 GB</label>
+              </p>
+
+
+            </div>
 
           </div>
           <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>Radio</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
+          <div id="filter-color">
+            <div class="filter-middle-header">
+              <h3>Color</h3>
+              <p id="filter-color-main" onclick="handleFilter(this.id)">
+                <i class="fa-solid fa-minus"></i>
+              </p>
+
+            </div>
+            <div class="search-filter-colors active" id="filter-color-main-1">
+              <span class="bg-red"></span>
+              <span class="bg-green"></span>
+              <span class="bg-yellow"></span>
+              <span class="bg-navyblue"></span>
+            </div>
 
           </div>
+
           <hr>
-          <div class="filter-middle-header">
-            <h3>Color</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
+          <div>
+            <div class="filter-middle-header">
+              <h3>No .of Cores</h3>
+              <p id="filter-cores-main" onclick="handleFilter(this.id)">
+                <i class="fa-solid fa-minus"></i>
+              </p>
+
+            </div>
+            <div class="checkboxes active" id="filter-cores-main-1">
+              <p><input type="checkbox" name="" id="">
+                <label for="">4</label>
+              </p>
+              <p><input type="checkbox" name="" id="">
+                <label for="">8</label>
+              </p>
+
+
+            </div>
 
           </div>
-          <div class="search-filter-colors">
-
-            <span class="bg-red"></span>
-            <span class="bg-green"></span>
-            <span class="bg-yellow"></span>
-            <span class="bg-navyblue"></span>
-          </div>
-          <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>Clockspeed</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
-
-          </div>
-          <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>test 1</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
-
-          </div>
-          <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>No. of cores</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
-
-          </div>
-          <hr>
-          <div class="filter-middle-header" style="color: rgb(181, 179, 179);">
-            <h3>styles</h3>
-            <p>
-              <i class="fa-solid fa-plus"></i>
-            </p>
-
-          </div>
-
 
         </div>
 

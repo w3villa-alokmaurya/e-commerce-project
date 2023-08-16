@@ -541,9 +541,16 @@
     border-radius: 3px;
 }
 
+.filter-middle-header p{
+    cursor: pointer;
+}
+.search-filter-none{
+    display: none!important;
+}
 .search-filter-brands {
     display: flex;
 }
+
 
 .left-side-grid {
     width: 350px !important;

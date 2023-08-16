@@ -398,9 +398,6 @@ const testimonialCards = () => {
 testimonialCards();
 
 //End Testimonials //******************************************** */
-
-
-
 const removeCartItems = (quantity1, category, productid) => {
   const quantity = quantity1;
   const currentProduct = productid;
@@ -583,8 +580,4 @@ const newFahionProducts = (term) => {
 newFahionProducts('fashion');
 
 
-const searchFilterHideShow = (id) => {
-  const element = document.getElementById(id);
-
-}
 
