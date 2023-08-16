@@ -580,4 +580,30 @@ const newFahionProducts = (term) => {
 newFahionProducts('fashion');
 
 
+// const checkout=()=>{
+//   let cartProducts = JSON.parse(localStorage.getItem("cartItems")) || [];
+//   let cartdata='';
+//   let totalprice = '';
+//   cartProducts.forEach((item) => {
+//     let category = item.category;
+//     let id = item.productId;
+//     let quantity = item.quantity;
+//     fetchData(apiUrl).then((data) => {
+//       let cartproducts = data[category];
+//       cartproducts.filter((data) => {
+//         if (data.id == id) {
+//           totalprice = Number(data.price * quantity); 
+
+          
+//         }
+//       });
+      
+//     });
+//   });
+
+
+// }
+// checkout()
+
+
 

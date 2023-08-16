@@ -68,7 +68,6 @@ Product();
 Tabs('#product-page-product-tabs', '#product-page-product-tabcontent');
 Tabs('#most-viewed-tabs', '#most-viewed-tabcontent');
 
-
 function showmore_tab() {
   let showmore = document.getElementById('hide-text-auto1');
   showmore.classList.add('overflow-none');

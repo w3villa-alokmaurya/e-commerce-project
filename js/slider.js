@@ -69,7 +69,6 @@ $('.stop').on('click', function () {
 // most viewed
 
 var owl = $('#most-viewed');
-
 owl.owlCarousel({
     items: 4,
     loop: true,
@@ -100,7 +99,7 @@ owl.owlCarousel({
         1200: {
             items: 4,
             nav: false,
-            loop: false
+            loop: true
         }
     }
 

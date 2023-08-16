@@ -1,5 +1,23 @@
+@media screen and (max-width:800px) {
+    .cart-items{
+        width: 100%;
+    }
+    
+    
+}
+@media screen and (max-width:550px) {
+    .head-cart{
+        display: none;
+    }
+    .cart-item{
+        flex-wrap: wrap;
+    }
+    
+}
+
+
 .cart-items {
-    width: 60%;
+    width: 100%;
     border: 1px solid var(--font-p-color);
 
 }
@@ -17,9 +35,7 @@
 .cart-up1 {
     display: flex;
     flex-direction: column;
-    width: 180px;
-
-
+    width: 250px;
 }
 
 .cart-body {

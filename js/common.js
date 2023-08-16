@@ -1,3 +1,5 @@
+
+
 const apiUrl = "data/products.json";
 // scroll to top
 const scrollToTop = () => {
