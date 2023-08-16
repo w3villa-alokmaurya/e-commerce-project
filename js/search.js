@@ -9,6 +9,13 @@ function gridview() {
 
 Tabs('#most-viewed-search-tabs', '#most-viewed-search-tabcontent');
 
+
+const handleClickpageSearchPaginate = (id, query) => {
+  const pageno = document.getElementById(id).value;
+  window.location.href = `search-page.html?query=${query}&pageno=${pageno}`;
+
+}
+
 //Search form
 
 const searchproduct = "data/products.json"
@@ -26,6 +33,8 @@ const search = (key) => {
         document.getElementById('gridview').innerHTML = products;
         return
       }
+      const paginatedUrl = `handleClickpageSearchPaginate(this.id,'${key}')`;
+
       results = fullarr.filter((data) => {
         if (data.title.toLowerCase().includes(key.toLowerCase())) {
           return true;
@@ -33,8 +42,14 @@ const search = (key) => {
         return false;
       })
       document.getElementById('search-input-value').value = key;
-      if (results.length > 0) {
-        results.forEach(value => {
+      let itemPerPage = 3;
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let pageno = url.searchParams.get("pageno") || '1';
+      pagination(itemPerPage, results,paginatedUrl);
+      const paginated = BuildPage(pageno, itemPerPage, results);
+      if (paginated.length > 0) {
+        paginated.forEach(value => {
           // Find all the product with the search term
 
           products += `<div class="products-card">
@@ -162,22 +177,22 @@ document.getElementById('search-page-search-btn').addEventListener('click', refr
 
 // Search filter
 
-const handleFilter=(id)=>{
+const handleFilter = (id) => {
   const element = document.getElementById(id);
   const mainElement = document.getElementById(`${id}-1`);
-  if(mainElement.classList.contains('active')){
-    element.innerHTML=`<i class="fa-solid fa-plus"></i>`
-    mainElement.classList.replace('active','search-filter-none');
+  if (mainElement.classList.contains('active')) {
+    element.innerHTML = `<i class="fa-solid fa-plus"></i>`
+    mainElement.classList.replace('active', 'search-filter-none');
   }
-  else{
-    element.innerHTML=`<i class="fa-solid fa-minus"></i>`
-    mainElement.classList.replace('search-filter-none','active');
+  else {
+    element.innerHTML = `<i class="fa-solid fa-minus"></i>`
+    mainElement.classList.replace('search-filter-none', 'active');
   }
-  
+
 
 }
 
-const rangeSlider=()=>{
+const rangeSlider = () => {
   let rangeMin = 10;
   const range = document.querySelector(".range-selected");
   const rangeInput = document.querySelectorAll(".price-selector input");
@@ -201,7 +216,7 @@ const rangeSlider=()=>{
       }
     });
   });
-  
+
   rangePrice.forEach((input) => {
     input.addEventListener("input", (e) => {
       let minPrice = rangePrice[0].value;

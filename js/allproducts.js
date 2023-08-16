@@ -1,27 +1,12 @@
 
-// Pagination ******///
 
-const pagination = (limit, items) => {
-  const numberOfItems = items.length;
-  const itemPerPage = limit;
-  const numberOfPages = Math.ceil(numberOfItems / itemPerPage);
-  for (let i = 0; i < numberOfPages; i++) {
-    $('#pagination').append(`<button id="page${i + 1}" onclick="handleClickpage(this.id)" class="btn btn-primary"
-      value="${i + 1}">${i + 1}</button>`);
-  }
-}
 
 //For all products ******//
 const handleClickpage = (id) => {
   const pageno = document.getElementById(id).value;
   window.location.href = "allproducts.html?pageno=" + pageno;
 }
-const BuildPage = (pageno, limit, fullarr) => {
-  const trimStart = (pageno - 1) * limit;
-  const trimEnd = trimStart + limit;
-  return fullarr.slice(trimStart, trimEnd);
-
-}
+const paginatedUrl = `handleClickpage(this.id)`;
 
 const AllProductsData = () => {
   fetchData(apiUrl)
@@ -32,7 +17,7 @@ const AllProductsData = () => {
       let url_string = window.location.href;
       let url = new URL(url_string);
       let pageno = url.searchParams.get("pageno") || '1';
-      pagination(itemPerPage, fullarr);
+      pagination(itemPerPage, fullarr,paginatedUrl);
       const paginated = BuildPage(pageno, itemPerPage, fullarr);
       paginated.forEach((product) => {
         productsCard += `<div class="products-card" id="${product.id}">

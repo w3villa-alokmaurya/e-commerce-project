@@ -41,6 +41,26 @@ const searchRedirect = () => {
     window.location.href = redirect;
   };
 
+  // Pagination ******///
+
+const pagination = (limit, items,func) => {
+    const numberOfItems = items.length;
+    const itemPerPage = limit;
+    const numberOfPages = Math.ceil(numberOfItems / itemPerPage);
+    for (let i = 0; i < numberOfPages; i++) {
+      $('#pagination').append(`<button id="page${i + 1}" onclick="${func}" class="btn btn-primary"
+        value="${i + 1}">${i + 1}</button>`);
+    }
+  }
+
+  const BuildPage = (pageno, limit, fullarr) => {
+    const trimStart = (pageno - 1) * limit;
+    const trimEnd = trimStart + limit;
+    return fullarr.slice(trimStart, trimEnd);
+  
+  }
+  
+
 // this is for truncate string ******
 const limit = (string = "", limit = 0) => {
     return string.substring(0, limit);
