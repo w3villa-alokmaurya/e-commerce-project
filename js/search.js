@@ -11,25 +11,9 @@ function gridview() {
   document.getElementById('listview').classList.add('displayblock');
 }
 
-
-
-// fetch Data  function/////////////////////////////////////////////////////////
-function fetchData(url, options = {}) {
-  return fetch(url, options)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json(); // This parses the response body as JSON
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-      throw error; // Re-throw the error to propagate it
-    });
-}
 //Search form
 
-const searchproduct = "/data/products.json"
+const searchproduct = "data/products.json"
 
 const search = (key) => {
   fetchData(searchproduct)
