@@ -46,8 +46,8 @@ const buyFromUs = (term) => {
 
         1000: {
           items: 5,
-          nav: false,
-          // loop:true,
+          nav: true,
+          loop:true,
         },
       },
       // dots:true,
@@ -212,13 +212,13 @@ const productsCardData = (term) => {
           },
           1000: {
             items: 3,
-            nav: false,
+            nav: true,
             loop: true,
           },
           1200: {
             items: 4,
-            nav: false,
-            loop: false,
+            nav: true,
+            loop: true,
           },
         },
         // dots:false,
@@ -304,12 +304,12 @@ const blogPosts = (term) => {
         },
         1000: {
           items: 3,
-          nav: false,
+          nav: true,
           loop: true,
         },
         1200: {
           items: 3,
-          nav: false,
+          nav: true,
           loop: false,
         },
       },
@@ -543,24 +543,24 @@ const newFahionProducts = (term) => {
           620: {
             items: 2,
             nav: false,
-            loop: true,
+            loop: false,
           },
           767: {
             items: 2,
             nav: false,
-            loop: true,
+            loop: false,
           },
           800: {
             items: 3,
           },
           1000: {
             items: 3,
-            nav: false,
-            loop: true,
+            nav: true,
+            loop: false,
           },
           1200: {
             items: 4,
-            nav: false,
+            nav: true,
             loop: false,
           },
         },
