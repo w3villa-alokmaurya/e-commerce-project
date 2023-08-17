@@ -564,7 +564,7 @@ const newFahionProducts = (term) => {
             loop: false,
           },
         },
-        // dots:false,
+        dots:false,
       });
       $(".play").on("click", function () {
         owl.trigger("play.owl.autoplay", [1000]);

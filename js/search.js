@@ -233,4 +233,5 @@ const rangeSlider = () => {
     });
   });
 }
-rangeSlider()
+rangeSlider();
+

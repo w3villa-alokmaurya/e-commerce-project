@@ -39,7 +39,8 @@ function fetchData(url, options = {}) {
 //search redirect to search page
 const searchRedirect = () => {
     const redirect =
-      "search-page.html?query=" + document.getElementById("search-input").value;
+      `search-page.html?query=${document.getElementById("search-input").value || document.getElementById("search-input1").value}` ;
+      console.log(redirect)
     window.location.href = redirect;
   };
 
@@ -87,3 +88,41 @@ const Tabs=(tabs, tabcontent)=>{
 
 }
 // Tabs('#most-viewed','#most-viewed-content');
+
+
+//mobile header things
+
+
+
+const showMobileSearch=(id)=>{
+    const element = document.getElementById(id);
+    const s=document.getElementById('search-form');
+    s.classList.add('overlay');
+    s.classList.add('dis-flex');
+  
+  }
+const  hideMobileSearch=()=>{
+    const s=document.getElementById('search-form');
+    s.classList.remove('overlay');
+    s.classList.remove('dis-flex');
+
+}
+
+const showMobileMenu=(id)=>{
+    const element= document.getElementById(id);
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.add('overlay');
+    menu.classList.add('dis-flex')
+    // document.getElementById('mobile-menu').classList.add('active');
+    
+
+
+}
+const hideMobileMenu=()=>{
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.remove('overlay');
+    menu.classList.remove('dis-flex')    
+
+
+}
+  
