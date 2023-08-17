@@ -2081,3 +2081,22 @@ img:hover {
     font-size: 18px;
     text-decoration: none;
 }
+.checkout-button{
+    float: right;
+}
+.checkout-button button{
+    width: auto;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}

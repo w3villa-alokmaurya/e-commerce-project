@@ -47,7 +47,7 @@ const buyFromUs = (term) => {
         1000: {
           items: 5,
           nav: true,
-          loop:true,
+          loop: true,
         },
       },
       // dots:true,
@@ -175,7 +175,7 @@ const productsCardData = (term) => {
           </div>
       </div>
       <div class="bottom-card d-flex justify-content-between align-items-center">
-        <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+        <p onclick=buyNow()><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
         <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
       </div>
     </div>`;
@@ -564,7 +564,7 @@ const newFahionProducts = (term) => {
             loop: false,
           },
         },
-        dots:false,
+        dots: false,
       });
       $(".play").on("click", function () {
         owl.trigger("play.owl.autoplay", [1000]);
@@ -580,30 +580,69 @@ const newFahionProducts = (term) => {
 newFahionProducts('fashion');
 
 
-// const checkout=()=>{
-//   let cartProducts = JSON.parse(localStorage.getItem("cartItems")) || [];
-//   let cartdata='';
-//   let totalprice = '';
-//   cartProducts.forEach((item) => {
-//     let category = item.category;
-//     let id = item.productId;
-//     let quantity = item.quantity;
-//     fetchData(apiUrl).then((data) => {
-//       let cartproducts = data[category];
-//       cartproducts.filter((data) => {
-//         if (data.id == id) {
-//           totalprice = Number(data.price * quantity); 
+const checkout = () => {
+  let cartProducts = JSON.parse(localStorage.getItem("cartItems")) || [];
+  let cartdata = '';
+  let totalprice = '';
+  let buyItem = [{
 
-          
-//         }
-//       });
-      
-//     });
-//   });
+  }]
+  cartProducts.forEach((item) => {
+    let category = item.category;
+    let id = item.productId;
+    let quantity = item.quantity;
+    fetchData(apiUrl).then((data) => {
+      let cartproducts = data[category];
+      cartproducts.filter((data) => {
+        if (data.id == id) {
+          totalprice = Number(data.price * quantity);
+          buyItem.push({
+            totalprice: totalprice,
+            productid: id,
+            category: category,
+          })
+          localStorage.setItem('buynowItems', JSON.stringify(buyItem))
+
+        }
+      });
+
+    });
+  });
 
 
-// }
-// checkout()
+ 
+}
+
+const buyNow=()=>{
+  checkout();
+  const buyNowItems = JSON.parse(localStorage.getItem('buynowItems')) || [];
+  if(buyNowItems.length>0){
+    
+    let fp = [];
+    let add = 0;
+    buyNowItems.forEach(item => {
+      fp.push(
+        Number(item.totalprice)
+      );
+    })
+    for (let i = 1; i < fp.length; i++) {
+      add += fp[i];
+  
+    }
+    alert(`Your Order Placed Sussesfully. Your total amonut is ${add}`);
+    localStorage.removeItem('cartItems');
+    localStorage.removeItem('buynowItems');
+    location.reload();
+
+  }
+  else{
+    alert('No Product in cart Please add products in cart.');
+
+
+  }
+ 
+}
+
 
 
 
