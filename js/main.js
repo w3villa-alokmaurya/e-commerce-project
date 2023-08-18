@@ -581,7 +581,8 @@ newFahionProducts('fashion');
 
 //checkout now 
 const checkoutNow = () => {
-  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  if(checkLoggedIn()){
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
   const orderedItems = JSON.parse(localStorage.getItem('orderedItems')) || [];
   let category = '';
   let id = '';
@@ -590,12 +591,10 @@ const checkoutNow = () => {
   let cartProducts = ''
   let orderDate = Date('dd-mm-yyyy');
   let filtered='';
+  let fp = [];
   let add=0;
-
-  
   fetchData(apiUrl).then(data => {
     cartProducts = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
-
     // console.log(cartProducts)
     cartItems.forEach((item) => {
       category = item.category;
@@ -611,8 +610,10 @@ const checkoutNow = () => {
             category: category,
             quantity: quantity,
             orderDate: orderDate,
-  
-          })
+            
+          });
+          add+=totalprice;
+          
           localStorage.setItem('orderedItems',JSON.stringify(orderedItems));
           localStorage.removeItem('cartItems');
           // console.log(orderedItems)
@@ -621,27 +622,21 @@ const checkoutNow = () => {
       });
       
     })
-    let fp = [];
-    orderedItems.forEach(item => {
-      fp.push(
-        Number(item.totalprice)
-      );
-    })
-    for (let i = 1; i < fp.length; i++) {
-      add += fp[i];
-  
-    }
+    
     alert('Your Order Placed SuccesFully YYour total Amount is '+add);
     location.reload();
   })
- 
+
+  }else{
+    alert("Please Login To Proceed")
+  }
+  
 }
 
 const buyNow = (id, quantity, category) => {
   addToCart(id, quantity, category)
   window.location.href='shopping-cart.html'
 }
-// checkoutNow();
 
 
 

@@ -70,17 +70,20 @@ const search = (key) => {
                                 </div>
                                 <div class="cart-product d-flex justify-content-between">
                                     <div class="add-to-cart-btn">
-                                    <input type="number" name="number"
+                                    <input id="quantity${value.id}" type="number" name="number"
                                     min = "1" max="10" step="1" value="1">
-                                    <button>Add to cart</button>
+                                    <button id="${value.productCategory + value.id}" onclick="addToCart('${value.id
+                                    }', 'quantity${value.id}', '${value.productCategory}')">Add to cart</button>
                                     </div>
                                     <div class="product-icon">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <a onclick="addToWishlist('${value.id
+                                    }','${value.productCategory}')"><i id="wishlist${value.id
+                                    }" class="fa-regular fa-heart"></i></a>
                                     <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
                                     </div>
                                 </div>
                                 <div class="bottom-card d-flex justify-content-between align-items-center">
-                                <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+                                <p onclick="buyNow('${value.id}', 'quantity${value.id}', '${value.productCategory}')"><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
                                 <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
                                 </div>
                             </div>`;
@@ -107,17 +110,20 @@ const search = (key) => {
                               </div>
                               <div class="right-side-grid-bottom">
                                 <div class="add-to-cart-btn">
-                                  <input type="number" name="number"
+                                  <input id="quantity${value.id}" type="number" name="number"
                                 min = "1" max="10" step="1" value="1">
-                                  <button><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                                  <button id="${value.productCategory + value.id}" onclick="addToCart('${value.id
+                                  }', 'quantity${value.id}', '${value.productCategory}')"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                                 </div>
                                 <div class="product-icon">
-                                  <i class="fa-regular fa-heart"></i>
+                                <a onclick="addToWishlist('${value.id
+                                }','${value.productCategory}')"><i id="wishlist${value.id
+                                }" class="fa-regular fa-heart"></i></a>
                                   <i class="fa-solid fa-arrow-down-up-across-line fa-rotate-90"></i>
                                 </div>
                               </div>
                               <div class="bottom-card d-flex align-items-center">
-                                <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+                                <p onclick="buyNow('${value.id}', 'quantity${value.id}', '${value.productCategory}')"><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
                                 <p><i class="fa-solid fa-circle-question color-red" style="padding-left: 20px;"></i>Question</p>
                               </div>
                               

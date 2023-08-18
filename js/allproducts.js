@@ -52,7 +52,7 @@ const AllProductsData = () => {
             </div>
         </div>
         <div class="bottom-card d-flex justify-content-between align-items-center">
-          <p><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+          <p onclick="buyNow('${product.id}', 'quantity${product.id}', '${product.productCategory}')"><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
           <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
         </div>
       </div>`;

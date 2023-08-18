@@ -1,5 +1,16 @@
 
+function checkLoggedIn() {
+    const token = sessionStorage.getItem('token');
 
+    if (!token == '') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  
 const apiUrl = "data/products.json";
 // scroll to top
 const scrollToTop = () => {
