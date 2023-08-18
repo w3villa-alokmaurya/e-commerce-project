@@ -175,7 +175,7 @@ const productsCardData = (term) => {
           </div>
       </div>
       <div class="bottom-card d-flex justify-content-between align-items-center">
-        <p onclick=buyNow()><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
+        <p onclick="buyNow('${product.id}', 'quantity${product.id}', '${term}')"><span class="color-green"><i class="fa-solid fa-sack-dollar"></i></span> Buy Now</p>
         <p><i class="fa-solid fa-circle-question color-red"></i>Question</p>
       </div>
     </div>`;
@@ -579,48 +579,50 @@ const newFahionProducts = (term) => {
 };
 newFahionProducts('fashion');
 
-
-const checkout = () => {
-  let cartProducts = JSON.parse(localStorage.getItem("cartItems")) || [];
-  let cartdata = '';
+//checkout now 
+const checkoutNow = () => {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  const orderedItems = JSON.parse(localStorage.getItem('orderedItems')) || [];
+  let category = '';
+  let id = '';
+  let quantity = '';
   let totalprice = '';
-  let buyItem = [{
+  let cartProducts = ''
+  let orderDate = Date('dd-mm-yyyy');
+  let filtered='';
+  let add=0;
 
-  }]
-  cartProducts.forEach((item) => {
-    let category = item.category;
-    let id = item.productId;
-    let quantity = item.quantity;
-    fetchData(apiUrl).then((data) => {
-      let cartproducts = data[category];
-      cartproducts.filter((data) => {
-        if (data.id == id) {
+  
+  fetchData(apiUrl).then(data => {
+    cartProducts = data['featured'].concat(data['latest']).concat(data['bestsellers']).concat(data['specials']);
+
+    // console.log(cartProducts)
+    cartItems.forEach((item) => {
+      category = item.category;
+      id = item.productId;
+      quantity = item.quantity;
+      // console.log(id)
+      filtered= cartProducts.filter((data) => {
+        if (data.id == id && data.productCategory == category) {
           totalprice = Number(data.price * quantity);
-          buyItem.push({
+          orderedItems.push({
             totalprice: totalprice,
             productid: id,
             category: category,
+            quantity: quantity,
+            orderDate: orderDate,
+  
           })
-          localStorage.setItem('buynowItems', JSON.stringify(buyItem))
-
+          localStorage.setItem('orderedItems',JSON.stringify(orderedItems));
+          localStorage.removeItem('cartItems');
+          // console.log(orderedItems)
+  
         }
       });
-
-    });
-  });
-
-
- 
-}
-
-const buyNow=()=>{
-  checkout();
-  const buyNowItems = JSON.parse(localStorage.getItem('buynowItems')) || [];
-  if(buyNowItems.length>0){
-    
+      
+    })
     let fp = [];
-    let add = 0;
-    buyNowItems.forEach(item => {
+    orderedItems.forEach(item => {
       fp.push(
         Number(item.totalprice)
       );
@@ -629,19 +631,17 @@ const buyNow=()=>{
       add += fp[i];
   
     }
-    alert(`Your Order Placed Sussesfully. Your total amonut is ${add}`);
-    localStorage.removeItem('cartItems');
-    localStorage.removeItem('buynowItems');
+    alert('Your Order Placed SuccesFully YYour total Amount is '+add);
     location.reload();
-
-  }
-  else{
-    alert('No Product in cart Please add products in cart.');
-
-
-  }
+  })
  
 }
+
+const buyNow = (id, quantity, category) => {
+  addToCart(id, quantity, category)
+  window.location.href='shopping-cart.html'
+}
+// checkoutNow();
 
 
 
