@@ -38,7 +38,7 @@ const LoginForm = () => {
     var storedemail = localStorage.getItem('email');
     var storedpass = localStorage.getItem('password');
 
-    if (email.length == 0) {
+    if (!email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)|| email.length == 0) {
         alert("Enter valid email");
     }
     else if (password.length == 0) {

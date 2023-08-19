@@ -231,7 +231,7 @@ const productsCardData = (term) => {
       });
     })
     .catch((error) => {
-      console.error("error");
+      console.log("Error comes oho!",error.name);
     });
 };
 productsCardData("featured");
@@ -574,7 +574,7 @@ const newFahionProducts = (term) => {
       });
     })
     .catch((error) => {
-      console.error("error");
+      console.log("error" ,error.name + error.message);
     });
 };
 newFahionProducts('fashion');

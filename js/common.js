@@ -34,18 +34,17 @@ newsletterForm.addEventListener("submit", newsletter);
 
 //End Newsletter form **************************//
 // fetch Data  function/////////////////////////////////////////////////////////
-function fetchData(url, options = {}) {
-    return fetch(url, options)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json(); // This parses the response body as JSON
-        })
-        .catch((error) => {
-            console.error("There was a problem with the fetch operation:", error);
-            throw error; // Re-throw the error to propagate it
-        });
+async function fetchData(url, options = {}) {
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+        throw error; // Re-throw the error to propagate it
+    }
 }
 //search redirect to search page
 const searchRedirect = () => {

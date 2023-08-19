@@ -40,12 +40,16 @@ const RegisterForm = () => {
     var name = document.getElementById("name").value;
     var password = document.getElementById("signuppassword").value;
 
+    
+
 
     if (name.length == 0) {
         alert("Enter valid name");
     }
-    else if (email.length == 0) {
-        alert("Enter valid email");
+    else if(!email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/) || email.length==0){
+        alert("Invaild email");
+
+
     }
     else if (password.length == 0) {
         alert("Enter valid password");
